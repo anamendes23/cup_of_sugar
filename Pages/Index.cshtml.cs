@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace CupOfSugar.Pages
 {
+    /// <summary>
+    /// Arielle Wilson
+    /// </summary>
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
