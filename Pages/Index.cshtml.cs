@@ -11,6 +11,9 @@ namespace CupOfSugar.Pages
     /// <summary>
     /// Arielle Wilson
     /// </summary>
+    /// <summary>
+    /// Ana Carolina de Souza Mendes
+    /// </summary>
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
