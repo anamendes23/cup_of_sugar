@@ -17,6 +17,9 @@ namespace CupOfSugar.Pages
     /// <summary>
     /// Phuc To
     /// </summary>
+    /// <summary>
+    /// Ananya Reddy
+    /// </summary>
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
