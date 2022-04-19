@@ -141,3 +141,13 @@ ul {
     background: -moz-linear-gradient(110deg, #252152 60%, #e9a8a6 60%);
     background: linear-gradient(110deg, #252152 60%, #e9a8a6 60%);
 }
+
+.logo-image {
+    width: 60px;
+    height: 42px;
+    overflow: visible;
+    margin-top: -1px;
+    margin-left: 5px;
+    padding-left: 5px;
+    float: right;
+}
