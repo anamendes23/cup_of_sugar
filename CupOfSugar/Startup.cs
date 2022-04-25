@@ -12,16 +12,27 @@ using CupOfSugar.WebSite.Services;
 
 namespace CupOfSugar.WebSite
 {
+    /// <summary>
+    /// Adds and maps razor pages, controllers and services
+    /// </summary>
     public class Startup
     {
+        /// <summary>
+        /// Constructor to Startup
+        /// Initializes configuration object
+        /// </summary>
+        /// <param name="configuration"></param>
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
+        public IConfiguration Configuration { get; } // A set of key/value configuration properties
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+        /// <summary>
+        /// This method gets called by the runtime. Use this method to add services to the container
+        /// </summary>
+        /// <param name="services"></param>
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
@@ -30,7 +41,11 @@ namespace CupOfSugar.WebSite
             services.AddTransient<JsonFileProductService>();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        /// <summary>
+        /// This method gets called by the runtime. Use this method to configure the HTTP request pipeline
+        /// </summary>
+        /// <param name="app"></param>
+        /// <param name="env"></param>
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
