@@ -6,20 +6,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+/// <summary>
+/// Old Index page - acting as a placeholder for the borrow page
+/// Will use get method to retrieve the food items
+/// </summary>
 namespace CupOfSugar.Pages
 {
-    /// <summary>
-    /// Arielle Wilson
-    /// </summary>
-    /// <summary>
-    /// Ana Carolina de Souza Mendes
-    /// </summary>
-    /// <summary>
-    /// Phuc To
-    /// </summary>
-    /// <summary>
-    /// Ananya Reddy
-    /// </summary>
     /*public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
