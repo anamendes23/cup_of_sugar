@@ -27,10 +27,8 @@ namespace CupOfSugar.WebSite.Controllers
             this.ProductService = productService;
         }
 
-        /// <summary>
-        /// Getter method for the ProductService
-        /// </summary>
-        public JsonFileProductService ProductService { get; }
+        
+        public JsonFileProductService ProductService { get; } // ProductService attribute deals with json file
 
         /// <summary>
         ///This is the Read method in CRUDi 
