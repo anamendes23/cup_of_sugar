@@ -18,17 +18,10 @@
 <!--START Triangles -->
 <div class="triangle-parent">
     <div class="triangle">
-        <button type="button" onclick="showMessage('Borrow')" class="btn bottom-triangle-button">Borrow</button>
+        <button type="button" class="btn bottom-triangle-button">Borrow</button>
         <button type="button" class="btn top-triangle-button"><a asp-page="/Lend">Lend</a></button>
     </div>
 </div>
 <!--END Triangles-->
-<!--START Script for displaying alert on triangle button clicks-->
-<script type="text/javascript">
-    function showMessage(buttonType) {
-        alert(buttonType + " button clicked!");
-    }
-</script>
-<!--END Script for displaying alert on triangle button clicks-->
 
 <script src="_framework/blazor.server.js"></script>
