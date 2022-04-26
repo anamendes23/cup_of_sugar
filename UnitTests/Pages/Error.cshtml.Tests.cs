@@ -10,11 +10,16 @@ using CupOfSugar.Pages;
 
 namespace UnitTests.Pages.Error
 {
+    /// <summary>
+    /// Unit test for Error page
+    /// </summary>
     public class ErrorTests
     {
         #region TestSetup
         public static ErrorModel pageModel;
-
+        /// <summary>
+        /// Initializing method that creates an object of the ErrorModel
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
@@ -30,6 +35,10 @@ namespace UnitTests.Pages.Error
         #endregion TestSetup
 
         #region OnGet
+        /// <summary>
+        /// The Unit test case to check if the correct HTTP request ID is being retrieved
+        /// And also check if its valid or not
+        /// </summary>
         [Test]
         public void OnGet_Valid_Activity_Set_Should_Return_RequestId()
         {
@@ -49,6 +58,10 @@ namespace UnitTests.Pages.Error
             Assert.AreEqual(activity.Id, pageModel.RequestId);
         }
 
+        /// <summary>
+        /// The Unit test case to check if the correct HTTP request ID is being retrieved
+        /// And also check if its invalid, meaning null
+        /// </summary>
         [Test]
         public void OnGet_InValid_Activity_Null_Should_Return_TraceIdentifier()
         {
