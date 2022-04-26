@@ -1,5 +1,7 @@
 using NUnit.Framework;
-
+/// <summary>
+/// sample test file for understanding unit tests
+/// </summary>
 namespace UnitTests
 {
     public class Tests
