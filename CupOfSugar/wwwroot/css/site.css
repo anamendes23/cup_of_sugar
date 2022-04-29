@@ -219,7 +219,8 @@ a:hover {
 .lend-form-label {
     font-family: 'Open Sans', sans-serif;
     font-size: 200%;
-    color: white;
+    color: #4ECDC4;
+    font-weight: 400;
 }
 
 .lend-btn {
