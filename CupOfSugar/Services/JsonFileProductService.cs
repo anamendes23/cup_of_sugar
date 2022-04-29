@@ -51,6 +51,7 @@ namespace CupOfSugar.WebSite.Services
             }
         }
 
+        /*
         /// <summary>
         /// Updating a product rating in Products.json
         /// </summary>
@@ -87,5 +88,6 @@ namespace CupOfSugar.WebSite.Services
                 );
             }
         }
+     */   
     }
 }
