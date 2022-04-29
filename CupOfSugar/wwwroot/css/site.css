@@ -209,12 +209,8 @@ a:hover {
 
 /*START Lend Page/Form Styles*/
 
-#lend-page-body {
-    background-color: #4ECDC4;
-}
-
 .lend-title {
-    font-family: 'Fascinate Inline', cursive;
+    font-family: 'Open Sans', sans-serif;
     margin-top: 100px;
     margin-bottom: 100px;
     font-size: 275%;
