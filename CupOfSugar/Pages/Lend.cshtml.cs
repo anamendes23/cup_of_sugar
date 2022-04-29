@@ -15,11 +15,18 @@ namespace CupOfSugar.Pages
     /// </summary>
     public class LendModel : PageModel
     {
+        // Data middletier
         public JsonFileProductService ProductService { get; }
 
+        /// <summary>
+        /// Defualt Construtor
+        /// </summary>
+        /// <param name="productService"></param>
         public LendModel(JsonFileProductService productService)
         {
             ProductService = productService;
         }
+
+
     }
 }
