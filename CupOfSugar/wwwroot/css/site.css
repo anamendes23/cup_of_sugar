@@ -206,3 +206,11 @@ a:hover {
     text-decoration: none;
     color: #C4C4C4;
 }
+
+/*START Lend Page/Form Styles*/
+
+#lend-page-body {
+    background-color: #4ECDC4;
+}
+
+/*END Lend Page/Form Styles*/
