@@ -220,4 +220,10 @@ a:hover {
     font-size: 275%;
 }
 
+.lend-form-label {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 200%;
+    color: white;
+}
+
 /*END Lend Page/Form Styles*/
