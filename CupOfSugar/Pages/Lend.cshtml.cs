@@ -29,5 +29,15 @@ namespace CupOfSugar.Pages
 
         [BindProperty]
         public CupOfSugar.WebSite.Models.Product Product { get; set; }  // The data to show, bind to it for the post
+
+        /// <summary>
+        /// REST Get request
+        /// Loads the Data
+        /// </summary>
+        /// <param name="id"></param>
+        public void OnGet(string id)
+        {
+            Product = ProductService.GetProducts().FirstOrDefault(m => m.Id.Equals(id));
+        }
     }
 }
