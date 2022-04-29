@@ -190,3 +190,19 @@ ul {
     font-family: 'Fascinate Inline', cursive;
 }
 /* END Triangles and their buttons*/
+
+/* CSS for the Lend and borrow buttons to remain white before and after clicking with no underline */
+a:link {
+    text-decoration: none;
+    color: #F7FFF7;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #F7FFF7;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #C4C4C4;
+}
