@@ -41,7 +41,7 @@ namespace CupOfSugar.WebSite.Controllers
             return ProductService.GetProducts();
         }
 
-        /// <summary>
+        /*/// <summary>
         /// CRUdi - Update method
         /// This method updates the rating
         /// </summary>
@@ -58,5 +58,6 @@ namespace CupOfSugar.WebSite.Controllers
             ProductService.AddRating(ProductId, Rating);
             return Ok();
         }
+        */
     }
 }
