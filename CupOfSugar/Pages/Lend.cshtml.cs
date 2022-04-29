@@ -27,6 +27,7 @@ namespace CupOfSugar.Pages
             ProductService = productService;
         }
 
-
+        [BindProperty]
+        public CupOfSugar.WebSite.Models.Product Product { get; set; }
     }
 }
