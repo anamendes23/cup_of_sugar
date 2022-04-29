@@ -16,18 +16,22 @@ namespace CupOfSugar.WebSite.Models
 
         public string Id { get; set; } //string Id of product
 
-        public string Maker { get; set; } //string Maker of product
+        public string Lender { get; set; } //string Lender of product
 
         [JsonPropertyName("img")]
         public string Image { get; set; } //string url of Image of the product
 
-        public string Url { get; set; } //string Url to the product
-
         public string Title { get; set; } //string Title of product
 
-        public string Description { get; set; } //string Description of product
+        public string Address { get; set; } //string Adress of Lender
 
-        public int[] Ratings { get; set; } //integer array of ratings of product
+        public string Phone { get; set; } //string phone of Lender
+
+        public string Quantity { get; set; } //string quantity of product
+
+        public string Category { get; set; } // string category of product
+
+        public string Status { get; set; } // string status of product
 
         /// <summary>
         /// Returns string representation of product object
