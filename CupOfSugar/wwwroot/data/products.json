@@ -1,20 +1,9 @@
 [
   {
-    "Id": "john-pizza",
-    "Lender": "johndoe",
-    "img": "https://user-images.githubusercontent.com/64483865/165841416-bd7ca3b8-11d5-45a5-81be-a3826243a82f.jpeg",
-    "Title": "Pepperoni Pizza",
-    "Address": "123 4th Street, Matrix - 10101",
-    "Phone": "4255198735",
-    "Quantity": "8 slices",
-    "Category": "cooked",
-    "Status": "Available"
-  },
-  {
-    "Id": "avaadams-avacado",
+    "Id": "avaadams-avocado",
     "Lender": "avaadams",
     "img": "https://user-images.githubusercontent.com/64483865/165871015-14dd3358-7188-43a5-92cd-a8e7dc336aab.jpg",
-    "Title": "Avacado",
+    "Title": "Avocado",
     "Address": "854 187th Ave, Park Street - 98545",
     "Phone": "7835496521",
     "Quantity": "10 Pieces",
@@ -141,6 +130,17 @@
     "Address": "10186 Alisa Vista Suite 620, 96902",
     "Phone": "5186223718",
     "Quantity": "pack of 2",
+    "Category": "cooked",
+    "Status": "Available"
+  },
+  {
+    "Id": "john-pizza",
+    "Lender": "johndoe",
+    "img": "https://user-images.githubusercontent.com/64483865/165841416-bd7ca3b8-11d5-45a5-81be-a3826243a82f.jpeg",
+    "Title": "Pepperoni Pizza",
+    "Address": "123 4th Street, Matrix - 10101",
+    "Phone": "4255198735",
+    "Quantity": "8 slices",
     "Category": "cooked",
     "Status": "Available"
   },
