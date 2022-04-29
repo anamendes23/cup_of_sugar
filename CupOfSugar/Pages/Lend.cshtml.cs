@@ -28,6 +28,6 @@ namespace CupOfSugar.Pages
         }
 
         [BindProperty]
-        public CupOfSugar.WebSite.Models.Product Product { get; set; }
+        public CupOfSugar.WebSite.Models.Product Product { get; set; }  // The data to show, bind to it for the post
     }
 }
