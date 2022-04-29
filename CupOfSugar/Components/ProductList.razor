@@ -39,33 +39,7 @@
                     <div class="card">
                         <div class="card-img" style="background-image: url('@selectedProduct.Image');">
                         </div>
-                        <div class="card-body">
-                            <p class="card-text">@selectedProduct.Description</p>
-                        </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    @if (voteCount == 0)
-                    {
-                        <span>Be the first to vote!</span>
-                    }
-                    else
-                    {
-                        <span>@voteCount @voteLabel</span>
-                    }
-
-                    @for (int i = 0; i < 6; i++)
-                    {
-                        var currentStar = i;
-                        if (i <= currentRating)
-                        {
-                            <span class="fa-star fa checked" @onclick="(e => SubmitRating(currentStar))"></span>
-                        }
-                        else
-                        {
-                            <span class="fa-star fa" @onclick="(e => SubmitRating(currentStar))"></span>
-                        }
-                    }
                 </div>
             </div>
         </div>
@@ -80,33 +54,5 @@
     {
         selectedProductId = productId;
         selectedProduct = ProductService.GetProducts().First(x => x.Id == productId);
-        GetCurrentRating();
-    }
-
-    int currentRating = 0;
-    int voteCount = 0;
-    string voteLabel;
-
-    void GetCurrentRating()
-    {
-        if(selectedProduct.Ratings == null)
-        {
-            currentRating = 0;
-            voteCount = 0;
-        }
-        else
-        {
-            voteCount = selectedProduct.Ratings.Count();
-            voteLabel = voteCount > 1 ? "Votes" : "Vote";
-            currentRating = selectedProduct.Ratings.Sum() / voteCount;
-        }
-        System.Console.WriteLine($"Current rating for {selectedProduct.Id}: {currentRating}");
-    }
-
-    void SubmitRating(int rating)
-    {
-        System.Console.WriteLine($"Rating received for {selectedProduct.Id}: {rating}");
-        ProductService.AddRating(selectedProductId, rating);
-        SelectProduct(selectedProductId);
     }
 }
