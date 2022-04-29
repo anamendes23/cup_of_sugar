@@ -213,4 +213,10 @@ a:hover {
     background-color: #4ECDC4;
 }
 
+.lend-title {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    font-size: 275%;
+}
+
 /*END Lend Page/Form Styles*/
