@@ -31,12 +31,12 @@ namespace CupOfSugar.Pages
 
         /// <summary>
         /// REST Get request
-        /// Loads the Data
+        /// initializes Product to new Product
         /// </summary>
         /// <param name="id"></param>
-        public void OnGet(string id)
+        public void OnGet()
         {
-            Product = ProductService.GetProducts().FirstOrDefault(m => m.Id.Equals(id));
+            Product = ProductService.CreateData();
         }
     }
 }
