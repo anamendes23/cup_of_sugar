@@ -15,8 +15,7 @@ namespace CupOfSugar.Pages
     /// </summary>
     public class LendModel : PageModel
     {
-        // Data middletier
-        public JsonFileProductService ProductService { get; }
+        public JsonFileProductService ProductService { get; }  // Data middle tier
 
         /// <summary>
         /// Defualt Construtor
@@ -27,8 +26,7 @@ namespace CupOfSugar.Pages
             ProductService = productService;
         }
 
-        [BindProperty]
-        public CupOfSugar.WebSite.Models.Product Product { get; set; }  // The data to show, bind to it for the post
+        public CupOfSugar.WebSite.Models.Product Product; // The data to show, bind to it for the post
 
         /// <summary>
         /// REST Get request
