@@ -38,5 +38,24 @@ namespace CupOfSugar.Pages
         {
             Product = ProductService.CreateData();
         }
+
+        /// <summary>
+        /// Post the model back to the page
+        /// The model is in the class variable Product
+        /// Call the data layer to Update that data
+        /// Then return to the index page
+        /// </summary>
+        /// <returns></returns>
+        public IActionResult OnPost()
+        {
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
+
+            ProductService.UpdateData(Product);
+
+            return RedirectToPage("./Index");
+        }
     }
 }
