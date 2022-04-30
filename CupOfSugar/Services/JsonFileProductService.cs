@@ -88,6 +88,54 @@ namespace CupOfSugar.WebSite.Services
                 );
             }
         }
-     */   
+        */
+
+        /// <summary>
+        /// Find the data record
+        /// Update the fields
+        /// Save to the data store
+        /// </summary>
+        /// <param name="data"></param>
+        public Product UpdateData(Product data)
+        {
+            var products = GetProducts();
+            var productData = products.FirstOrDefault(x => x.Id.Equals(data.Id));
+            if (productData == null)
+            {
+                return null;
+            }
+
+            productData.Lender = data.Lender;
+            productData.Image = data.Image;
+            productData.Title = data.Title;
+            productData.Address = data.Address;
+            productData.Phone = data.Phone;
+            productData.Quantity = data.Quantity;
+            productData.Category = data.Category;
+            productData.Status = data.Status;
+
+            SaveData(products);
+
+            return productData;
+        }
+
+        /// <summary>
+        /// Save All products data to storage
+        /// </summary>
+        private void SaveData(IEnumerable<Product> products)
+        {
+
+            using (var outputStream = File.Create(JsonFileName))
+            {
+                JsonSerializer.Serialize<IEnumerable<Product>>(
+                    new Utf8JsonWriter(outputStream, new JsonWriterOptions
+                    {
+                        SkipValidation = true,
+                        Indented = true
+                    }),
+                    products
+                );
+            }
+        }
     }
 }
