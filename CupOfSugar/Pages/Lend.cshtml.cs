@@ -26,7 +26,8 @@ namespace CupOfSugar.Pages
             ProductService = productService;
         }
 
-        public CupOfSugar.WebSite.Models.Product Product; // The data to show, bind to it for the post
+        [BindProperty]
+        public CupOfSugar.WebSite.Models.Product Product { get; set; } // The data to show, bind to it for the post
 
         /// <summary>
         /// REST Get request
