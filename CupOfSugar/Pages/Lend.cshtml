@@ -53,6 +53,12 @@
                 <span asp-validation-for="Product.Phone" class="text-danger"></span>
             </div>
 
+            <div class="row form-group">
+                <label asp-for="Product.Category" class="col-sm-3 col-form-label control-label lend-form-label"></label>
+                <input asp-for="Product.Category" class="col-sm-9 form-control input-color" />
+                <span asp-validation-for="Product.Category" class="text-danger"></span>
+            </div>
+
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary lend-form-label lend-btn" />
             </div>
