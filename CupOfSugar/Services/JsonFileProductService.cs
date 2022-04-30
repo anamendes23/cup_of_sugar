@@ -155,7 +155,7 @@ namespace CupOfSugar.WebSite.Services
                 Phone = "",
                 Quantity = "",
                 Category = "",
-                Status = ""
+                Status = "Available"
             };
 
             // Get the current set, and append the new record to it becuase IEnumerable does not have Add
