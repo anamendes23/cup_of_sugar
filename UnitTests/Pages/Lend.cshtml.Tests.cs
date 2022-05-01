@@ -10,7 +10,12 @@ using CupOfSugar.Pages;
 
 namespace UnitTests.Pages
 {
-    class Lend
+    /// <summary>
+    /// Unit tests class for Lend page
+    /// </summary>
+    class LendTests
     {
+
+       
     }
 }
