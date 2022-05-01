@@ -56,5 +56,21 @@ namespace UnitTests.Pages.Product.AddRating
         }
 
         #endregion UpdateData
-    }
+
+        #region CreateData
+
+        [Test]
+        public void CreateData_Valid_Product_Should_Return_New_Product()
+        {
+            // Arrange
+
+            // Act
+            var result = TestHelper.ProductService.CreateData();
+
+            // Assert
+            Assert.AreNotEqual(null, result);
+        }
+
+        #endregion CreateData
+     }
 }
