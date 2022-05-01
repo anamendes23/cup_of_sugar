@@ -1,8 +1,27 @@
-﻿@page
-@model CupOfSugar.WebSite.Models.Product
+﻿@page "{id}"
+@using CupOfSugar.WebSite.Services
+@inject JsonFileProductService ProductService
+@model CupOfSugar.Pages.Product.ReadModel
 @{
-    ViewData["Title"] = "Read";
+    ViewData["Title"] = "Read Page";
     Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 
-<h1>Page Under Construction</h1>
+<h1>Read</h1>
+
+<div class="content">
+    <h5 class="title" id="productTitle">@Model.Product.Title</h5>
+
+    <img class="card-img" src='@Model.Product.Image' alt='Image for @Model.Product.Title'>
+
+    <p class="card-text">@Model.Product.Address</p>
+
+</div>
+
+<br />
+<br />
+
+<div class="row">
+    <a asp-page="Update" asp-route-id="@Model.Product.Id" class="btn btn-primary">Update</a> &nbsp; &nbsp;
+    <a asp-page="Delete" asp-route-id="@Model.Product.Id" class="btn btn-danger">Delete</a>
+</div>
