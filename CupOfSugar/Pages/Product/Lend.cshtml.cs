@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using CupOfSugar.WebSite.Services;
 using CupOfSugar.WebSite.Models;
 
-namespace CupOfSugar.Pages
+namespace CupOfSugar.Pages.Product
 {
     /// <summary>
     /// LendModel class
