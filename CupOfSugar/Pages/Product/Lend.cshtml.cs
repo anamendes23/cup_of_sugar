@@ -55,7 +55,7 @@ namespace CupOfSugar.Pages
 
             ProductService.UpdateData(Product);
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("../Index");
         }
     }
 }
