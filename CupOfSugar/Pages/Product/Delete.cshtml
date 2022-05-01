@@ -1,6 +1,52 @@
-﻿@page
+﻿@page "{id}"
+@using CupOfSugar.WebSite.Services
+@inject JsonFileProductService ProductService
 @model CupOfSugar.Pages.Product.DeleteModel
+
 @{
+    ViewData["Title"] = "Delete page";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 
-<h1>Page Under Construction</h1>
+<h1>Delete</h1>
+
+<div class="container">
+    <form method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        @Html.HiddenFor(x => x.Product.Id)
+
+        <div class="form-group">
+            <label asp-for="Product.Title" class="control-label"></label>
+            <input asp-for="Product.Title" class="form-control" />
+            <span asp-validation-for="Product.Title" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Product.Quantity" class="control-label"></label>
+            <input asp-for="Product.Quantity" class="form-control" />
+            <span asp-validation-for="Product.Quantity" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Product.Lender" class="control-label"></label>
+            <input asp-for="Product.Lender" class="form-control" />
+            <span asp-validation-for="Product.Lender" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Product.Image" class="control-label"></label>
+            <input asp-for="Product.Image" class="form-control" />
+            <span asp-validation-for="Product.Image" class="text-danger"></span>
+        </div>
+
+        <h1>Confirm Delete of this item</h1>
+        <div class="form-group">
+            <input type="submit" value="Delete" class="btn btn-primary" />
+        </div>
+    </form>
+
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
