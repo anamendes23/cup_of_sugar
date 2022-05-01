@@ -27,7 +27,6 @@ namespace UnitTests.Pages.Product.AddRating
         public void UpdateData_Valid_Product_Should_Return_Updated_Product()
         {
             // Arrange
-            // Get the First data item
             var productData = TestHelper.ProductService.CreateData();
             var updateLenderString = "Test Lender";
             productData.Lender = updateLenderString;
@@ -40,6 +39,20 @@ namespace UnitTests.Pages.Product.AddRating
             Assert.AreNotEqual(null, result);
             Assert.AreEqual(productData.Id, result.Id);
             Assert.AreEqual(testLender, updateLenderString);
+        }
+
+        [Test]
+        public void UpdateData_InValid_Product_Should_Return_Null()
+        {
+            // Arrange
+            CupOfSugar.WebSite.Models.Product newProductNotInJsonFile = new CupOfSugar.WebSite.Models.Product();
+            newProductNotInJsonFile.Id = "95";
+
+            // Act
+            var result = TestHelper.ProductService.UpdateData(newProductNotInJsonFile);
+
+            // Assert
+            Assert.AreEqual(null, result);
         }
 
         #endregion UpdateData
