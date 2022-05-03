@@ -7,7 +7,13 @@
     Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 
-<h1>Read</h1>
+             <form>
+                 <input type="button" value="Go back!" onclick="history.back()">
+             </form>
+<br />
+<h1>Read</h1><br />
+
+
 
 <div class="content">
     <h5 class="title" id="productTitle">@Model.Product.Title</h5>
