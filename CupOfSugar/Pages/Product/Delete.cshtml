@@ -12,6 +12,7 @@
 
 <div class="container">
     <form method="post">
+        <!-- Start of product information -->
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         @Html.HiddenFor(x => x.Product.Id)
 
@@ -28,18 +29,36 @@
         </div>
 
         <div class="form-group">
+            <label asp-for="Product.Image" class="control-label"></label>
+            <input asp-for="Product.Image" class="form-control" />
+            <span asp-validation-for="Product.Image" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
             <label asp-for="Product.Lender" class="control-label"></label>
             <input asp-for="Product.Lender" class="form-control" />
             <span asp-validation-for="Product.Lender" class="text-danger"></span>
         </div>
 
         <div class="form-group">
-            <label asp-for="Product.Image" class="control-label"></label>
-            <input asp-for="Product.Image" class="form-control" />
-            <span asp-validation-for="Product.Image" class="text-danger"></span>
+            <label asp-for="Product.Address" class="control-label"></label>
+            <input asp-for="Product.Address" class="form-control" />
+            <span asp-validation-for="Product.Address" class="text-danger"></span>
         </div>
 
-        <h1>Confirm Delete of this item</h1>
+        <div class="form-group">
+            <label asp-for="Product.Phone" class="control-label"></label>
+            <input asp-for="Product.Phone" class="form-control" />
+            <span asp-validation-for="Product.Phone" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Product.Status" class="control-label"></label>
+            <input asp-for="Product.Status" class="form-control" />
+            <span asp-validation-for="Product.Status" class="text-danger"></span>
+        </div>
+        <!-- End of product information -->
+        <h2>Confirm Delete of this item</h2>
         <div class="form-group">
             <input type="submit" value="Delete" class="btn btn-primary" />
         </div>
