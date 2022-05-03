@@ -14,8 +14,6 @@ namespace UnitTests.Pages.Product
     /// </summary>
     public class Read
     {
-        /// This class is a place holder
-        /// Tests will be added as Read.cshtml is implemented
         #region TestSetup
         public static ReadModel pageModel;
 
@@ -43,5 +41,19 @@ namespace UnitTests.Pages.Product
             Assert.AreEqual("Avocado", pageModel.Product.Title);
         }
         #endregion OnGet
+
+        #region GetFormattedPhone
+        [Test]
+        public void GetFormattedPhone_Valid_Should_Return_Formatted_Phone()
+        {
+            // Arrange
+
+            // Act
+            pageModel.OnGet("avaadams-avocado");
+            string formattedPhone = pageModel.GetFormattedPhone();
+            // Assert
+            Assert.AreEqual("(783) 549-6521", formattedPhone);
+        }
+        #endregion GetFormattedPhone
     }
 }
