@@ -17,16 +17,23 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-toggleable-lg navbar-light mb-3" style="background-color: #C488E1;">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index" style="font-family: 'Fascinate', cursive; color: white; " >
+                <a class="navbar-brand" asp-area="" asp-page="/Index" style="font-family: 'Fascinate', cursive; color: white; ">
                     Cup of Sugar
                     <div style="float: right;">
-                        <img src="~/images/logo/offwhite.png" class="logo-image"/>
+                        <img src="~/images/logo/offwhite.png" class="logo-image" />
                     </div>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Product/Borrow">Borrow</a>
+                        </li>
+                    </ul>
+                </div>
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn my-2 my-sm-0" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
