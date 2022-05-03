@@ -24,8 +24,12 @@ namespace CupOfSugar.Pages.Product
             ProductService = productService;
         }
 
-        // The data to show
-        public CupOfSugar.WebSite.Models.Product Product;
+        // The data to show// The data to show, bind to it for the post
+        [BindProperty]
+        public WebSite.Models.Product Product { get; set; }
+
+        public bool borrowBtnStatus;
+        public string borrowBtnValue;
 
         /// <summary>
         /// REST Get request
@@ -34,6 +38,16 @@ namespace CupOfSugar.Pages.Product
         public void OnGet(string id)
         {
             Product = ProductService.GetProducts().FirstOrDefault(m => m.Id.Equals(id));
+            if (Product.Status == "Available")
+            {
+                borrowBtnStatus = false;
+                borrowBtnValue = "Borrow";
+            }
+            else
+            {
+                borrowBtnStatus = true;
+                borrowBtnValue = "Pending";
+            }
         }
 
         /// <summary>
@@ -43,6 +57,28 @@ namespace CupOfSugar.Pages.Product
         public string GetFormattedPhone()
         {
             return Convert.ToInt64(Product.Phone).ToString("(###) ###-####");
+        }
+
+        /// <summary>
+        /// Post the model back to the page
+        /// The model is in the class variable Product
+        /// Call the data layer to Update that data
+        /// Then return to the read page
+        /// </summary>
+        /// <returns></returns>
+        public IActionResult OnPost(string id)
+        {
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
+
+            Product = ProductService.GetProducts().FirstOrDefault(m => m.Id.Equals(id));
+            Product.Status = "Pending";
+
+            ProductService.UpdateData(Product);
+
+            return RedirectToPage("../Index");
         }
     }
 }
