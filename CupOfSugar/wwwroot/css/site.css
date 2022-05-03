@@ -232,3 +232,10 @@ a:hover {
 }
 
 /*END Lend Page/Form Styles*/
+
+
+/*Adding spacing between the navbar elements*/
+.navbar-nav > li {
+    padding-left: 20px;
+    padding-right: 20px;
+}
