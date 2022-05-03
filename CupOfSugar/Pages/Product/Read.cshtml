@@ -14,22 +14,32 @@
 
 <br />
 
-<h1 style="font-family: 'Fascinate', cursive; text-align: center;">Product Information</h1><br />
+<!-- Page title -->
+<h1 style="font-family: 'Fascinate', cursive; text-align: center;">Product Information</h1>
+<br />
 
 
-
+<!-- Start Product Data -->
 <div class="content">
-    <h3 class="title" id="productTitle">@Model.Product.Title</h3><br />
-
-    <img class="card-img" src='@Model.Product.Image' alt='Image for @Model.Product.Title'>
-
-    <p class="card-text">@Model.Product.Address</p>
-
+    <div class="product-info-card">
+        <img src='@Model.Product.Image' alt='Image for @Model.Product.Title'>
+        <div class="product-info">
+            <h3 class="title" id="productTitle">@Model.Product.Title</h3>
+            <p class="card-text">Quantity: @Model.Product.Quantity</p>
+            <p class="card-text">Lender: @Model.Product.Lender</p>
+            <p class="card-text">Address: @Model.Product.Address</p>
+            <p class="card-text">Phone: @Model.GetFormattedPhone()</p>
+            <p class="card-text">Category: @Model.Product.Category</p>
+            <p class="card-text">Status: @Model.Product.Status</p>
+        </div>
+    </div>
 </div>
+<!-- End Product Data -->
 
 <br />
 <br />
 
+<!-- Buttons to Update and Delete item -->
 <div class="row">
     <a asp-page="Update" asp-route-id="@Model.Product.Id" class="btn btn-primary">Update</a> &nbsp; &nbsp;
     <a asp-page="Delete" asp-route-id="@Model.Product.Id" class="btn btn-danger">Delete</a>
