@@ -252,9 +252,14 @@ a:hover {
     align-items:flex-start;
 }
 
-.product-info {
-    align-items:flex-end;
+.product-info-card-address {
+    color: #4ECDC4;
+    font-weight: bold;
+}
+
+.product-info { 
+    align-items: flex-end;
     padding: 10px;
     margin-left: 30px;
-}
+ }
 /* End of Read page styling */
