@@ -35,5 +35,14 @@ namespace CupOfSugar.Pages.Product
         {
             Product = ProductService.GetProducts().FirstOrDefault(m => m.Id.Equals(id));
         }
+
+        /// <summary>
+        /// Helper function that formats the stored phone number
+        /// </summary>
+        /// <returns>Formatted phone number</returns>
+        public string GetFormattedPhone()
+        {
+            return Convert.ToInt64(Product.Phone).ToString("(###) ###-####");
+        }
     }
 }
