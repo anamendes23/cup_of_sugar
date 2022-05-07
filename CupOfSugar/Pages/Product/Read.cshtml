@@ -7,17 +7,17 @@
     Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 
-<!--The back button to revert back using the user history-->
+<!-- Start Back Button to revert back using the user history-->
 <form>
     <input type="button" value="Go back!" onclick="history.back()">
 </form>
-
 <br />
+<!-- End Back Button -->
 
-<!-- Page title -->
+<!-- Start Page title -->
 <h1 style="font-family: 'Fascinate', cursive; text-align: center;">Product Information</h1>
 <br />
-s
+<!-- End Page title -->
 
 <!-- Start Product Data -->
 <div class="content">
@@ -36,16 +36,17 @@ s
 </div>
 <!-- End Product Data -->
 
+<!-- Adding space for better page styling -->
 <br />
 <br />
 
-<!-- Buttons to Update and Delete item -->
+<!-- Start Buttons to Update and Delete item -->
 <div class="row">
 
     <form method="post">
-        <input id="borrow" type="submit" value=@Model.borrowBtnValue disabled="@Model.borrowBtnStatus" class="btn btn-primary"/> &nbsp; &nbsp;    
-    </form>    
+        <input id="borrow" type="submit" value=@Model.borrowBtnValue disabled="@Model.borrowBtnStatus" class="btn btn-primary" /> &nbsp; &nbsp;
+    </form>
     <a asp-page="Update" asp-route-id="@Model.Product.Id" class="btn btn-primary">Update</a> &nbsp; &nbsp;
     <a asp-page="Delete" asp-route-id="@Model.Product.Id" class="btn btn-danger">Delete</a>
 </div>
-
+<!-- End Buttons to Update and Delete item -->
