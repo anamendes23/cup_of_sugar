@@ -11,20 +11,20 @@
 <div class="card-columns">
     @foreach (var product in Model.Products)
     {
-        <div class="card">
-            <div class="card-img" style="background-image: url('@product.Image');"></div>
-            <div class="card-body">
-                <h5 class="card-title">@product.Title</h5>
-                <p class="card-text">Quantity: @product.Quantity</p>
-            </div>
-        </div>
-        <div class="card-footer">
-            <small class="text-muted">
-                <button class="btn btn-primary">
-                    <a asp-page="Read" asp-route-id="@product.Id">More Info</a>
-                </button>
-            </small>
-        </div>
+     <div class="card">
+         <div class="card-img" style="background-image: url('@product.Image');"></div>
+         <div class="card-body">
+             <h5 class="card-title">@product.Title</h5>
+             <p class="card-text">Quantity: @product.Quantity</p>
+         </div>
+         <div class="card-footer">
+             <small class="text-muted">
+                 <button class="btn btn-primary">
+                     <a asp-page="Read" asp-route-id="@product.Id">More Info</a>
+                 </button>
+             </small>
+         </div>
+     </div>
     }
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
