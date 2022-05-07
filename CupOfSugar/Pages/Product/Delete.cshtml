@@ -8,7 +8,9 @@
     Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 
+<!-- Start Page title -->
 <h1>Delete</h1>
+<!-- End Page title -->
 
 <div class="container">
     <form method="post">
@@ -58,12 +60,13 @@
             <span asp-validation-for="Product.Status" class="text-danger"></span>
         </div>
         <!-- End of product information -->
+        <!-- Start of delete confirmation section -->
         <h2>Confirm Delete of this item</h2>
         <div class="form-group">
             <input type="submit" value="Delete" class="btn btn-primary" />
         </div>
+        <!-- End of delete confirmation section -->
     </form>
-
 </div>
 
 @section Scripts {
