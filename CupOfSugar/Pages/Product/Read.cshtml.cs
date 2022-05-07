@@ -1,21 +1,21 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using CupOfSugar.WebSite.Models;
 using CupOfSugar.WebSite.Services;
 
 namespace CupOfSugar.Pages.Product
 {
+    /// <summary>
+    /// Read Page
+    /// </summary>
     public class ReadModel : PageModel
     {
         // Data middletier
         public JsonFileProductService ProductService { get; }
 
         /// <summary>
-        /// Defualt Construtor
+        /// Default Construtor
         /// </summary>
         /// <param name="logger"></param>
         /// <param name="productService"></param>
@@ -24,11 +24,12 @@ namespace CupOfSugar.Pages.Product
             ProductService = productService;
         }
 
-        // The data to show// The data to show, bind to it for the post
+        // The data to show, bind to it for the post
         [BindProperty]
         public WebSite.Models.Product Product { get; set; }
-
+        // The status that indicate if the borrow button was clicked or not
         public bool borrowBtnStatus;
+        // The value of the borrow button press
         public string borrowBtnValue;
 
         /// <summary>
@@ -68,17 +69,17 @@ namespace CupOfSugar.Pages.Product
         /// <returns></returns>
         public IActionResult OnPost(string id)
         {
-            if (!ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-                return Page();
+                Product = ProductService.GetProducts().FirstOrDefault(m => m.Id.Equals(id));
+                Product.Status = "Pending";
+
+                ProductService.UpdateData(Product);
+
+                return RedirectToPage("../Index");
             }
 
-            Product = ProductService.GetProducts().FirstOrDefault(m => m.Id.Equals(id));
-            Product.Status = "Pending";
-
-            ProductService.UpdateData(Product);
-
-            return RedirectToPage("../Index");
+            return Page();
         }
     }
 }
