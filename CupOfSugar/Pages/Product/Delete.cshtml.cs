@@ -1,21 +1,20 @@
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using CupOfSugar.WebSite.Services;
-using CupOfSugar.WebSite.Models;
 
 namespace CupOfSugar.Pages.Product
 {
+    /// <summary>
+    /// Delete Page
+    /// </summary>
     public class DeleteModel : PageModel
     {
         // Data middletier
         public JsonFileProductService ProductService { get; }
 
         /// <summary>
-        /// Defualt Construtor
+        /// Default Construtor
         /// </summary>
         /// <param name="logger"></param>
         /// <param name="productService"></param>
@@ -26,7 +25,7 @@ namespace CupOfSugar.Pages.Product
 
         // The data to show, bind to it for the post
         [BindProperty]
-        public CupOfSugar.WebSite.Models.Product Product { get; set; }
+        public WebSite.Models.Product Product { get; set; }
 
         /// <summary>
         /// REST Get request
@@ -47,14 +46,14 @@ namespace CupOfSugar.Pages.Product
         /// <returns></returns>
         public IActionResult OnPost()
         {
-            if (!ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-                return Page();
+                ProductService.DeleteData(Product.Id);
+
+                return RedirectToPage("./Borrow");
             }
 
-            ProductService.DeleteData(Product.Id);
-
-            return RedirectToPage("./Borrow");
+            return Page();
         }
     }
 }
