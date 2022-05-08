@@ -46,14 +46,22 @@ namespace CupOfSugar.Pages.Product
         /// Then return to the index page
         /// </summary>
         /// <returns></returns>
-        public IActionResult OnPost()
+        public IActionResult OnPost(string action)
         {
             if (!ModelState.IsValid)
             {
                 return Page();
             }
 
-            ProductService.UpdateData(Product);
+            if (action == "Cancel")
+            {
+                ProductService.DeleteData(Product.Id);
+            }
+            if (action == "Save")
+            {
+                Product.Status = "Available";
+                ProductService.UpdateData(Product);
+            }
 
             return RedirectToPage("../Index");
         }
