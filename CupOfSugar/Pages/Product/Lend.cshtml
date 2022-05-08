@@ -55,14 +55,23 @@
 
             <div class="row form-group">
                 <label asp-for="Product.Category" class="col-sm-3 col-form-label control-label lend-form-label"></label>
-                <input asp-for="Product.Category" class="col-sm-9 form-control input-color" />
-                <span asp-validation-for="Product.Category" class="text-danger"></span>
+                <select asp-for="Product.Category" class="form-select col-sm-9 form-control input-color" id="inputGroupSelect02">
+                    <option selected>Choose...</option>
+                    <option value="Fruit/Vegetable">Fruit/Vegetable</option>
+                    <option value="Poultry">Poultry</option>
+                    <option value="Meat">Meat</option>
+                    <option value="Dairy">Dairy</option>
+                    <option value="Entre">Entre</option>
+                    <option value="Savory">Savory</option>
+                    <option value="Dessert">Dessert</option>
+                    <option value="Magical Dessert">Magical Dessert</option>
+                </select>
             </div>
 
             <div class="form-group">
                 <input type="submit" value="Save" name="action" class="btn btn-primary lend-form-label lend-btn" />
             </div>
-        </form>
+</form>
     </div>
 </body>
 
