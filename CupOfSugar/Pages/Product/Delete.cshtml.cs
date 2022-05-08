@@ -46,14 +46,9 @@ namespace CupOfSugar.Pages.Product
         /// <returns></returns>
         public IActionResult OnPost()
         {
-            if (ModelState.IsValid)
-            {
-                ProductService.DeleteData(Product.Id);
+            ProductService.DeleteData(Product.Id);
 
-                return RedirectToPage("./Borrow");
-            }
-
-            return Page();
+            return RedirectToPage("./Borrow");
         }
     }
 }
