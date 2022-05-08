@@ -57,7 +57,11 @@ namespace CupOfSugar.Pages.Product
         /// <returns>Formatted phone number</returns>
         public string GetFormattedPhone()
         {
-            return Convert.ToInt64(Product.Phone).ToString("(###) ###-####");
+            if (Product.Phone.Length == 10)
+            {
+                return Convert.ToInt64(Product.Phone).ToString("(###) ###-####");
+            }
+            return Product.Phone;
         }
 
         /// <summary>
