@@ -168,6 +168,24 @@ namespace CupOfSugar.WebSite.Services
         }
 
         /// <summary>
+        /// Create a new product using the passed values
+        /// </summary>
+        /// <returns></returns>
+        public Product CreateData(Product data)
+        {
+            data.Id = System.Guid.NewGuid().ToString();
+            data.Status = "Available";
+
+            // Get the current set, and append the new record to it becuase IEnumerable does not have Add
+            var dataSet = GetProducts();
+            dataSet = dataSet.Append(data);
+
+            SaveData(dataSet);
+
+            return data;
+        }
+
+        /// <summary>
         /// Remove the item from the system
         /// </summary>
         /// <returns></returns>
