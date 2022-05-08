@@ -264,3 +264,13 @@ a:hover {
     margin-left: 30px;
  }
 /* End of Read page styling */
+
+/* Start of Borrow page styling */
+.borrow-title {
+    font-family: 'Fascinate', cursive;
+    color: #FF6B6B;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+/* End of Borrow page styling */
+
