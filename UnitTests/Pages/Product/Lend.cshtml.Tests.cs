@@ -1,38 +1,36 @@
-﻿using System.Linq;
-
-using NUnit.Framework;
-
+﻿using NUnit.Framework;
 using CupOfSugar.Pages.Product;
-using CupOfSugar.Pages;
 using Microsoft.AspNetCore.Mvc;
 
 namespace UnitTests.Pages.Product
 {
     /// <summary>
-    /// Unit test for Lend page
+    /// Unit tests for Lend page
     /// </summary>
     public class LendTests
     {
         #region TestSetup
-        public static LendModel pageModel; // Instance of LendModel
+
+        // Instance of LendModel
+        public static LendModel pageModel;
 
         /// <summary>
-        /// Initializing method that creates an object of the LendModel
+        /// Initializing method that creates an 
+        /// object of the LendModel
         /// </summary>
         [SetUp]
         public void TestInitialize()
         {
-            pageModel = new LendModel(TestHelper.ProductService)
-        {
-        };
-    }
+            pageModel = new LendModel(TestHelper.ProductService) { };
+        }
 
         #endregion TestSetup
 
         #region OnGet
 
         /// <summary>
-        /// The Unit test case to check if the correct HTTP request ID is being retrieved
+        /// The unit test to check if the correct 
+        /// HTTP request ID is being retrieved
         /// And also check if its valid or not
         /// </summary>
         [Test]
@@ -52,8 +50,9 @@ namespace UnitTests.Pages.Product
         #region OnPost
 
         /// <summary>
-        /// The Unit test case to check if a Product is returned 
-        /// When form is posted, and redirect to correct page
+        /// The Unit test case to check if a 
+        /// Product is returned When form is 
+        /// posted, and redirects to correct page
         /// </summary>
         [Test]
         public void OnPostAsync_Valid_Should_Return_Products()
@@ -81,8 +80,9 @@ namespace UnitTests.Pages.Product
         }
 
         /// <summary>
-        /// The Unit test case to check if an invalid Lendmodel
-        /// Causes a invalid return page
+        /// The Unit test case to check if an 
+        /// invalid Lendmodel Causes an invalid 
+        /// return page
         /// </summary>
         [Test]
         public void OnPostAsync_InValid_Model_NotValid_Return_Page()
