@@ -36,7 +36,6 @@ namespace CupOfSugar.Pages.Product
         /// <param name="id"></param>
         public void OnGet()
         {
-            Product = ProductService.CreateData();
         }
 
         /// <summary>
@@ -46,22 +45,14 @@ namespace CupOfSugar.Pages.Product
         /// Then return to the index page
         /// </summary>
         /// <returns></returns>
-        public IActionResult OnPost(string action)
+        public IActionResult OnPost()
         {
             if (!ModelState.IsValid)
             {
                 return Page();
             }
 
-            if (action == "Cancel")
-            {
-                ProductService.DeleteData(Product.Id);
-            }
-            if (action == "Save")
-            {
-                Product.Status = "Available";
-                ProductService.UpdateData(Product);
-            }
+            Product = ProductService.CreateData(Product);
 
             return RedirectToPage("../Index");
         }
