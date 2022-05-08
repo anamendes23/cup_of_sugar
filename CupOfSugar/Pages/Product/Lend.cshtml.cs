@@ -1,21 +1,16 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using CupOfSugar.WebSite.Services;
-using CupOfSugar.WebSite.Models;
 
 namespace CupOfSugar.Pages.Product
 {
     /// <summary>
-    /// LendModel class
-    /// Will be developed further to Lend page - Create in CRUDi associated with Lend form
+    /// Lend page
     /// </summary>
     public class LendModel : PageModel
     {
-        public JsonFileProductService ProductService { get; }  // Data middle tier
+        // Data middle tier
+        public JsonFileProductService ProductService { get; } 
 
         /// <summary>
         /// Defualt Construtor
@@ -26,12 +21,13 @@ namespace CupOfSugar.Pages.Product
             ProductService = productService;
         }
 
+        // The data to show, bind to it for the post
         [BindProperty]
-        public CupOfSugar.WebSite.Models.Product Product { get; set; } // The data to show, bind to it for the post
+        public CupOfSugar.WebSite.Models.Product Product { get; set; } 
 
         /// <summary>
         /// REST Get request
-        /// initializes Product to new Product
+        /// Loads the data
         /// </summary>
         /// <param name="id"></param>
         public void OnGet()
