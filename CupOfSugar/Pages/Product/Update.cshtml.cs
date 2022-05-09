@@ -9,6 +9,9 @@ using CupOfSugar.WebSite.Models;
 
 namespace CupOfSugar.Pages.Product
 {
+    /// <summary>
+    /// Update page
+    /// </summary>
     public class UpdateModel : PageModel
     {
         // Data middletier
@@ -27,6 +30,11 @@ namespace CupOfSugar.Pages.Product
         [BindProperty]
         public WebSite.Models.Product Product { get; set; }
 
+        /// <summary>
+        /// REST Get request
+        /// Loads the Data
+        /// </summary>
+        /// <param name="id"></param>
         public void OnGet(string id)
         {
             Product = ProductService.GetProducts().FirstOrDefault(m => m.Id.Equals(id));
@@ -36,7 +44,7 @@ namespace CupOfSugar.Pages.Product
         /// Post the model back to the page
         /// The model is in the class variable Product
         /// Call the data layer to Update that data
-        /// Then return to the read page
+        /// Then return to the Index page
         /// </summary>
         /// <returns></returns>
         public IActionResult OnPost()
@@ -48,7 +56,7 @@ namespace CupOfSugar.Pages.Product
 
             ProductService.UpdateData(Product);
 
-            return RedirectToPage("../Index");
+            return RedirectToPage("./Borrow");
         }
     }
 }
