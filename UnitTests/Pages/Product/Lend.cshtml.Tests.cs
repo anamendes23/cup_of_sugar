@@ -66,7 +66,7 @@ namespace UnitTests.Pages.Product
                 Title = "bogus",
                 Address = "bogus",
                 Phone = "bogus",
-                Quantity = "bogus",
+                Quantity = 0,
                 Category = "bogus",
                 Status = "bogus"
             };
@@ -96,7 +96,7 @@ namespace UnitTests.Pages.Product
                 Title = "bogus",
                 Address = "bogus",
                 Phone = "bogus",
-                Quantity = "bogus",
+                Quantity = 0,
                 Category = "bogus",
                 Status = "bogus"
             };
