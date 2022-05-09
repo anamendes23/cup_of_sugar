@@ -153,7 +153,7 @@ namespace CupOfSugar.WebSite.Services
                 Title = "",
                 Address = "",
                 Phone = "",
-                Quantity = "",
+                Quantity = 0,
                 Category = "",
                 Status = "Available"
             };
