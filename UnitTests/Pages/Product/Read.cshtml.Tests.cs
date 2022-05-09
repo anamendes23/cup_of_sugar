@@ -30,7 +30,7 @@ namespace UnitTests.Pages.Product
 
         #region OnGet
         [Test]
-        public void OnGet_Valid_Should_Return_Products()
+        public void OnGet_Valid_Available_Should_Return_Products()
         {
             // Arrange
 
@@ -41,6 +41,23 @@ namespace UnitTests.Pages.Product
             Assert.AreEqual(true, pageModel.ModelState.IsValid);
             Assert.AreEqual("Avocado", pageModel.Product.Title);
         }
+
+        [Test]
+        public void OnGet_Valid_Pending_Should_Return_Products()
+        {
+            // Arrange
+            pageModel.Product = TestHelper.ProductService.GetProducts().FirstOrDefault(m => m.Id.Equals("avaadams-avocado"));
+            pageModel.Product.Status = "Pending";
+            TestHelper.ProductService.UpdateData(pageModel.Product);
+
+            // Act
+            pageModel.OnGet("avaadams-avocado");
+
+            // Assert
+            Assert.AreEqual(true, pageModel.ModelState.IsValid);
+            Assert.AreEqual("Avocado", pageModel.Product.Title);
+        }
+
         #endregion OnGet
 
 
@@ -55,6 +72,30 @@ namespace UnitTests.Pages.Product
             string formattedPhone = pageModel.GetFormattedPhone();
             // Assert
             Assert.AreEqual("(783) 549-6521", formattedPhone);
+        }
+
+        [Test]
+        public void GetFormattedPhone_Invalid_Should_Return_Unformatted_Phone()
+        {
+            // Arrange
+            pageModel.Product = new CupOfSugar.WebSite.Models.Product
+            {
+                Id = "mary-banana",
+                Lender = "bogus",
+                Image = "bogus",
+                Title = "bogus",
+                Address = "bogus",
+                Phone = "549-6521",
+                Quantity = 0,
+                Category = "bogus",
+                Status = "bogus"
+            };
+
+            // Act
+            string formattedPhone = pageModel.GetFormattedPhone();
+
+            // Assert
+            Assert.AreEqual("549-6521", formattedPhone);
         }
         #endregion GetFormattedPhone
 
