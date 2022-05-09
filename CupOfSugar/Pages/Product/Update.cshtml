@@ -13,6 +13,7 @@
 <body id="update-page-body">
     <h1 class="update-title">Need to change your item details? Fill in the blanks!...</h1>
     <div class="container">
+        <!-- Start of product information -->
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             @Html.HiddenFor(x => x.Product.Id)
@@ -58,10 +59,12 @@
                 <input asp-for="Product.Category" class="col-sm-9 form-control input-color" />
                 <span asp-validation-for="Product.Category" class="text-danger"></span>
             </div>
-
+            <!-- End of product information -->
+            <!-- Start of Update Confirmation section-->
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary update-form-label update-btn" />
             </div>
+            <!-- End of Update Confirmation section-->
         </form>
     </div>
 </body>
