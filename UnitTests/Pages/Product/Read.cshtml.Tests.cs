@@ -16,8 +16,13 @@ namespace UnitTests.Pages.Product
     public class Read
     {
         #region TestSetup
+        // Instance of ReadModel
         public static ReadModel pageModel;
 
+        /// <summary>
+        /// Initializing method that creats an
+        /// object of the Read Model
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
@@ -29,6 +34,12 @@ namespace UnitTests.Pages.Product
         #endregion TestSetup
 
         #region OnGet
+
+        /// <summary>
+        /// The unit test to check if the correct
+        /// HTTP request ID with Status: Available is being retrieved
+        /// Also check if it's valid or not
+        /// </summary>
         [Test]
         public void OnGet_Valid_Available_Should_Return_Products()
         {
@@ -42,6 +53,12 @@ namespace UnitTests.Pages.Product
             Assert.AreEqual("Avocado", pageModel.Product.Title);
         }
 
+        /// <summary>
+        /// The unit test to check if the correct
+        /// HTTP request ID with Status: Pending 
+        /// is being retrieved
+        /// Also check if it's valid or not
+        /// </summary>
         [Test]
         public void OnGet_Valid_Pending_Should_Return_Products()
         {
@@ -62,6 +79,12 @@ namespace UnitTests.Pages.Product
 
 
         #region GetFormattedPhone
+
+        /// <summary>
+        /// The unit test to check if the 
+        /// valid phone number of the item 
+        /// is formatted correctly
+        /// </summary>
         [Test]
         public void GetFormattedPhone_Valid_Should_Return_Formatted_Phone()
         {
@@ -74,6 +97,11 @@ namespace UnitTests.Pages.Product
             Assert.AreEqual("(783) 549-6521", formattedPhone);
         }
 
+        /// <summary>
+        /// The unit test to check if the 
+        /// invalid phone number of the item 
+        /// is left unformatted
+        /// </summary>
         [Test]
         public void GetFormattedPhone_Invalid_Should_Return_Unformatted_Phone()
         {
@@ -130,7 +158,7 @@ namespace UnitTests.Pages.Product
         }
 
         /// <summary>
-        /// The Unit test case to check if an invalid Lendmodel
+        /// The Unit test case to check if an invalid ReadModel
         /// Causes a invalid return page
         /// </summary>
         [Test]
