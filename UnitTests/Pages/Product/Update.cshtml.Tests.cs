@@ -78,7 +78,7 @@ namespace UnitTests.Pages.Product
 
             // Assert
             Assert.AreEqual(true, pageModel.ModelState.IsValid);
-            Assert.AreEqual(true, result.PageName.Contains("Index"));
+            Assert.AreEqual(true, result.PageName.Contains("Borrow"));
         }
 
         /// <summary>
