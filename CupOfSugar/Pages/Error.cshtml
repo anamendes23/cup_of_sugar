@@ -4,9 +4,12 @@
     ViewData["Title"] = "Error";
 }
 
+<!--Mail heading of the error page-->
 <h1 class="text-danger">Error.</h1>
+<!--Sub-heading of the error page-->
 <h2 class="text-danger">An error occurred while processing your request.</h2>
 
+<!--when an invalid request ID causes the error, the ID is displayed-->
 @if (Model.ShowRequestId)
 {
     <p>
@@ -14,6 +17,8 @@
     </p>
 }
 
+
+<!--text for developer mode starts here-->
 <h3>Development Mode</h3>
 <p>
     Swapping to the <strong>Development</strong> environment displays detailed information about the error that occurred.
@@ -24,3 +29,4 @@
     For local debugging, enable the <strong>Development</strong> environment by setting the <strong>ASPNETCORE_ENVIRONMENT</strong> environment variable to <strong>Development</strong>
     and restarting the app.
 </p>
+<!--text for developer mode ends here-->
