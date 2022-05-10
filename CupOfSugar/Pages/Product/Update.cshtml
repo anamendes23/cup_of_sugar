@@ -11,52 +11,71 @@
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 
 <body id="update-page-body">
+    <!-- The prompt title of the Update page -->
     <h1 class="update-title">Need to change your item details? Fill in the blanks!...</h1>
     <div class="container">
         <!-- Start of product information -->
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             @Html.HiddenFor(x => x.Product.Id)
+            @Html.HiddenFor(x => x.Product.Status)
 
+            <!--input text field for product title with validation-->
             <div class="row form-group">
                 <label asp-for="Product.Title" class="col-sm-3 col-form-label control-label update-form-label"></label>
                 <input asp-for="Product.Title" class="col-sm-9 form-control input-color" />
                 <span asp-validation-for="Product.Title" class="text-danger"></span>
             </div>
 
+            <!--input text field for product quantity with validation-->
             <div class="row form-group">
                 <label asp-for="Product.Quantity" class="col-sm-3 col-form-label control-label update-form-label"></label>
                 <input asp-for="Product.Quantity" class="col-sm-9 form-control input-color" />
                 <span asp-validation-for="Product.Quantity" class="text-danger"></span>
             </div>
 
+            <!--input text field for product image url with validation-->
             <div class="row form-group">
                 <label asp-for="Product.Image" class="col-sm-3 col-form-label control-label update-form-label"></label>
                 <input asp-for="Product.Image" class="col-sm-9 form-control input-color" />
                 <span asp-validation-for="Product.Image" class="text-danger"></span>
             </div>
 
+            <!--input text field for lender name with validation-->
             <div class="row form-group">
                 <label asp-for="Product.Lender" class="col-sm-3 col-form-label control-label update-form-label"></label>
                 <input asp-for="Product.Lender" class="col-sm-9 form-control input-color" />
                 <span asp-validation-for="Product.Lender" class="text-danger"></span>
             </div>
 
+            <!--input text field for lender address with validation-->
             <div class="row form-group">
                 <label asp-for="Product.Address" class="col-sm-3 col-form-label control-label update-form-label"></label>
                 <input asp-for="Product.Address" class="col-sm-9 form-control input-color" />
                 <span asp-validation-for="Product.Address" class="text-danger"></span>
             </div>
 
+            <!--input text field for lender phone number with validation-->
             <div class="row form-group">
                 <label asp-for="Product.Phone" class="col-sm-3 col-form-label control-label update-form-label"></label>
                 <input asp-for="Product.Phone" class="col-sm-9 form-control input-color" />
                 <span asp-validation-for="Product.Phone" class="text-danger"></span>
             </div>
 
+            <!--drop down menu for food category types-->
             <div class="row form-group">
                 <label asp-for="Product.Category" class="col-sm-3 col-form-label control-label update-form-label"></label>
-                <input asp-for="Product.Category" class="col-sm-9 form-control input-color" />
+                <select asp-for="Product.Category" class="form-select col-sm-9 form-control input-color" id="inputGroupSelect02">
+                    <option selected></option>
+                    <option value="Fruit/Vegetable">Fruit/Vegetable</option>
+                    <option value="Poultry">Poultry</option>
+                    <option value="Meat">Meat</option>
+                    <option value="Dairy">Dairy</option>
+                    <option value="Entre">Entre</option>
+                    <option value="Savory">Savory</option>
+                    <option value="Dessert">Dessert</option>
+                    <option value="Magical Dessert">Magical Dessert</option>
+                </select>
                 <span asp-validation-for="Product.Category" class="text-danger"></span>
             </div>
             <!-- End of product information -->
