@@ -106,7 +106,7 @@ namespace UnitTests.Pages.Product
             pageModel.ModelState.AddModelError("bogus", "bogus error");
 
             // Act
-            var result = pageModel.OnPost() as ActionResult;
+            _ = pageModel.OnPost() as ActionResult;
 
             // Assert
             Assert.AreEqual(false, pageModel.ModelState.IsValid);
