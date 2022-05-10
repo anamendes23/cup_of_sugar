@@ -148,6 +148,11 @@ namespace UnitTests.Pages.Product
             var result = pageModel.OnPost("mary-banana") as RedirectToPageResult;
 
             // Assert
+            Assert.AreEqual("{\"Id\":\"mary-banana\",\"Lender\":\"mary\"," +
+                            "\"img\":\"https://user-images.githubusercontent.com/64483865/165871171-927f964d-e94f-4179-b90a-dde80e613e23.jpg\"," +
+                            "\"Title\":\"Bananas\",\"Address\":\"212 Burley Streets Apt. 699 - 158201\",\"Phone\":\"3409523801\",\"Quantity\":8," +
+                            "\"Category\":\"fruits_veg\",\"Status\":\"Pending\"}",
+                            pageModel.Product.ToString());
             Assert.AreEqual(true, pageModel.ModelState.IsValid);
             Assert.AreEqual(true, result.PageName.Contains("Index"));
         }
