@@ -3,11 +3,14 @@
 @model BorrowModel
 @{ ViewData["Title"] = "Home page"; }
 
+<!--Page title-->
 <div class="text-center">
     <h1 class="display-4 borrow-title">Yummy Borrows</h1>
 </div>
 
+<!--card-columns class is used to display all the Products in tiles on the Borrow page-->
 <div class="card-columns">
+    <!--The foreach loop iterates over all the products-->
     @foreach (var product in Model.Products)
     {
      <div class="card">
