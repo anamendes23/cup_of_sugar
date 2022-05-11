@@ -32,6 +32,7 @@ namespace CupOfSugar.WebSite.Models
         [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Not a valid phone number")]
         public string Phone { get; set; } //string phone of Lender
 
+        [Range(1, Int32.MaxValue, ErrorMessage = "Value should be greater than or equal to 1")]
         public int Quantity { get; set; } //int quantity of product
 
         public string Category { get; set; } // string category of product
