@@ -1,18 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.Extensions.Logging;
-using System;
+﻿using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using CupOfSugar.WebSite.Models;
 using CupOfSugar.WebSite.Services;
-/// <summary>
-/// Borrow (Index) page
-/// Will use get method to retrieve the food items
-/// </summary>
+
 namespace CupOfSugar.Pages
 {
+    /// <summary>
+    /// Borrow (Index) page
+    /// Will use get method to retrieve the food items
+    /// </summary>
     public class BorrowModel : PageModel
     {
         /// <summary>
