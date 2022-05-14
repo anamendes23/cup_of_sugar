@@ -1,9 +1,6 @@
 using Microsoft.Extensions.Logging;
-
 using NUnit.Framework;
-
 using Moq;
-
 using CupOfSugar.Pages;
 
 namespace UnitTests.Pages.Privacy
