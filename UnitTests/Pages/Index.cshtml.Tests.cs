@@ -1,11 +1,6 @@
-using System.Linq;
-
 using Microsoft.Extensions.Logging;
-
 using Moq;
-
 using NUnit.Framework;
-
 using CupOfSugar.Pages;
 
 namespace UnitTests.Pages.Index
