@@ -1,12 +1,5 @@
-﻿
-using Microsoft.AspNetCore.Mvc;
-
-using NUnit.Framework;
-
-using CupOfSugar.Pages;
-using CupOfSugar.WebSite.Models;
+﻿using NUnit.Framework;
 using System.Linq;
-using System;
 
 namespace UnitTests.Pages.Product.AddRating
 {
