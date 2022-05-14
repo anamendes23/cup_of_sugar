@@ -1,9 +1,5 @@
-﻿using System.Linq;
-
-using NUnit.Framework;
-
+﻿using NUnit.Framework;
 using CupOfSugar.Pages.Product;
-using CupOfSugar.Pages;
 using Microsoft.AspNetCore.Mvc;
 
 namespace UnitTests.Pages.Product
