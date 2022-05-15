@@ -165,30 +165,131 @@ ul {
 }
 
 .bottom-triangle-button {
-    right: 5%;
-    bottom: 20%;
-    /*padding: 10px;*/
-    width: 40%;
-    height: 30%;
-    font-size: 500%;
+    padding: 10px;
     position: absolute;
     background-color: #4ECDC4;
     color: white;
     font-family: 'Fascinate Inline', cursive;
+    text-align: left;
 }
 
 .top-triangle-button {
-    left: 5%;
-    top: 20%;
     padding: 10px;
-    width: 40%;
-    height: 30%;
-    font-size: 500%;
     position: absolute;
     background-color: #FF6B6B;
     color: white;
     font-family: 'Fascinate Inline', cursive;
+    text-align: right;
 }
+
+@media (min-width: 320px) {
+    .top-triangle-button {
+        width: 40%;
+        height: 30%;
+        font-size: 400%;
+        left: 15%;
+        top: 10%;
+    }
+
+    .bottom-triangle-button {
+        width: 40%;
+        height: 30%;
+        font-size: 400%;
+        right: 15%;
+        bottom: 10%;
+    }
+
+    .triangle {
+        height: 500px;
+        margin-top: 60px;
+    }
+
+@media (min-width: 576px) {
+    .top-triangle-button {
+        width: 40%;
+        height: 30%;
+        font-size: 450%;
+        left: 15%;
+        top: 10%;
+    }
+
+    .bottom-triangle-button {
+        width: 40%;
+        height: 20%;
+        font-size: 450%;
+        right: 15%;
+        bottom: 10%;
+    }
+
+    .triangle {
+        height: 600px;
+        margin-top: 5px;
+    }
+}
+
+@media (min-width: 768px) {
+    .top-triangle-button {
+        width: 40%;
+        height: 30%;
+        font-size: 500%;
+        left: 10%;
+        top: 10%;
+    }
+
+    .bottom-triangle-button {
+        width: 40%;
+        height: 30%;
+        font-size: 500%;
+        right: 10%;
+        bottom: 10%;
+    }
+
+    .triangle {
+        height: 600px;
+        margin-top: 10px;
+    }
+}
+
+@media (min-width: 992px) {
+    .top-triangle-button {
+        width: 40%;
+        height: 30%;
+        font-size: 550%;
+        left: 10%;
+        top: 15%;
+    }
+
+    .bottom-triangle-button {
+        width: 40%;
+        height: 30%;
+        font-size: 550%;
+        right: 10%;
+        bottom: 15%;
+    }
+
+    .triangle {
+        height: 800px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .top-triangle-button {
+        width: 40%;
+        height: 30%;
+        font-size: 600%;
+        left: 5%;
+        top: 15%;
+    }
+
+    .bottom-triangle-button {
+        width: 40%;
+        height: 30%;
+        font-size: 600%;
+        right: 5%;
+        bottom: 15%;
+    }
+}
+
 /* END Triangles and their buttons*/
 
 /* CSS for the Lend and borrow buttons to remain white before and after clicking with no underline */
