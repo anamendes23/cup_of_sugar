@@ -7,7 +7,7 @@
     "Address": "854 187th Ave, Park Street - 98545",
     "Phone": "7835496521",
     "Quantity": 10,
-    "Category": "fruits_veg",
+    "Category": "Fruit",
     "Status": "Available"
   },
   {
@@ -18,7 +18,7 @@
     "Address": "212 Burley Streets Apt. 699 - 158201",
     "Phone": "3409523801",
     "Quantity": 8,
-    "Category": "fruits_veg",
+    "Category": "Fruit",
     "Status": "Available"
   },
   {
@@ -29,7 +29,7 @@
     "Address": "9220 Stark Well Suite 699, 76625",
     "Phone": "3398258850",
     "Quantity": 1,
-    "Category": "fruits_veg",
+    "Category": "Fruit",
     "Status": "Available"
   },
   {
@@ -40,7 +40,7 @@
     "Address": "6233 Glennie Avenue, 66544-6720",
     "Phone": "6768689991",
     "Quantity": 1,
-    "Category": "fruits_veg",
+    "Category": "Fruit",
     "Status": "Available"
   },
   {
@@ -51,7 +51,7 @@
     "Address": "22381 Pascale Avenue Apt. 221, 74100",
     "Phone": "4798216646",
     "Quantity": 1,
-    "Category": "fruits_veg",
+    "Category": "Fruit",
     "Status": "Available"
   },
   {
@@ -62,7 +62,7 @@
     "Address": "392 Baylee Stream Suite 350, 29671",
     "Phone": "5597453371",
     "Quantity": 12,
-    "Category": "poultry_dairy",
+    "Category": "Poultry",
     "Status": "Available"
   },
   {
@@ -73,7 +73,7 @@
     "Address": "57072 Fahey Cliff Suite 270, 79745",
     "Phone": "2678727028",
     "Quantity": 15,
-    "Category": "poultry_dairy",
+    "Category": "Dairy",
     "Status": "Available"
   },
   {
@@ -84,7 +84,7 @@
     "Address": "5178 Price Manors Apt. 164, 24202",
     "Phone": "2425760049",
     "Quantity": 1,
-    "Category": "dessert_baked",
+    "Category": "Miscellaneous",
     "Status": "Available"
   },
   {
@@ -95,7 +95,7 @@
     "Address": "4243 Elinor Flats Apt. 227, 79503",
     "Phone": "8827905352",
     "Quantity": 3,
-    "Category": "dessert_baked",
+    "Category": "Dessert",
     "Status": "Available"
   },
   {
@@ -106,7 +106,7 @@
     "Address": "885 Herman Underpass Apt. 887, 71858",
     "Phone": "8744199655",
     "Quantity": 6,
-    "Category": "dessert_baked",
+    "Category": "Dessert",
     "Status": "Available"
   },
   {
@@ -117,7 +117,7 @@
     "Address": "6648 Gleichner Stravenue, 64470",
     "Phone": "6328562870",
     "Quantity": 10,
-    "Category": "dessert_baked",
+    "Category": "Dessert",
     "Status": "Available"
   },
   {
@@ -128,7 +128,7 @@
     "Address": "10186 Alisa Vista Suite 620, 96902",
     "Phone": "5186223718",
     "Quantity": 2,
-    "Category": "cooked",
+    "Category": "Entree",
     "Status": "Available"
   },
   {
@@ -139,7 +139,7 @@
     "Address": "123 4th Street, Matrix - 10101",
     "Phone": "4255198735",
     "Quantity": 8,
-    "Category": "cooked",
+    "Category": "Entree",
     "Status": "Available"
   },
   {
@@ -150,7 +150,7 @@
     "Address": "5862 Marilou Fort Apt. 477, 54559",
     "Phone": "5988247244",
     "Quantity": 1,
-    "Category": "cooked",
+    "Category": "Entree",
     "Status": "Available"
   },
   {
@@ -161,7 +161,7 @@
     "Address": "57234 Franecki Plains, 10782",
     "Phone": "5742968575",
     "Quantity": 1,
-    "Category": "drinks",
+    "Category": "Drink",
     "Status": "Available"
   },
   {
@@ -172,7 +172,7 @@
     "Address": "525 Eldon Spring Suite 442, 44232",
     "Phone": "4898792298",
     "Quantity": 6,
-    "Category": "drinks",
+    "Category": "Drink",
     "Status": "Available"
   },
   {
@@ -183,7 +183,7 @@
     "Address": "34787 Macey Mews Suite 985, 63298",
     "Phone": "8376606872",
     "Quantity": 2,
-    "Category": "misc",
+    "Category": "Miscellaneous",
     "Status": "Available"
   },
   {
@@ -194,7 +194,7 @@
     "Address": "5788 Cartwright Plains Apt. 154, 02809",
     "Phone": "9754986903",
     "Quantity": 1,
-    "Category": "misc",
+    "Category": "Miscellaneous",
     "Status": "Available"
   },
   {
@@ -205,7 +205,18 @@
     "Address": "1468 Turcotte Loaf Suite 361, 08353",
     "Phone": "5514271720",
     "Quantity": 2,
-    "Category": "misc",
+    "Category": "Miscellaneous",
+    "Status": "Available"
+  },
+  {
+    "Id": "c9d2b67a-c872-49e9-9754-8b28f23eca41",
+    "Lender": "Sleepy Larry",
+    "img": "https://thescranline.com/wp-content/uploads/2021/03/Dancing-Queen-Cupcakes.jpg",
+    "Title": "Unicorn Cupcake",
+    "Address": "222 NotAStreetItsAnOcean Street Atlantis Atlantic Ocean 00000",
+    "Phone": "4444444444",
+    "Quantity": 1,
+    "Category": "Dessert",
     "Status": "Available"
   }
 ]
