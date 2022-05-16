@@ -1,27 +1,81 @@
 ﻿@using CupOfSugar.WebSite.Models
 @using CupOfSugar.WebSite.Services
+@using Microsoft.AspNetCore.Components.Web
 @inject JsonFileProductService ProductService
 
-<div class="card-columns">
-    @foreach (var product in ProductService.GetProducts())
-    {
-        <div class="card">
-            <div class="card-img" style="background-image: url('@product.Image');"></div>
-            <div class="card-body">
-                <h5 class="card-title">@product.Title</h5>
-            </div>
+<!--Page title-->
+<div class="text-center">
+    <h1 class="display-4 borrow-title">Yummy Borrows</h1>
+</div>
+
+<!--Filter-->
+<div>
+    <div class="row">
+        <div class="col">
+            <input type="text" @onchange="(e) => UpdateFilterText(e.Value.ToString())" value="@FilterDataString" />
+            <button @onclick="(e => EnableFilterData())" class="btn btn-success">Filter</button>
+            <button @onclick="(e => ClearFilterData())" class="btn btn-danger">Clear</button>
         </div>
-        <div class="card-footer">
-            <small class="text-muted">
-                <button @onclick="(e => SelectProduct(product.Id))"
-                        data-toggle="modal" data-target="#productModal" class="btn btn-primary">
-                    More Info
-                </button>
-            </small>
-        </div>
+    </div>
+
+</div>
+
+<div class="container-fluid">
+    @{
+        var productList = ProductService.GetProducts();
+
+        /*
+
+            Change the grouping sort order to be
+            Order by ProductType
+            Then order by ProductList Alphabetic within the Product data set
+
+        */
+
+        // Group by the Enum
+        foreach (ProductTypeEnum productType in Enum.GetValues(typeof(ProductTypeEnum)))
+        {
+            // Get only the products that are of this enum type
+            var productListGroup = productList.Where(m => m.Category == productType.ToString());
+
+            // Order the list alphabetical
+            productListGroup = productListGroup.OrderBy(m => m.Title);
+
+            // If filter is enabled, reduce the data set to the filter string
+            if (FilterData)
+            {
+                productListGroup = productListGroup.Where(m => m.Title.ToLower().Contains(FilterDataString.ToLower()));
+            }
+
+            if (productListGroup.Any())
+            {
+
+                <hr />
+                <h2>@productType.DisplayName()</h2>
+
+                <div class="row">
+                    <div class="card-columns">
+                        @foreach (var product in productListGroup)
+                        {
+                            <div class="card">
+                                <div class="card-img" style="background-image: url('@product.Image');">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">@product.Title</h5>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">
+                                        <button @onclick="(e => SelectProduct(product.Id))" id="MoreInfoButton_@product.Id" data-toggle="modal" data-target="#productModal" class="btn btn-primary">More Info</button>
+                                    </small>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            }
+        }
     }
 </div>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 @if (selectedProduct != null)
 {
@@ -29,7 +83,7 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="productTitle">@selectedProduct.Title</h5>
+                    <h3 class="modal-title" id="productTitle">@selectedProduct.Title</h3>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -38,6 +92,27 @@
                     <div class="card">
                         <div class="card-img" style="background-image: url('@selectedProduct.Image');">
                         </div>
+                        <div class="card-body">
+                            <p class="card-text">Quantity: @selectedProduct.Quantity</p>
+                            <p class="card-text">Lender: @selectedProduct.Lender</p>
+                            <p class="card-text product-info-card-address">Address: @selectedProduct.Address</p>
+                            <!--<p class="card-text">Phone: @Model.GetFormattedPhone()</p>-->
+                            <p class="card-text">Category: @selectedProduct.Category</p>
+                            <p class="card-text">Status: @selectedProduct.Status</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -45,7 +120,10 @@
     </div>
 }
 
-@code {
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+@code
+{
     Product selectedProduct;
     string selectedProductId;
 
@@ -53,5 +131,26 @@
     {
         selectedProductId = productId;
         selectedProduct = ProductService.GetProducts().First(x => x.Id == productId);
+    }
+
+    string FilterDataString = "";
+    bool FilterData = false;
+
+    void UpdateFilterText(string text)
+    {
+        FilterDataString = text;
+    }
+
+    void EnableFilterData()
+    {
+        // If the Filter is enabled, set the filter flag
+        FilterData = true;
+    }
+
+    void ClearFilterData()
+    {
+        // If the Filter is enabled, set the filter flag
+        FilterData = false;
+        FilterDataString = "";
     }
 }
