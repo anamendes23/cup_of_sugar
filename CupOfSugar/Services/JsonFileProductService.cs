@@ -51,45 +51,6 @@ namespace CupOfSugar.WebSite.Services
             }
         }
 
-        /*
-        /// <summary>
-        /// Updating a product rating in Products.json
-        /// </summary>
-        /// <param name="productId"></param>
-        /// <param name="rating"></param>
-        public void AddRating(string productId, int rating)
-        {
-            var products = GetProducts(); //stores all products
-            var query = products.First(x => x.Id == productId); //Gets the first product with a matching Id
-
-            //adds a new int array when there are no ratings for a product
-            if(query.Ratings == null)
-            {
-                query.Ratings = new int[] { rating };
-            }
-
-            //adds rating to int rating array
-            else
-            {
-                var ratings = query.Ratings.ToList();
-                ratings.Add(rating);
-                query.Ratings = ratings.ToArray();
-            }
-
-            using(var outputStream = File.OpenWrite(JsonFileName))
-            {
-                JsonSerializer.Serialize<IEnumerable<Product>>(
-                    new Utf8JsonWriter(outputStream, new JsonWriterOptions
-                    {
-                        SkipValidation = true,
-                        Indented = true
-                    }),
-                    products
-                );
-            }
-        }
-        */
-
         /// <summary>
         /// Find the data record
         /// Update the fields
