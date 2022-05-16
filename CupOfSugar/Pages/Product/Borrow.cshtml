@@ -1,31 +1,8 @@
 ﻿@page
+@using CupOfSugar.Components
 @model BorrowModel
 @{ ViewData["Title"] = "Home page"; }
 
-<!--Page title-->
-<div class="text-center">
-    <h1 class="display-4 borrow-title">Yummy Borrows</h1>
-</div>
+@(await Html.RenderComponentAsync<ProductList>(RenderMode.ServerPrerendered))
 
-<!--card-columns class is used to display all the Products in tiles on the Borrow page-->
-<div class="card-columns">
-    <!--The foreach loop iterates over all the products-->
-    @foreach (var product in Model.Products)
-    {
-     <div class="card">
-         <div class="card-img" style="background-image: url('@product.Image');"></div>
-         <div class="card-body">
-             <h5 class="card-title">@product.Title</h5>
-             <p class="card-text">Quantity: @product.Quantity</p>
-         </div>
-         <div class="card-footer">
-             <small class="text-muted">
-                 <button class="btn btn-primary">
-                     <a asp-page="Read" asp-route-id="@product.Id">More Info</a>
-                 </button>
-             </small>
-         </div>
-     </div>
-    }
-</div>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="_framework/blazor.server.js"></script>
