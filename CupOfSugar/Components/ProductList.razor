@@ -13,7 +13,7 @@
 </div>
 
 <!--Filter-->
-<div>
+<div class="row">
     <div class="row">
         <div class="col">
             <input type="text" @onchange="(e) => UpdateFilterText(e.Value.ToString())" value="@FilterDataString" />
@@ -21,7 +21,23 @@
             <button @onclick="(e => ClearFilterData())" class="btn btn-danger">Clear</button>
         </div>
     </div>
-
+    <!--drop down menu for food category types-->
+    <div class="row">
+        <label class="col-sm-3 col-form-label" for="category"></label>
+        <select @onchange="(e) => UpdateFilterCategory(e.Value.ToString())" class="form-select col-sm-9 form-control" id="inputGroupSelect02">
+            <option selected></option>
+            <option value="Fruit">Fruit</option>
+            <option value="Vegetable">Vegetable</option>
+            <option value="Poultry">Poultry</option>
+            <option value="Meat">Meat</option>
+            <option value="Dairy">Dairy</option>
+            <option value="Entree">Entre</option>
+            <option value="Savory">Savory</option>
+            <option value="Dessert">Dessert</option>
+            <option value="Drink">Drink</option>
+            <option value="Miscellaneous">Miscellaneous</option>
+        </select>
+    </div>
 </div>
 
 <div class="container-fluid">
@@ -49,6 +65,12 @@
             if (FilterData)
             {
                 productListGroup = productListGroup.Where(m => m.Title.ToLower().Contains(FilterDataString.ToLower()));
+            }
+
+            // filter by category
+            if (!String.IsNullOrEmpty(selectedCategory))
+            {
+                productListGroup = productListGroup.Where(m => m.Category.ToLower().Contains(selectedCategory.ToLower()));
             }
 
             if (productListGroup.Any())
@@ -91,6 +113,9 @@
     // Selected product Id
     string selectedProductId;
 
+    // Selected category
+    string selectedCategory = "placeholder";
+
     /// <summary>
     /// Sets product Id and gets product with this Id
     /// </summary>
@@ -114,6 +139,16 @@
     void UpdateFilterText(string text)
     {
         FilterDataString = text;
+    }
+
+    /// <summary>
+    /// Changes category filter string to user selected option
+    /// </summary>
+    /// <param name="category"></param>
+    void UpdateFilterCategory(string category)
+    {
+        selectedCategory = category;
+        Console.Write(selectedCategory);
     }
 
     /// <summary>
