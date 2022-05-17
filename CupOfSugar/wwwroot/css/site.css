@@ -423,3 +423,7 @@ ul {
         background-color: #C488E1;
     }
 
+    .navbar-logo {
+        font-family: 'Fascinate', cursive !important;
+        color: white !important;
+    }
