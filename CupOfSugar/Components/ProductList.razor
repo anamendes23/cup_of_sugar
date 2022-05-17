@@ -85,29 +85,51 @@
 
 @code
 {
+    // Selected product
     Product selectedProduct;
+
+    // Selected product Id
     string selectedProductId;
 
+    /// <summary>
+    /// Sets product Id and gets product with this Id
+    /// </summary>
+    /// <param name="productId"></param>
     void SelectProduct(string productId)
     {
         selectedProductId = productId;
         selectedProduct = ProductService.GetProducts().First(x => x.Id == productId);
     }
 
+    // Filter string 
     string FilterDataString = "";
+
+    // Filtering state
     bool FilterData = false;
 
+    /// <summary>
+    /// Changes filter string to user input
+    /// </summary>
+    /// <param name="text"></param>
     void UpdateFilterText(string text)
     {
         FilterDataString = text;
     }
 
+    /// <summary>
+    /// Enables filtering by setting FilterData to true
+    /// </summary>
     void EnableFilterData()
     {
         // If the Filter is enabled, set the filter flag
         FilterData = true;
     }
 
+
+    /// <summary>
+    /// Disables filtering and sets filter string to an
+    /// empty string
+    /// </summary>
     void ClearFilterData()
     {
         // If the Filter is enabled, set the filter flag
@@ -115,6 +137,11 @@
         FilterDataString = "";
     }
 
+    /// <summary>
+    /// Routes to read page when More Info button
+    /// is clicked
+    /// </summary>
+    /// <param name="id"></param>
     void MovetoRead(string id)
     {
         NavManager.NavigateTo("../Product/Read/" + id, true);
