@@ -416,3 +416,10 @@ ul {
         [data-theme="dark"] .bg-black {
             background-color: #eee !important;
         }
+
+
+/*These are the styling elements for the _Layout page*/
+    .navbar-color {
+        background-color: #C488E1;
+    }
+
