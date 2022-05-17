@@ -293,19 +293,19 @@ ul {
     /* END Triangles and their buttons*/
 
     /* CSS for the Lend and borrow buttons to remain white before and after clicking with no underline */
-    a:link {
-        text-decoration: none;
-        color: #F7FFF7;
+   .main-button a:link {
+        text-decoration: none !important;
+        color: #F7FFF7 !important;
     }
 
-    a:visited {
-        text-decoration: none;
-        color: #F7FFF7;
+    .main-button a:visited {
+        text-decoration: none !important;
+        color: #F7FFF7 !important;
     }
 
-    a:hover {
-        text-decoration: none;
-        color: #C4C4C4;
+    .main-button a:hover {
+        text-decoration: none !important;
+        color: #C4C4C4 !important;
     }
 
     /*START Lend Page/Form Styles*/
