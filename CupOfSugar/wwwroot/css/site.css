@@ -330,6 +330,8 @@ ul {
 
     .lend-btn {
         background-color: #F6BD60;
+        font-size: 150%;
+        color: #000000;
         margin-right: 50px;
     }
 
