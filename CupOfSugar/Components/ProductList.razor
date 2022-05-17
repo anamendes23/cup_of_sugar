@@ -81,50 +81,6 @@
     }
 </div>
 
-@if (selectedProduct != null)
-{
-    <div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="productTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h3 class="modal-title" id="productTitle">@selectedProduct.Title</h3>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="card">
-                        <div class="card-img" style="background-image: url('@selectedProduct.Image');">
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text">Quantity: @selectedProduct.Quantity</p>
-                            <p class="card-text">Lender: @selectedProduct.Lender</p>
-                            <p class="card-text product-info-card-address">Address: @selectedProduct.Address</p>
-                            <!--<p class="card-text">Phone: @Model.GetFormattedPhone()</p>-->
-
-                            <p class="card-text">Category: @selectedProduct.Category</p>
-                            <p class="card-text">Status: @selectedProduct.Status</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col">
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-}
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 @code
