@@ -427,3 +427,9 @@ ul {
         font-family: 'Fascinate', cursive !important;
         color: white !important;
     }
+
+    .navbar-button {
+        font-family: 'Fascinate', cursive;
+        color: white  !important;
+        font-size: 1.25em !important;
+    }
