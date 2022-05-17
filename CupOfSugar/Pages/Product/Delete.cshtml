@@ -10,57 +10,38 @@
 
 <!-- Start Page title -->
 <h1>Delete</h1>
+<br />
 <!-- End Page title -->
 
 <div class="container">
     <form method="post">
-        <!-- Start of product information -->
-        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-        @Html.HiddenFor(x => x.Product.Id)
-        @Html.HiddenFor(x => x.Product.Category)
+        <!-- Start of product information -->     
 
-        <div class="form-group">
-            <label asp-for="Product.Title" class="control-label"></label>
-            <input asp-for="Product.Title" class="form-control" />
-            <span asp-validation-for="Product.Title" class="text-danger"></span>
-        </div>
-
-        <div class="form-group">
-            <label asp-for="Product.Quantity" class="control-label"></label>
-            <input asp-for="Product.Quantity" class="form-control" />
-            <span asp-validation-for="Product.Quantity" class="text-danger"></span>
-        </div>
-
-        <div class="form-group">
-            <label asp-for="Product.Image" class="control-label"></label>
-            <input asp-for="Product.Image" class="form-control" />
-            <span asp-validation-for="Product.Image" class="text-danger"></span>
-        </div>
-
-        <div class="form-group">
-            <label asp-for="Product.Lender" class="control-label"></label>
-            <input asp-for="Product.Lender" class="form-control" />
-            <span asp-validation-for="Product.Lender" class="text-danger"></span>
-        </div>
-
-        <div class="form-group">
-            <label asp-for="Product.Address" class="control-label"></label>
-            <input asp-for="Product.Address" class="form-control" />
-            <span asp-validation-for="Product.Address" class="text-danger"></span>
-        </div>
-
-        <div class="form-group">
-            <label asp-for="Product.Phone" class="control-label"></label>
-            <input asp-for="Product.Phone" class="form-control" />
-            <span asp-validation-for="Product.Phone" class="text-danger"></span>
-        </div>
-
-        <div class="form-group">
-            <label asp-for="Product.Status" class="control-label"></label>
-            <input asp-for="Product.Status" class="form-control" />
-            <span asp-validation-for="Product.Status" class="text-danger"></span>
+        <div class="product-info-card">
+            
+            <img src='@Model.Product.Image' alt='Image for @Model.Product.Title'>
+            <div class="product-info">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                @Html.HiddenFor(x => x.Product.Id)
+                @Html.HiddenFor(x => x.Product.Title)
+                @Html.HiddenFor(x => x.Product.Quantity)
+                @Html.HiddenFor(x => x.Product.Lender)
+                @Html.HiddenFor(x => x.Product.Address)
+                @Html.HiddenFor(x => x.Product.Phone)
+                @Html.HiddenFor(x => x.Product.Category)
+                @Html.HiddenFor(x => x.Product.Status)
+                <h3 class="title" id="productTitle">@Model.Product.Title</h3>
+                <p class="card-text">Quantity: @Model.Product.Quantity</p>
+                <p class="card-text">Lender: @Model.Product.Lender</p>
+                <p class="card-text product-info-card-address">Address: @Model.Product.Address</p>
+                <p class="card-text">Phone: @Model.GetFormattedPhone()</p>
+                <p class="card-text">Category: @Model.Product.Category</p>
+                <p class="card-text">Status: @Model.Product.Status</p>
+            </div>
         </div>
         <!-- End of product information -->
+        <br />
+        <br />
         <!-- Start of delete confirmation section -->
         <h2>Confirm Delete of this item</h2>
         <div class="form-group">
