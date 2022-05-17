@@ -17,6 +17,7 @@
         <!-- Start of product information -->
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         @Html.HiddenFor(x => x.Product.Id)
+        @Html.HiddenFor(x => x.Product.Category)
 
         <div class="form-group">
             <label asp-for="Product.Title" class="control-label"></label>
