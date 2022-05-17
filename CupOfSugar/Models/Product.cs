@@ -33,6 +33,8 @@ namespace CupOfSugar.WebSite.Models
         [Range(1, Int32.MaxValue, ErrorMessage = "Value should be greater than or equal to 1")]
         public int Quantity { get; set; } //int quantity of product
 
+        [Required(ErrorMessage = "Please select a category from the list. " +
+            "Select 'Miscellaneous' if not known.")]
         public string Category { get; set; } // string category of product
 
         public string Status { get; set; } // string status of product
