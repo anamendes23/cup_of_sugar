@@ -43,6 +43,15 @@
 <!-- Start Buttons to Update and Delete item -->
 <div class="row">
     <form method="post">
+        @Html.HiddenFor(x => x.Product.Address)
+        @Html.HiddenFor(x => x.Product.Category)
+        @Html.HiddenFor(x => x.Product.Id)
+        @Html.HiddenFor(x => x.Product.Image)
+        @Html.HiddenFor(x => x.Product.Lender)
+        @Html.HiddenFor(x => x.Product.Phone)
+        @Html.HiddenFor(x => x.Product.Quantity)
+        @Html.HiddenFor(x => x.Product.Status)
+        @Html.HiddenFor(x => x.Product.Title)
         <input id="borrow" type="submit" value=@Model.borrowBtnValue disabled="@Model.borrowBtnStatus" class="btn btn-primary" /> &nbsp; &nbsp;
     </form>
     <a asp-page="Update" asp-route-id="@Model.Product.Id" class="btn btn-primary">Update</a> &nbsp; &nbsp;
