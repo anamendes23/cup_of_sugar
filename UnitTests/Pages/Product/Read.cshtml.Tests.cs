@@ -145,7 +145,7 @@ namespace UnitTests.Pages.Product
             };
 
             // Act
-            var result = pageModel.OnPost("mary-banana") as RedirectToPageResult;
+            var result = pageModel.OnPost() as RedirectToPageResult;
 
             // Assert
             Assert.AreEqual("{\"Id\":\"mary-banana\",\"Lender\":\"mary\"," +
@@ -182,7 +182,7 @@ namespace UnitTests.Pages.Product
             pageModel.ModelState.AddModelError("bogus", "bogus error");
 
             // Act
-            var result = pageModel.OnPost("mary-banana") as ActionResult;
+            var result = pageModel.OnPost() as ActionResult;
 
             // Assert
             Assert.AreEqual(false, pageModel.ModelState.IsValid);
