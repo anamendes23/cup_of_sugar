@@ -204,191 +204,212 @@ ul {
         margin-top: 60px;
     }
 
-@media (min-width: 576px) {
-    .top-triangle-button {
-        width: 40%;
-        height: 30%;
-        font-size: 450%;
-        left: 15%;
-        top: 10%;
+    @media (min-width: 576px) {
+        .top-triangle-button {
+            width: 40%;
+            height: 30%;
+            font-size: 450%;
+            left: 15%;
+            top: 10%;
+        }
+
+        .bottom-triangle-button {
+            width: 40%;
+            height: 20%;
+            font-size: 450%;
+            right: 15%;
+            bottom: 10%;
+        }
+
+        .triangle {
+            height: 600px;
+            margin-top: 5px;
+        }
     }
 
-    .bottom-triangle-button {
-        width: 40%;
-        height: 20%;
-        font-size: 450%;
-        right: 15%;
-        bottom: 10%;
+    @media (min-width: 768px) {
+        .top-triangle-button {
+            width: 40%;
+            height: 30%;
+            font-size: 500%;
+            left: 10%;
+            top: 10%;
+        }
+
+        .bottom-triangle-button {
+            width: 40%;
+            height: 30%;
+            font-size: 500%;
+            right: 10%;
+            bottom: 10%;
+        }
+
+        .triangle {
+            height: 600px;
+            margin-top: 10px;
+        }
     }
 
-    .triangle {
-        height: 600px;
-        margin-top: 5px;
-    }
-}
+    @media (min-width: 992px) {
+        .top-triangle-button {
+            width: 40%;
+            height: 30%;
+            font-size: 550%;
+            left: 10%;
+            top: 15%;
+        }
 
-@media (min-width: 768px) {
-    .top-triangle-button {
-        width: 40%;
-        height: 30%;
-        font-size: 500%;
-        left: 10%;
-        top: 10%;
-    }
+        .bottom-triangle-button {
+            width: 40%;
+            height: 30%;
+            font-size: 550%;
+            right: 10%;
+            bottom: 15%;
+        }
 
-    .bottom-triangle-button {
-        width: 40%;
-        height: 30%;
-        font-size: 500%;
-        right: 10%;
-        bottom: 10%;
-    }
-
-    .triangle {
-        height: 600px;
-        margin-top: 10px;
-    }
-}
-
-@media (min-width: 992px) {
-    .top-triangle-button {
-        width: 40%;
-        height: 30%;
-        font-size: 550%;
-        left: 10%;
-        top: 15%;
+        .triangle {
+            height: 800px;
+        }
     }
 
-    .bottom-triangle-button {
-        width: 40%;
-        height: 30%;
-        font-size: 550%;
-        right: 10%;
-        bottom: 15%;
+    @media (min-width: 1200px) {
+        .top-triangle-button {
+            width: 40%;
+            height: 30%;
+            font-size: 600%;
+            left: 5%;
+            top: 15%;
+        }
+
+        .bottom-triangle-button {
+            width: 40%;
+            height: 30%;
+            font-size: 600%;
+            right: 5%;
+            bottom: 15%;
+        }
     }
 
-    .triangle {
-        height: 800px;
-    }
-}
+    /* END Triangles and their buttons*/
 
-@media (min-width: 1200px) {
-    .top-triangle-button {
-        width: 40%;
-        height: 30%;
-        font-size: 600%;
-        left: 5%;
-        top: 15%;
+    /* CSS for the Lend and borrow buttons to remain white before and after clicking with no underline */
+    a:link {
+        text-decoration: none;
+        color: #F7FFF7;
     }
 
-    .bottom-triangle-button {
-        width: 40%;
-        height: 30%;
-        font-size: 600%;
-        right: 5%;
-        bottom: 15%;
+    a:visited {
+        text-decoration: none;
+        color: #F7FFF7;
     }
-}
 
-/* END Triangles and their buttons*/
+    a:hover {
+        text-decoration: none;
+        color: #C4C4C4;
+    }
 
-/* CSS for the Lend and borrow buttons to remain white before and after clicking with no underline */
-a:link {
-    text-decoration: none;
-    color: #F7FFF7;
-}
+    /*START Lend Page/Form Styles*/
 
-a:visited {
-    text-decoration: none;
-    color: #F7FFF7;
-}
+    .lend-title {
+        font-family: 'Open Sans', sans-serif;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        font-size: 275%;
+    }
 
-a:hover {
-    text-decoration: none;
-    color: #C4C4C4;
-}
+    .lend-form-label {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 200%;
+        color: #4ECDC4;
+        font-weight: 400;
+    }
 
-/*START Lend Page/Form Styles*/
+    .input-color {
+        border: 1px solid #4ECDC4;
+    }
 
-.lend-title {
-    font-family: 'Open Sans', sans-serif;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    font-size: 275%;
-}
+    .lend-btn {
+        background-color: #F6BD60;
+        margin-right: 50px;
+    }
 
-.lend-form-label {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 200%;
-    color: #4ECDC4;
-    font-weight: 400;
-}
-
-.input-color {
-    border: 1px solid #4ECDC4;
-}
-
-.lend-btn {
-    background-color: #F6BD60;
-    margin-right: 50px;
-}
-
-/*END Lend Page/Form Styles*/
+    /*END Lend Page/Form Styles*/
 
 
-/*Adding spacing between the navbar elements*/
-.navbar-nav > li {
-    padding-left: 20px;
-    padding-right: 20px;
-}
+    /*Adding spacing between the navbar elements*/
+    .navbar-nav > li {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 
-/* Start of Read page styling */
-.product-info-card {
-    display:flex;
-    flex-direction:row;
-}
+    /* Start of Read page styling */
+    .product-info-card {
+        display: flex;
+        flex-direction: row;
+    }
 
-.product-info-card img {
-    width: 300px;
-    height: 300px;
-    align-items:flex-start;
-}
+        .product-info-card img {
+            width: 300px;
+            height: 300px;
+            align-items: flex-start;
+        }
 
-.product-info-card-address {
-    color: #4ECDC4;
-    font-weight: bold;
-}
+    .product-info-card-address {
+        color: #4ECDC4;
+        font-weight: bold;
+    }
 
-.product-info { 
-    align-items: flex-end;
-    padding: 10px;
-    margin-left: 30px;
- }
-/* End of Read page styling */
+    .product-info {
+        align-items: flex-end;
+        padding: 10px;
+        margin-left: 30px;
+    }
+    /* End of Read page styling */
 
-/* Start of Borrow page styling */
-.borrow-title {
-    font-family: 'Fascinate', cursive;
-    color: #FF6B6B;
-    padding: 20px;
-    margin-bottom: 20px;
-}
-/* End of Borrow page styling */
+    /* Start of Borrow page styling */
+    .borrow-title {
+        font-family: 'Fascinate', cursive;
+        color: #FF6B6B;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    /* End of Borrow page styling */
 
-.dev-card {
-    display: flex;
-    flex-direction: row;
-    max-width: 1100px;
-    margin-top: 30px;
-    margin-right: 50px;
-}
+    .dev-card {
+        display: flex;
+        flex-direction: row;
+        max-width: 1100px;
+        margin-top: 30px;
+        margin-right: 50px;
+    }
 
-.about-us {
-    width: 200px;
-}
+    .about-us {
+        width: 200px;
+    }
 
-.dev-card > p {
-    text-align: center;
-    align-self: center;
-    padding: 20px;
-}
+    .dev-card > p {
+        text-align: center;
+        align-self: center;
+        padding: 20px;
+    }
+
+
+    /*Basic styling for the dark mode*/
+
+
+    [data-theme="dark"] {
+        background-color: #111 !important;
+        color: #eee;
+    }
+
+        [data-theme="dark"] .bg-light {
+            background-color: #333 !important;
+        }
+
+        [data-theme="dark"] .bg-white {
+            background-color: #000 !important;
+        }
+
+        [data-theme="dark"] .bg-black {
+            background-color: #eee !important;
+        }
