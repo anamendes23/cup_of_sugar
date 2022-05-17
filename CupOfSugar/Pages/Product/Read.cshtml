@@ -43,9 +43,9 @@
 <!-- Start Buttons to Update and Delete item -->
 <div class="row">
     <form method="post">
+        @Html.HiddenFor(x => x.Product.Id)
         @Html.HiddenFor(x => x.Product.Address)
         @Html.HiddenFor(x => x.Product.Category)
-        @Html.HiddenFor(x => x.Product.Id)
         @Html.HiddenFor(x => x.Product.Image)
         @Html.HiddenFor(x => x.Product.Lender)
         @Html.HiddenFor(x => x.Product.Phone)
