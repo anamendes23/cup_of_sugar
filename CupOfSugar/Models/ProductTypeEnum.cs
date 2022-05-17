@@ -14,7 +14,7 @@
         Savory = 6,
         Dessert = 7,
         Drink = 8,
-        Miscellaneous = 9
+        Miscellaneous = 9,
     }
 
     /// <summary>
@@ -42,8 +42,6 @@
                 ProductTypeEnum.Dessert => "Dessert",
                 ProductTypeEnum.Drink => "Drink",
                 ProductTypeEnum.Miscellaneous => "Miscellaneous",
-                // Default, Unknown
-                _ => "",
             };
         }
     }
