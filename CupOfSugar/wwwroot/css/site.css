@@ -433,3 +433,10 @@ ul {
         color: white  !important;
         font-size: 1.25em !important;
     }
+
+    /*START privacy page styling*/
+    .cupofsugar-privacy {
+        color: black;
+        font-weight: 1000;
+    }
+
