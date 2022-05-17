@@ -1,15 +1,19 @@
 ﻿using NUnit.Framework;
 using CupOfSugar.WebSite.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace UnitTests.Models
 {
+    /// <summary>
+    /// Unit tests for ProductTypeEnum
+    /// </summary>
     class ProductTypeEnumTests
     {
+        #region DisplayName
+
+        /// <summary>
+        /// Tests that DisplayName returns valid string for 
+        /// Enum value
+        /// </summary>
         [Test]
         public void DisplayName_Should_Return_Valid_String()
         {
@@ -39,5 +43,7 @@ namespace UnitTests.Models
             Assert.AreEqual("Drink", drink);
             Assert.AreEqual("Miscellaneous", miscellaneous);
         }
+
+        #endregion DisplayName
     }
 }
