@@ -1,7 +1,11 @@
 ﻿@using CupOfSugar.WebSite.Models
+
+@using Microsoft.AspNetCore.Mvc
 @using CupOfSugar.WebSite.Services
 @using Microsoft.AspNetCore.Components.Web
 @inject JsonFileProductService ProductService
+
+@inject NavigationManager NavManager
 
 <!--Page title-->
 <div class="text-center">
@@ -66,6 +70,7 @@
                                 <div class="card-footer">
                                     <small class="text-muted">
                                         <button @onclick="(e => SelectProduct(product.Id))" id="MoreInfoButton_@product.Id" data-toggle="modal" data-target="#productModal" class="btn btn-primary">More Info</button>
+                                        <button @onclick="(e => MovetoRead(product.Id))">Move it?</button>
                                     </small>
                                 </div>
                             </div>
@@ -97,6 +102,7 @@
                             <p class="card-text">Lender: @selectedProduct.Lender</p>
                             <p class="card-text product-info-card-address">Address: @selectedProduct.Address</p>
                             <!--<p class="card-text">Phone: @Model.GetFormattedPhone()</p>-->
+
                             <p class="card-text">Category: @selectedProduct.Category</p>
                             <p class="card-text">Status: @selectedProduct.Status</p>
                         </div>
@@ -152,5 +158,10 @@
         // If the Filter is enabled, set the filter flag
         FilterData = false;
         FilterDataString = "";
+    }
+
+    void MovetoRead(string id)
+    {
+        NavManager.NavigateTo("../Product/Read/" + id, true);
     }
 }
