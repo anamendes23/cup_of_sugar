@@ -2,6 +2,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using CupOfSugar.WebSite.Services;
+using System;
 
 namespace CupOfSugar.Pages.Product
 {
@@ -54,6 +55,20 @@ namespace CupOfSugar.Pages.Product
             }
 
             return Page();
+        }
+
+
+        /// <summary>
+        /// Helper function that formats the stored phone number
+        /// </summary>
+        /// <returns>Formatted phone number</returns>
+        public string GetFormattedPhone()
+        {
+            if (Product.Phone.Length == 10)
+            {
+                return Convert.ToInt64(Product.Phone).ToString("(###) ###-####");
+            }
+            return Product.Phone;
         }
     }
 }
