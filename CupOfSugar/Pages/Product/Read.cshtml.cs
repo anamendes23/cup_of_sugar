@@ -71,16 +71,15 @@ namespace CupOfSugar.Pages.Product
         /// Then return to the read page
         /// </summary>
         /// <returns></returns>
-        public IActionResult OnPost(string id)
+        public IActionResult OnPost()
         {
             if (ModelState.IsValid)
             {
-                Product = ProductService.GetProducts().FirstOrDefault(m => m.Id.Equals(id));
                 Product.Status = "Pending";
 
                 ProductService.UpdateData(Product);
 
-                return RedirectToPage("../Index");
+                return RedirectToPage("./Borrow");
             }
 
             return Page();
