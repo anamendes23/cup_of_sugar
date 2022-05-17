@@ -134,14 +134,14 @@ namespace UnitTests.Pages.Product
             pageModel.Product = new CupOfSugar.WebSite.Models.Product
             {
                 Id = "mary-banana",
-                Lender = "bogus",
-                Image = "bogus",
-                Title = "bogus",
-                Address = "bogus",
-                Phone = "bogus",
-                Quantity = 0,
-                Category = "bogus",
-                Status = "bogus"
+                Lender = "mary",
+                Image = "https://user-images.githubusercontent.com/64483865/165871171-927f964d-e94f-4179-b90a-dde80e613e23.jpg",
+                Title = "Bananas",
+                Address = "212 Burley Streets Apt. 699 - 158201",
+                Phone = "3409523801",
+                Quantity = 8,
+                Category = "Fruit",
+                Status = "Pending"
             };
 
             // Act
@@ -151,10 +151,9 @@ namespace UnitTests.Pages.Product
             Assert.AreEqual("{\"Id\":\"mary-banana\",\"Lender\":\"mary\"," +
                             "\"img\":\"https://user-images.githubusercontent.com/64483865/165871171-927f964d-e94f-4179-b90a-dde80e613e23.jpg\"," +
                             "\"Title\":\"Bananas\",\"Address\":\"212 Burley Streets Apt. 699 - 158201\",\"Phone\":\"3409523801\",\"Quantity\":8," +
-                            "\"Category\":\"fruits_veg\",\"Status\":\"Pending\"}",
+                            "\"Category\":\"Fruit\",\"Status\":\"Pending\"}",
                             pageModel.Product.ToString());
             Assert.AreEqual(true, pageModel.ModelState.IsValid);
-            Assert.AreEqual(true, result.PageName.Contains("Index"));
         }
 
         /// <summary>
