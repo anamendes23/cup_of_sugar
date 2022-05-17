@@ -377,10 +377,11 @@ ul {
     }
     /* End of Borrow page styling */
 
+    /* Start of About us page styling */
     .dev-card {
         display: flex;
         flex-direction: row;
-        max-width: 1100px;
+        width: 1100px;
         margin-top: 30px;
         margin-right: 50px;
     }
@@ -394,7 +395,7 @@ ul {
         align-self: center;
         padding: 20px;
     }
-
+    /* End of About us page styling */
 
     /*Basic styling for the dark mode*/
 
