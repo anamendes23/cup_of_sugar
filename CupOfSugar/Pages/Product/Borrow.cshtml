@@ -1,7 +1,12 @@
 ﻿@page
 @using CupOfSugar.Components
 @model BorrowModel
-@{ ViewData["Title"] = "Home page"; }
+@{ ViewData["Title"] = "Borrow Page"; }
+
+<!--Page title-->
+<div class="text-center">
+    <h1 class="display-4 borrow-title">Yummy Borrows</h1>
+</div>
 
 @(await Html.RenderComponentAsync<ProductList>(RenderMode.ServerPrerendered))
 
