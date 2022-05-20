@@ -77,8 +77,7 @@
                         @foreach (var product in productListGroup)
                         {
                             <div class="card">
-                                <div class="card-img" style="background-image: url('@product.Image');">
-                                </div>
+                                <img class="card-img" src="@product.Image" onerror="this.onerror=null;this.src='../images/default-@product.Category.ToLower()\.png'" />
                                 <div class="card-body">
                                     <h5 class="card-title">@product.Title</h5>
                                 </div>
