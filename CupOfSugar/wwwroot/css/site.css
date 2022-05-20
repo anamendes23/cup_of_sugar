@@ -321,11 +321,11 @@ ul {
         font-family: 'Open Sans', sans-serif;
         font-size: 200%;
         color: #4ECDC4;
-        font-weight: 400;
+        font-weight: 500;
     }
 
     .input-color {
-        border: 1px solid #4ECDC4;
+        border: 3px solid #4ECDC4;
     }
 
     .lend-btn {
