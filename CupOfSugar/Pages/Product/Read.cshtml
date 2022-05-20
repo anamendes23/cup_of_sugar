@@ -13,16 +13,14 @@
 </form>
 <br />
 <!-- End Back Button -->
-
 <!-- Start Page title -->
 <h1 style="font-family: 'Fascinate', cursive; text-align: center;">Product Information</h1>
 <br />
 <!-- End Page title -->
-
 <!-- Start Product Data -->
 <div class="content">
     <div class="product-info-card">
-        <img src='@Model.Product.Image' alt='Image for @Model.Product.Title'>
+        <img id="one" src='@Model.Product.Image' onerror="imgError(this)">
         <div class="product-info">
             <h3 class="title" id="productTitle">@Model.Product.Title</h3>
             <p class="card-text">Quantity: @Model.Product.Quantity</p>
@@ -35,7 +33,6 @@
     </div>
 </div>
 <!-- End Product Data -->
-
 <!-- Adding space for better page styling -->
 <br />
 <br />
@@ -58,3 +55,14 @@
     <a asp-page="Delete" asp-route-id="@Model.Product.Id" class="btn btn-danger">Delete</a>
 </div>
 <!-- End Buttons to Update and Delete item -->
+
+<script type="text/javascript">
+    function imgError(me) {
+        // place here the alternative image
+        var AlterNativeImg = "/images/default-fruit.png";
+
+        // to avoid the case that even the alternative fails
+        if(AlterNativeImg != me.src)
+            me.src = AlterNativeImg;
+    }
+</script>
