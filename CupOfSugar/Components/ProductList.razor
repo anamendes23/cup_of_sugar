@@ -45,11 +45,16 @@
 
         */
 
+        //flag for checking if the filters applied render any products
+        var productPresent = 0;
+
         // Group by the Enum
         foreach (ProductTypeEnum productType in Enum.GetValues(typeof(ProductTypeEnum)))
         {
             // Get only the products that are of this enum type
             var productListGroup = productList.Where(m => m.Category == productType.ToString());
+
+
 
             // Order the list alphabetical
             productListGroup = productListGroup.OrderBy(m => m.Title);
@@ -68,7 +73,7 @@
 
             if (productListGroup.Any())
             {
-
+                productPresent = 1;
                 <hr />
                 <h2>@productType.DisplayName()</h2>
 
@@ -92,6 +97,16 @@
                 </div>
             }
         }
+
+        // Checking if the filter applied rendered any products
+        if(productPresent == 0)
+            {
+                <br />
+                <br />
+                <h4>
+                    Sorry! Could not find any items matching your search.
+                </h4>
+            }
     }
 </div>
 
