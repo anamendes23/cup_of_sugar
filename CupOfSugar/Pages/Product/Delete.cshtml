@@ -18,7 +18,7 @@
         <!-- Start of product information -->
 
         <div class="product-info-card">
-            <img id="one" src='@Model.Product.Image' onerror="imgError(this)">
+            <img id="one" src='@Model.Product.Image' onerror="this.onerror=null;this.src='../images/default-@Model.Product.Category.ToLower()\.png'">
             <div class="product-info">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 @Html.HiddenFor(x => x.Product.Id)
@@ -54,14 +54,3 @@
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
-
-<script type="text/javascript">
-    function imgError(me) {
-        // place here the alternative image
-        var AlterNativeImg = "/images/default-fruit.png";
-
-        // to avoid the case that even the alternative fails
-        if(AlterNativeImg != me.src)
-            me.src = AlterNativeImg;
-    }
-</script>
