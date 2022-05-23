@@ -502,6 +502,16 @@ ul {
             background: #1d1c1f;
         }
 
+        [data-theme="dark"] .cupofsugar-privacy {
+            color: white;
+            font-weight: 1000;
+        }
+
+        [data-theme="dark"] .google-privacy {
+            color: white;
+            font-weight: 700;
+        }
+
 
         [data-theme="dark"] .bg-light {
             background-color: #333 !important;
