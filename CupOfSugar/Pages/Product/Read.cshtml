@@ -37,23 +37,26 @@
     <div>
         <p class="card-text">Pending Borrows:</p>
         <div class="borrows-info-card">
-            @for (int i = 0; i < Model.Product.Names.Length; i++)
+            @if (Model.Product.Names != null)
             {
-                <div class="borrow-info-card">
-                    <div class="borrow-info-text card-text">@Model.Product.Names[i] - @Model.Product.BorrowQuantities[i]</div>
-                    <form method="post">
-                        @Html.HiddenFor(x => x.Product.Id)
-                        @Html.HiddenFor(x => x.Product.Address)
-                        @Html.HiddenFor(x => x.Product.Category)
-                        @Html.HiddenFor(x => x.Product.Image)
-                        @Html.HiddenFor(x => x.Product.Lender)
-                        @Html.HiddenFor(x => x.Product.Phone)
-                        @Html.HiddenFor(x => x.Product.Quantity)
-                        @Html.HiddenFor(x => x.Product.Status)
-                        @Html.HiddenFor(x => x.Product.Title)
-                        <input id="cancel_borrow" type="submit" value="Cancel Borrow" class="btn btn-red" /> &nbsp; &nbsp;
-                    </form>
-                </div>
+                @for (int i = 0; i < Model.Product.Names.Length; i++)
+                {
+                    <div class="borrow-info-card">
+                        <div class="borrow-info-text card-text">@Model.Product.Names[i] - @Model.Product.BorrowQuantities[i]</div>
+                        <form method="post">
+                            @Html.HiddenFor(x => x.Product.Id)
+                            @Html.HiddenFor(x => x.Product.Address)
+                            @Html.HiddenFor(x => x.Product.Category)
+                            @Html.HiddenFor(x => x.Product.Image)
+                            @Html.HiddenFor(x => x.Product.Lender)
+                            @Html.HiddenFor(x => x.Product.Phone)
+                            @Html.HiddenFor(x => x.Product.Quantity)
+                            @Html.HiddenFor(x => x.Product.Status)
+                            @Html.HiddenFor(x => x.Product.Title)
+                            <input id="cancel_borrow" type="submit" value="Cancel Borrow" class="btn btn-red" /> &nbsp; &nbsp;
+                        </form>
+                    </div>
+                }
             }
         </div>
     </div>
