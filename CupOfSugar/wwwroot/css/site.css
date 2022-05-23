@@ -356,18 +356,73 @@ ul {
             align-items: flex-start;
         }
 
-    .product-info-card-address {
-        color: #4ECDC4;
-        font-weight: bold;
-    }
-
     .product-info {
         align-items: flex-end;
         padding: 10px;
         margin-left: 30px;
     }
-    /* End of Read page styling */
 
+    .borrows-info-card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .borrow-info-card {
+        display: flex;
+        flex-direction: row;
+        background-color: #D9D9D9;
+        margin: 5px;
+        padding: 5px;
+        align-items: center;
+        justify-content: space-between;
+        width: 300px;
+    }
+
+    .borrow-info-text {
+        text-align: left;
+    }
+
+    .borrow-form {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .read-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .btn-green {
+        color: #fff;
+        background-color: #4ECDC4;
+        border-color: #4ECDC4;
+    }
+
+    .btn-red {
+        color: #fff;
+        background-color: #FF6B6B;
+        border-color: #FF6B6B;
+    }
+
+    .btn-monster {
+        width: 150px;
+        height: 50px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .verticalLine {
+        border-left: 1px solid #E5E5E5;
+        height: 300px;
+        padding-left: 20px;
+        margin-left: 10px;
+    }
+
+    .read-page-divider {
+        color: #c2c2c2;
+    }
+    /* End of Read page styling */
     /* Start of Borrow page styling */
     .borrow-title {
         font-family: 'Fascinate', cursive;
