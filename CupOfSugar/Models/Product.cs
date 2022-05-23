@@ -11,7 +11,6 @@ namespace CupOfSugar.WebSite.Models
     /// </summary>
     public class Product
     {
-
         public string Id { get; set; } //string Id of product
 
         [Required(ErrorMessage = "Please enter your name.")]
@@ -39,6 +38,10 @@ namespace CupOfSugar.WebSite.Models
         [Required(ErrorMessage = "Please enter a quantity greater than 0.")]
         [Range(1, Int32.MaxValue, ErrorMessage = "Please enter a quantity greater than 0.")]
         public int Quantity { get; set; } //int quantity of product
+
+        [Required(ErrorMessage = "Please select a unit from the list. " +
+            "Select 'Unit' if not known.")]
+        public string Unit { get; set; } // string unit of product
 
         [Required(ErrorMessage = "Please select a category from the list. " +
             "Select 'Miscellaneous' if not known.")]
