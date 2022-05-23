@@ -46,6 +46,10 @@ namespace CupOfSugar.WebSite.Models
 
         public string Status { get; set; } // string status of product
 
+        public string[] Names { get; set; } // string names of people borrowing product
+
+        public int[] BorrowQuantities { get; set; } // string quantities that people are borrowing
+
         /// <summary>
         /// Returns string representation of product object
         /// </summary>
