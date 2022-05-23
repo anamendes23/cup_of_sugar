@@ -8,7 +8,15 @@
     "Phone": "7835496521",
     "Quantity": 10,
     "Category": "Fruit",
-    "Status": "Available"
+    "Status": "Available",
+    "Names": [
+      "Ana",
+      "Banana"
+    ],
+    "BorrowQuantities": [
+      3,
+      4
+    ]
   },
   {
     "Id": "mary-banana",
@@ -19,7 +27,9 @@
     "Phone": "3409523801",
     "Quantity": 8,
     "Category": "Fruit",
-    "Status": "Available"
+    "Status": "Available",
+    "Names": null,
+    "BorrowQuantities": null
   },
   {
     "Id": "grover-strawberries",
@@ -30,7 +40,9 @@
     "Phone": "3398258850",
     "Quantity": 1,
     "Category": "Fruit",
-    "Status": "Available"
+    "Status": "Available",
+    "Names": null,
+    "BorrowQuantities": null
   },
   {
     "Id": "hazel-mixedberries",
@@ -41,7 +53,9 @@
     "Phone": "6768689991",
     "Quantity": 1,
     "Category": "Fruit",
-    "Status": "Available"
+    "Status": "Available",
+    "Names": null,
+    "BorrowQuantities": null
   },
   {
     "Id": "margot-tomatoes",
@@ -52,7 +66,9 @@
     "Phone": "4798216646",
     "Quantity": 1,
     "Category": "Fruit",
-    "Status": "Available"
+    "Status": "Available",
+    "Names": null,
+    "BorrowQuantities": null
   },
   {
     "Id": "jessie-eggs",
@@ -63,7 +79,9 @@
     "Phone": "5597453371",
     "Quantity": 12,
     "Category": "Poultry",
-    "Status": "Available"
+    "Status": "Available",
+    "Names": null,
+    "BorrowQuantities": null
   },
   {
     "Id": "freda-cheese",
@@ -74,7 +92,9 @@
     "Phone": "2678727028",
     "Quantity": 15,
     "Category": "Dairy",
-    "Status": "Available"
+    "Status": "Available",
+    "Names": null,
+    "BorrowQuantities": null
   },
   {
     "Id": "ellie-bread",
@@ -85,7 +105,9 @@
     "Phone": "2425760049",
     "Quantity": 1,
     "Category": "Miscellaneous",
-    "Status": "Available"
+    "Status": "Available",
+    "Names": null,
+    "BorrowQuantities": null
   },
   {
     "Id": "dustin-croissants",
@@ -96,7 +118,9 @@
     "Phone": "8827905352",
     "Quantity": 3,
     "Category": "Dessert",
-    "Status": "Available"
+    "Status": "Available",
+    "Names": null,
+    "BorrowQuantities": null
   },
   {
     "Id": "joanna-macarons",
@@ -107,7 +131,9 @@
     "Phone": "8744199655",
     "Quantity": 6,
     "Category": "Dessert",
-    "Status": "Available"
+    "Status": "Available",
+    "Names": null,
+    "BorrowQuantities": null
   },
   {
     "Id": "leo-doughnuts",
@@ -118,7 +144,9 @@
     "Phone": "6328562870",
     "Quantity": 10,
     "Category": "Dessert",
-    "Status": "Available"
+    "Status": "Available",
+    "Names": null,
+    "BorrowQuantities": null
   },
   {
     "Id": "doyle-chickensandwich",
@@ -129,7 +157,9 @@
     "Phone": "5186223718",
     "Quantity": 2,
     "Category": "Entree",
-    "Status": "Available"
+    "Status": "Available",
+    "Names": null,
+    "BorrowQuantities": null
   },
   {
     "Id": "john-pizza",
@@ -140,7 +170,9 @@
     "Phone": "4255198735",
     "Quantity": 8,
     "Category": "Entree",
-    "Status": "Available"
+    "Status": "Available",
+    "Names": null,
+    "BorrowQuantities": null
   },
   {
     "Id": "olivia-pasta",
@@ -151,7 +183,9 @@
     "Phone": "5988247244",
     "Quantity": 1,
     "Category": "Entree",
-    "Status": "Available"
+    "Status": "Available",
+    "Names": null,
+    "BorrowQuantities": null
   },
   {
     "Id": "jack-orangejuice",
@@ -162,7 +196,9 @@
     "Phone": "5742968575",
     "Quantity": 1,
     "Category": "Drink",
-    "Status": "Available"
+    "Status": "Available",
+    "Names": null,
+    "BorrowQuantities": null
   },
   {
     "Id": "dan-cola",
@@ -173,7 +209,9 @@
     "Phone": "4898792298",
     "Quantity": 6,
     "Category": "Drink",
-    "Status": "Available"
+    "Status": "Available",
+    "Names": null,
+    "BorrowQuantities": null
   },
   {
     "Id": "zach-sugar",
@@ -184,7 +222,9 @@
     "Phone": "8376606872",
     "Quantity": 2,
     "Category": "Miscellaneous",
-    "Status": "Available"
+    "Status": "Available",
+    "Names": null,
+    "BorrowQuantities": null
   },
   {
     "Id": "claire-oliveoil",
@@ -195,7 +235,9 @@
     "Phone": "9754986903",
     "Quantity": 1,
     "Category": "Miscellaneous",
-    "Status": "Available"
+    "Status": "Available",
+    "Names": null,
+    "BorrowQuantities": null
   },
   {
     "Id": "cam-flour",
@@ -206,7 +248,9 @@
     "Phone": "5514271720",
     "Quantity": 2,
     "Category": "Miscellaneous",
-    "Status": "Available"
+    "Status": "Available",
+    "Names": null,
+    "BorrowQuantities": null
   },
   {
     "Id": "c9d2b67a-c872-49e9-9754-8b28f23eca41",
@@ -217,7 +261,9 @@
     "Phone": "4444444444",
     "Quantity": 1,
     "Category": "Dessert",
-    "Status": "Available"
+    "Status": "Available",
+    "Names": null,
+    "BorrowQuantities": null
   },
   {
     "Id": "00ee5812-2054-4dc1-a93e-1994de885801",
@@ -228,7 +274,9 @@
     "Phone": "4444444444",
     "Quantity": 1,
     "Category": "Dessert",
-    "Status": "Available"
+    "Status": "Available",
+    "Names": null,
+    "BorrowQuantities": null
   },
   {
     "Id": "ed40a1f5-24d9-40fa-b0f2-efe0f71befe2",
@@ -239,6 +287,8 @@
     "Phone": "4444444444",
     "Quantity": 1,
     "Category": "Fruit",
-    "Status": "Available"
+    "Status": "Available",
+    "Names": null,
+    "BorrowQuantities": null
   }
 ]
