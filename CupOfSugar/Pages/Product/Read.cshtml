@@ -17,28 +17,60 @@
 <h1 style="font-family: 'Fascinate', cursive; text-align: center;">Product Information</h1>
 <br />
 <!-- End Page title -->
-<!-- Start Product Data -->
-<div class="content">
+<div class="content product-info-card">
+    <!-- Start Product Data -->
     <div class="product-info-card">
         <img id="one" src='@Model.Product.Image' onerror="this.onerror=null;this.src='../images/default-@Model.Product.Category.ToLower()\.png'">
         <div class="product-info">
             <h3 class="title" id="productTitle">@Model.Product.Title</h3>
             <p class="card-text">Quantity: @Model.Product.Quantity</p>
             <p class="card-text">Lender: @Model.Product.Lender</p>
-            <p class="card-text product-info-card-address">Address: @Model.Product.Address</p>
+            <p class="card-text">Address: @Model.Product.Address</p>
             <p class="card-text">Phone: @Model.GetFormattedPhone()</p>
             <p class="card-text">Category: @Model.Product.Category</p>
             <p class="card-text">Status: @Model.Product.Status</p>
         </div>
     </div>
+    <!-- End Product Data -->
+    <div class="verticalLine"></div>
+    <!-- Start list of borrows -->
+    <div>
+        <p class="card-text">Pending Borrows:</p>
+        <div class="borrows-info-card">
+            @for (int i = 0; i < Model.Product.Names.Length; i++)
+            {
+                <div class="borrow-info-card">
+                    <div class="borrow-info-text card-text">@Model.Product.Names[i] - @Model.Product.BorrowQuantities[i]</div>
+                    <form method="post">
+                        @Html.HiddenFor(x => x.Product.Id)
+                        @Html.HiddenFor(x => x.Product.Address)
+                        @Html.HiddenFor(x => x.Product.Category)
+                        @Html.HiddenFor(x => x.Product.Image)
+                        @Html.HiddenFor(x => x.Product.Lender)
+                        @Html.HiddenFor(x => x.Product.Phone)
+                        @Html.HiddenFor(x => x.Product.Quantity)
+                        @Html.HiddenFor(x => x.Product.Status)
+                        @Html.HiddenFor(x => x.Product.Title)
+                        <input id="cancel_borrow" type="submit" value="Cancel Borrow" class="btn btn-red" /> &nbsp; &nbsp;
+                    </form>
+                </div>
+            }
+        </div>
+    </div>
+    <!-- End list of borrows -->
 </div>
-<!-- End Product Data -->
-<!-- Adding space for better page styling -->
-<br />
-<br />
-
-<!-- Start Buttons to Update and Delete item -->
-<div class="row">
+<hr class="read-page-divider" />
+<!-- Start borrow form -->
+<p class="card-text">Borrow this item:</p>
+<div class="product-info-card">
+    <div class="row form-group">
+        <label class="col-sm-3 col-form-label control-label">Name:</label>
+        <input class="col-sm-6 form-control" />
+    </div>
+    <div class="row form-group">
+        <label class="col-sm-4 col-form-label control-label">Quantity:</label>
+        <input class="col-sm-6 form-control" />
+    </div>
     <form method="post">
         @Html.HiddenFor(x => x.Product.Id)
         @Html.HiddenFor(x => x.Product.Address)
@@ -49,9 +81,15 @@
         @Html.HiddenFor(x => x.Product.Quantity)
         @Html.HiddenFor(x => x.Product.Status)
         @Html.HiddenFor(x => x.Product.Title)
-        <input id="borrow" type="submit" value=@Model.borrowBtnValue disabled="@Model.borrowBtnStatus" class="btn btn-primary" /> &nbsp; &nbsp;
+        <input id="borrow" type="submit" value=@Model.borrowBtnValue disabled="@Model.borrowBtnStatus" class="btn btn-red" /> &nbsp; &nbsp;
     </form>
-    <a asp-page="Update" asp-route-id="@Model.Product.Id" class="btn btn-primary">Update</a> &nbsp; &nbsp;
-    <a asp-page="Delete" asp-route-id="@Model.Product.Id" class="btn btn-danger">Delete</a>
+</div>
+<!-- End borrow form -->
+<hr class="read-page-divider" />
+
+<!-- Start Buttons to Update and Delete item -->
+<div class="read-buttons">
+    <a asp-page="Update" asp-route-id="@Model.Product.Id" class="btn btn-green btn-monster">Update</a> &nbsp; &nbsp;
+    <a asp-page="Delete" asp-route-id="@Model.Product.Id" class="btn btn-red btn-monster">Delete</a>
 </div>
 <!-- End Buttons to Update and Delete item -->
