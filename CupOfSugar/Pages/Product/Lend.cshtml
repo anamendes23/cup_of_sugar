@@ -1,5 +1,6 @@
 ﻿@page
 @using CupOfSugar.WebSite.Services
+@using CupOfSugar.WebSite.Models
 @inject JsonFileProductService ProductService
 @model CupOfSugar.Pages.Product.LendModel
 @{
@@ -31,6 +32,19 @@
                 <label asp-for="Product.Quantity" class="col-sm-3 col-form-label control-label lend-form-label"></label>
                 <input asp-for="Product.Quantity" class="col-sm-6 form-control input-color" />
                 <span asp-validation-for="Product.Quantity" class="text-danger"></span>
+            </div>
+
+            <!--drop down menu for quantity unit types-->
+            <div class="row form-group">
+                <label asp-for="Product.Unit" class="col-sm-3 col-form-label control-label lend-form-label"></label>
+                <select asp-for="Product.Unit" class="form-select col-sm-6 form-control input-color" id="inputGroupSelect03">
+                    <option selected></option>
+                    @foreach (UnitTypeEnum unit in Enum.GetValues(typeof(UnitTypeEnum)))
+                    {
+                        <option value=@unit>@UnitTypeEnumExtensions.DisplayName(unit)</option>
+                    }
+                </select>
+                <span asp-validation-for="Product.Unit" class="text-danger"></span>
             </div>
 
             <!--input text field for product image url with validation-->
@@ -66,16 +80,10 @@
                 <label asp-for="Product.Category" class="col-sm-3 col-form-label control-label lend-form-label"></label>
                 <select asp-for="Product.Category" class="form-select col-sm-6 form-control input-color" id="inputGroupSelect02">
                     <option selected></option>
-                    <option value="Fruit">Fruit</option>
-                    <option value="Vegetable">Vegetable</option>
-                    <option value="Poultry">Poultry</option>
-                    <option value="Meat">Meat</option>
-                    <option value="Dairy">Dairy</option>
-                    <option value="Entree">Entre</option>
-                    <option value="Savory">Savory</option>
-                    <option value="Dessert">Dessert</option>
-                    <option value="Drink">Drink</option>
-                    <option value="Miscellaneous">Miscellaneous</option>
+                    @foreach (ProductTypeEnum category in Enum.GetValues(typeof(ProductTypeEnum)))
+                    {
+                        <option value=@category>@ProductTypeEnumExtensions.DisplayName(category)</option>
+                    }
                 </select>
                 <span asp-validation-for="Product.Category" class="text-danger"></span>
             </div>
