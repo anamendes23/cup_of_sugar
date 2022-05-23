@@ -18,7 +18,7 @@
     <div class="row">
         <label class="col-sm-3 col-form-label" for="category"></label>
         <select @onchange="(e) => UpdateFilterCategory(e.Value.ToString())" class="form-select col-sm-9 form-control" id="inputGroupSelect02">
-            <option selected></option>
+            <option selected>All</option>
             <option value="Fruit">Fruit</option>
             <option value="Vegetable">Vegetable</option>
             <option value="Poultry">Poultry</option>
@@ -67,8 +67,12 @@
 
             // filter by category
             if (!String.IsNullOrEmpty(selectedCategory))
-            {
-                productListGroup = productListGroup.Where(m => m.Category.ToLower().Contains(selectedCategory.ToLower()));
+            {   // If the selceted category is not "All", thenget products of the selected category, else productListGroup will
+                // be all products
+                if (!selectedCategory.Equals("All"))
+                {
+                    productListGroup = productListGroup.Where(m => m.Category.ToLower().Contains(selectedCategory.ToLower()));
+                }
             }
 
             if (productListGroup.Any())
