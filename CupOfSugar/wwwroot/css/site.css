@@ -464,6 +464,30 @@ ul {
             background-color: #936DCC;
         }
 
+        [data-theme="dark"] .triangle {
+            width: 100%;
+            height: 800px;
+            background: linear-gradient(to bottom right, #C52641 0%, #C52641 50%, #4AADBC 50%, #4AADBC 100%);
+            position: relative;
+        }
+
+        [data-theme="dark"] .bottom-triangle-button {
+            padding: 10px;
+            position: absolute;
+            background-color: #4AADBC;
+            color: white;
+            font-family: 'Fascinate Inline', cursive;
+            text-align: left;
+        }
+
+        [data-theme="dark"] .top-triangle-button {
+            padding: 10px;
+            position: absolute;
+            background-color: #C52641;
+            color: white;
+            font-family: 'Fascinate Inline', cursive;
+            text-align: right;
+        }
 
         [data-theme="dark"] .bg-light {
             background-color: #333 !important;
