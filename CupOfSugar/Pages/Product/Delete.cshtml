@@ -1,5 +1,6 @@
 ﻿@page "{id}"
 @using CupOfSugar.WebSite.Services
+@using CupOfSugar.WebSite.Models
 @inject JsonFileProductService ProductService
 @model CupOfSugar.Pages.Product.DeleteModel
 
@@ -31,7 +32,7 @@
                 @Html.HiddenFor(x => x.Product.Category)
                 @Html.HiddenFor(x => x.Product.Status)
                 <h3 class="title" id="productTitle">@Model.Product.Title</h3>
-                <p class="card-text">Quantity: @Model.Product.Quantity</p>
+                <p class="card-text">Quantity: @Model.Product.Quantity @UnitTypeEnumExtensions.DisplayName((UnitTypeEnum)Enum.Parse(typeof(UnitTypeEnum), Model.Product.Unit))</p>
                 <p class="card-text">Lender: @Model.Product.Lender</p>
                 <p class="card-text product-info-card-address">Address: @Model.Product.Address</p>
                 <p class="card-text">Phone: @Model.GetFormattedPhone()</p>
