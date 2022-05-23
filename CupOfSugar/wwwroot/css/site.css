@@ -489,6 +489,12 @@ ul {
             text-align: right;
         }
 
+        [data-theme="dark"] .borrow-title {
+            font-family: 'Fascinate', cursive;
+            color: #C52641;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
         [data-theme="dark"] .bg-light {
             background-color: #333 !important;
         }
