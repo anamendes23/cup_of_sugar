@@ -9,7 +9,7 @@
 <div class="row">
     <div class="row">
         <div class="col">
-            <input type="text" @onchange="(e) => UpdateFilterText(e.Value.ToString())" value="@FilterDataString" />
+            <input id="filter-input" type="text" @onchange="(e) => UpdateFilterText(e.Value.ToString())" value="@FilterDataString" />
             <button @onclick="(e => EnableFilterData())" class="btn btn-success">Filter</button>
             <button @onclick="(e => ClearFilterData())" class="btn btn-danger">Clear</button>
         </div>
@@ -118,24 +118,8 @@
 
 @code
 {
-    // Selected product
-    Product selectedProduct;
-
-    // Selected product Id
-    string selectedProductId;
-
     // Selected category
     string selectedCategory;
-
-    /// <summary>
-    /// Sets product Id and gets product with this Id
-    /// </summary>
-    /// <param name="productId"></param>
-    void SelectProduct(string productId)
-    {
-        selectedProductId = productId;
-        selectedProduct = ProductService.GetProducts().First(x => x.Id == productId);
-    }
 
     // Filter string 
     string FilterDataString = "";
@@ -190,6 +174,7 @@
     /// <param name="id"></param>
     void MovetoRead(string id)
     {
+        var theUri = NavManager.BaseUri;
         NavManager.NavigateTo("../Product/Read/" + id, true);
     }
 }
