@@ -73,16 +73,19 @@ namespace CupOfSugar.Pages.Product
         /// <returns></returns>
         public IActionResult OnPost()
         {
-            if (ModelState.IsValid)
+
+            if (!ModelState.IsValid)
             {
-                Product.Status = "Pending";
 
-                ProductService.UpdateData(Product);
 
-                return RedirectToPage("./Borrow");
+                return Page();
             }
 
-            return Page();
+            Product.Status = "Pending";
+
+            ProductService.UpdateData(Product);
+
+            return RedirectToPage("./Borrow");
         }
     }
 }
