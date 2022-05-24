@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using CupOfSugar.WebSite.Services;
 
 using System.ComponentModel.DataAnnotations;
+using System.Collections.Generic;
 
 namespace CupOfSugar.Pages.Product
 {
@@ -91,6 +92,12 @@ namespace CupOfSugar.Pages.Product
             if (!ModelState.IsValid)
             {
                 return Page();
+            }
+
+            if (Product.Names == null)
+            {
+                Product.Names = new List<String>();
+                Product.BorrowQuantities = new List<int>();
             }
 
             if (quantity > Product.Quantity)
