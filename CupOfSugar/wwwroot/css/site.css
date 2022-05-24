@@ -345,6 +345,11 @@ ul {
     }
 
     /* Start of Read page styling */
+    .read-title {
+        font-family: 'Fascinate', cursive;
+        text-align: center;
+    }
+
     .product-info-card {
         display: flex;
         flex-direction: row;
@@ -403,6 +408,11 @@ ul {
         color: #fff;
         background-color: #FF6B6B;
         border-color: #FF6B6B;
+    }
+
+    .btn-thinner {
+        height: 40px;
+        width: 120px;
     }
 
     .btn-monster {
