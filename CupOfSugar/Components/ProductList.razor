@@ -19,17 +19,11 @@
     <div class="row">
         <label class="col-sm-3 col-form-label" for="category"></label>
         <select @onchange="(e) => UpdateFilterCategory(e.Value.ToString())" class="form-select col-sm-9 form-control" id="inputGroupSelect02">
-            <option selected></option>
-            <option value="Fruit">Fruit</option>
-            <option value="Vegetable">Vegetable</option>
-            <option value="Poultry">Poultry</option>
-            <option value="Meat">Meat</option>
-            <option value="Dairy">Dairy</option>
-            <option value="Entree">Entre</option>
-            <option value="Savory">Savory</option>
-            <option value="Dessert">Dessert</option>
-            <option value="Drink">Drink</option>
-            <option value="Miscellaneous">Miscellaneous</option>
+            <option selected>All</option>
+            @foreach (ProductTypeEnum category in Enum.GetValues(typeof(ProductTypeEnum)))
+            {
+                <option value=@category>@ProductTypeEnumExtensions.DisplayName(category)</option>
+            }
         </select>
     </div>
 
@@ -83,7 +77,12 @@
             // filter by category
             if (!String.IsNullOrEmpty(selectedCategory))
             {
-                productListGroup = productListGroup.Where(m => m.Category.ToLower().Contains(selectedCategory.ToLower()));
+                // If the selected category is not "All", then get products of the selected category, else productListGroup will
+                // be all products
+                if (!selectedCategory.Equals("All"))
+                {
+                    productListGroup = productListGroup.Where(m => m.Category.ToLower().Contains(selectedCategory.ToLower()));
+                }
             }
 
             if (productListGroup.Any())
