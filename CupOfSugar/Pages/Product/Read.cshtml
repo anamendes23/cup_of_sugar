@@ -54,6 +54,9 @@
                             @Html.HiddenFor(x => x.Product.Quantity)
                             @Html.HiddenFor(x => x.Product.Status)
                             @Html.HiddenFor(x => x.Product.Title)
+                            @Html.HiddenFor(x => x.Product.Unit)
+                            @Html.HiddenFor(x => x.Product.BorrowQuantities[i])
+                            @Html.HiddenFor(x => x.Product.Names[i])
                             <input id="cancel_borrow" type="submit" value="Cancel Borrow" class="btn btn-red" /> &nbsp; &nbsp;
                         </form>
                     </div>
@@ -85,8 +88,14 @@
         @Html.HiddenFor(x => x.Product.Quantity)
         @Html.HiddenFor(x => x.Product.Status)
         @Html.HiddenFor(x => x.Product.Title)
+        @Html.HiddenFor(x => x.Product.Unit)
+        @for (int i = 0; i < Model.Product.Names.Length; i++)
+        {
+            @Html.HiddenFor(x => x.Product.BorrowQuantities[i])
+            @Html.HiddenFor(x => x.Product.Names[i])
+        }
         <input id="borrow" type="submit" value=@Model.borrowBtnValue disabled="@Model.borrowBtnStatus" class="btn btn-red" /> &nbsp; &nbsp;
-    </form>
+        </form>
 </div>
 <!-- End borrow form -->
 <hr class="read-page-divider" />
