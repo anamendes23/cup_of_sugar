@@ -36,7 +36,7 @@ namespace CupOfSugar.Pages.Product
 
         [BindProperty]
         [Required(AllowEmptyStrings = false, ErrorMessage = "Please enter a number greater than 0!")]
-        [Range(0, Int32.MaxValue)]
+        [Range(1, Int32.MaxValue, ErrorMessage = "The number must be greater than 0!")]
         public int quantity { get; set; }
 
 
@@ -88,7 +88,7 @@ namespace CupOfSugar.Pages.Product
         public IActionResult OnPost()
         {
 
-            if ((!ModelState.IsValid) || (quantity == 0))
+            if (!ModelState.IsValid)
             {
                 return Page();
             }
