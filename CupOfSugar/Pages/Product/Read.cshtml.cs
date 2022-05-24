@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using CupOfSugar.WebSite.Services;
 
+using System.ComponentModel.DataAnnotations;
+
 namespace CupOfSugar.Pages.Product
 {
     /// <summary>
@@ -17,7 +19,6 @@ namespace CupOfSugar.Pages.Product
         /// <summary>
         /// Default Construtor
         /// </summary>
-        /// <param name="logger"></param>
         /// <param name="productService"></param>
         public ReadModel(JsonFileProductService productService)
         {
@@ -27,10 +28,23 @@ namespace CupOfSugar.Pages.Product
         // The data to show, bind to it for the post
         [BindProperty]
         public WebSite.Models.Product Product { get; set; }
+
+        [BindProperty]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "The borrower's name must not be null!")]
+        [StringLength(1000, ErrorMessage = "The name must not be too long")]
+        public string borrower { get; set; }
+
+        [BindProperty]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "Please enter a number greater than 0!")]
+        [Range(0, Int32.MaxValue)]
+        public int quantity { get; set; }
+
+
         // The status that indicate if the borrow button was clicked or not
         public bool borrowBtnStatus;
         // The value of the borrow button press
         public string borrowBtnValue;
+
 
         /// <summary>
         /// REST Get request
@@ -76,12 +90,11 @@ namespace CupOfSugar.Pages.Product
 
             if (!ModelState.IsValid)
             {
-
-
                 return Page();
             }
 
-            Product.Status = "Pending";
+            Product.Names.Add(borrower);
+            Product.BorrowQuantities.Add(quantity);
 
             ProductService.UpdateData(Product);
 
