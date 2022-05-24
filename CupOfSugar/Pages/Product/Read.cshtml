@@ -44,21 +44,7 @@
                 {
                     <div class="borrow-info-card">
                         <div class="borrow-info-text card-text">@Model.Product.Names[i] - @Model.Product.BorrowQuantities[i] @UnitTypeEnumExtensions.DisplayName((UnitTypeEnum)Enum.Parse(typeof(UnitTypeEnum), Model.Product.Unit))</div>
-                        <form method="post">
-                            @Html.HiddenFor(x => x.Product.Id)
-                            @Html.HiddenFor(x => x.Product.Address)
-                            @Html.HiddenFor(x => x.Product.Category)
-                            @Html.HiddenFor(x => x.Product.Image)
-                            @Html.HiddenFor(x => x.Product.Lender)
-                            @Html.HiddenFor(x => x.Product.Phone)
-                            @Html.HiddenFor(x => x.Product.Quantity)
-                            @Html.HiddenFor(x => x.Product.Status)
-                            @Html.HiddenFor(x => x.Product.Title)
-                            @Html.HiddenFor(x => x.Product.Unit)
-                            @Html.HiddenFor(x => x.Product.BorrowQuantities[i])
-                            @Html.HiddenFor(x => x.Product.Names[i])
-                            <input id="cancel_borrow" type="submit" value="Cancel Borrow" class="btn btn-red" /> &nbsp; &nbsp;
-                        </form>
+                        <a asp-page="Cancel" asp-route-id="@Model.Product.Id&@i" id="cancel_borrow" class="btn btn-red">Cancel Borrow</a>
                     </div>
                 }
             }
@@ -69,7 +55,7 @@
 <hr class="read-page-divider" />
 <!-- Start borrow form -->
 <p class="card-text">Borrow this item:</p>
-<div class="product-info-card">    
+<div class="product-info-card">
     <form method="post">
         @Html.HiddenFor(x => x.Product.Id)
         @Html.HiddenFor(x => x.Product.Address)
