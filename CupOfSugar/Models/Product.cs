@@ -52,7 +52,7 @@ namespace CupOfSugar.WebSite.Models
 
         public List<string> Names { get; set; } // string names of people borrowing product
 
-        public List<int> BorrowQuantities { get; set; } // string quantities that people are borrowing
+        public List<int> BorrowQuantities { get; set; } // int quantities that people are borrowing
 
         /// <summary>
         /// Returns string representation of product object
