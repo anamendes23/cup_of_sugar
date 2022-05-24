@@ -120,8 +120,8 @@ namespace CupOfSugar.WebSite.Services
                 Category = "",
                 Status = "Available",
                 Unit = "Unit",
-                Names = { },
-                BorrowQuantities = { }
+                Names = new List<string>(),
+                BorrowQuantities = new List<int>()
             };
 
             // Get the current set, and append the new record to it becuase IEnumerable does not have Add
