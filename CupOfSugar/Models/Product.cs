@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json;
 using System.Text.Json.Serialization;
@@ -49,9 +50,9 @@ namespace CupOfSugar.WebSite.Models
 
         public string Status { get; set; } // string status of product
 
-        public string[] Names { get; set; } // string names of people borrowing product
+        public List<string> Names { get; set; } // string names of people borrowing product
 
-        public int[] BorrowQuantities { get; set; } // string quantities that people are borrowing
+        public List<int> BorrowQuantities { get; set; } // string quantities that people are borrowing
 
         /// <summary>
         /// Returns string representation of product object
