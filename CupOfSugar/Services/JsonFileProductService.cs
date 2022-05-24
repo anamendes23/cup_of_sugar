@@ -74,7 +74,9 @@ namespace CupOfSugar.WebSite.Services
             productData.Quantity = data.Quantity;
             productData.Category = data.Category;
             productData.Status = data.Status;
-
+            productData.Unit = data.Unit;
+            productData.Names = data.Names;
+            productData.BorrowQuantities = data.BorrowQuantities;
             SaveData(products);
 
             return productData;
@@ -116,7 +118,10 @@ namespace CupOfSugar.WebSite.Services
                 Phone = "",
                 Quantity = 0,
                 Category = "",
-                Status = "Available"
+                Status = "Available",
+                Unit = "Unit",
+                Names = { },
+                BorrowQuantities = { }
             };
 
             // Get the current set, and append the new record to it becuase IEnumerable does not have Add
