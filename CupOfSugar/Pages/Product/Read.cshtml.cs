@@ -88,13 +88,23 @@ namespace CupOfSugar.Pages.Product
         public IActionResult OnPost()
         {
 
-            if (!ModelState.IsValid)
+            if ((!ModelState.IsValid) || (quantity == 0))
             {
                 return Page();
             }
 
+            if (quantity > Product.Quantity)
+            {
+                Product.Quantity -= 1;
+                Product.BorrowQuantities.Add(1);
+            }
+            else
+            {
+                Product.Quantity -= quantity;
+                Product.BorrowQuantities.Add(quantity);
+            }
+
             Product.Names.Add(borrower);
-            Product.BorrowQuantities.Add(quantity);
 
             ProductService.UpdateData(Product);
 
