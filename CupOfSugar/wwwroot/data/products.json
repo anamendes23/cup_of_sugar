@@ -10,11 +10,13 @@
     "Unit": "Unit",
     "Category": "Fruit",
     "Status": "Available",
-    "Names": [
+    "Names": 
+    [
       "Ana",
       "Banana"
     ],
-    "BorrowQuantities": [
+    "BorrowQuantities": 
+    [
       3,
       4
     ]
@@ -30,8 +32,32 @@
     "Unit": "Unit",
     "Category": "Fruit",
     "Status": "Available",
-    "Names": null,
-    "BorrowQuantities": null
+    "Names": [
+      "Jasmine",
+      "Kat",
+      "Banunu",
+      "Kevin",
+      "Stuart",
+      "Bob",
+      "Dave",
+      "Phil",
+      "Tim",
+      "Carl",
+      "Jorge"
+    ],
+    "BorrowQuantities": [
+      3,
+      1,
+      3,
+      4,
+      1,
+      6,
+      2,
+      8,
+      5,
+      12,
+      7
+    ]
   },
   {
     "Id": "grover-strawberries",
@@ -44,8 +70,14 @@
     "Unit": "Box",
     "Category": "Fruit",
     "Status": "Available",
-    "Names": null,
-    "BorrowQuantities": null
+    "Names": [
+      "James",
+      "Tee"
+    ],
+    "BorrowQuantities": [
+      5,
+      4
+    ]
   },
   {
     "Id": "hazel-mixedberries",
@@ -58,8 +90,10 @@
     "Unit": "Box",
     "Category": "Fruit",
     "Status": "Available",
-    "Names": null,
-    "BorrowQuantities": null
+    "Names": [
+    ],
+    "BorrowQuantities": [
+    ]
   },
   {
     "Id": "margot-tomatoes",
@@ -72,8 +106,14 @@
     "Unit": "Unit",
     "Category": "Fruit",
     "Status": "Available",
-    "Names": null,
-    "BorrowQuantities": null
+    "Names": [
+      "Ace",
+      "Hanks"
+    ],
+    "BorrowQuantities": [
+      1,
+      4
+    ]
   },
   {
     "Id": "jessie-eggs",
@@ -86,8 +126,14 @@
     "Unit": "Unit",
     "Category": "Poultry",
     "Status": "Available",
-    "Names": null,
-    "BorrowQuantities": null
+    "Names": [
+      "Ana",
+      "Banana"
+    ],
+    "BorrowQuantities": [
+      3,
+      4
+    ]
   },
   {
     "Id": "freda-cheese",
@@ -100,8 +146,14 @@
     "Unit": "Slice",
     "Category": "Dairy",
     "Status": "Available",
-    "Names": null,
-    "BorrowQuantities": null
+    "Names": [
+      "Ana",
+      "Banana"
+    ],
+    "BorrowQuantities": [
+      3,
+      4
+    ]
   },
   {
     "Id": "ellie-bread",
@@ -114,8 +166,14 @@
     "Unit": "Loaf",
     "Category": "Miscellaneous",
     "Status": "Available",
-    "Names": null,
-    "BorrowQuantities": null
+    "Names": [
+      "Ana",
+      "Banana"
+    ],
+    "BorrowQuantities": [
+      3,
+      4
+    ]
   },
   {
     "Id": "dustin-croissants",
@@ -128,8 +186,14 @@
     "Unit": "Unit",
     "Category": "Dessert",
     "Status": "Available",
-    "Names": null,
-    "BorrowQuantities": null
+    "Names": [
+      "Ana",
+      "Banana"
+    ],
+    "BorrowQuantities": [
+      3,
+      4
+    ]
   },
   {
     "Id": "joanna-macarons",
@@ -142,8 +206,14 @@
     "Unit": "Unit",
     "Category": "Dessert",
     "Status": "Available",
-    "Names": null,
-    "BorrowQuantities": null
+    "Names": [
+      "Ana",
+      "Banana"
+    ],
+    "BorrowQuantities": [
+      3,
+      4
+    ]
   },
   {
     "Id": "leo-doughnuts",
@@ -156,8 +226,14 @@
     "Unit": "Unit",
     "Category": "Dessert",
     "Status": "Available",
-    "Names": null,
-    "BorrowQuantities": null
+    "Names": [
+      "Ana",
+      "Banana"
+    ],
+    "BorrowQuantities": [
+      3,
+      4
+    ]
   },
   {
     "Id": "doyle-chickensandwich",
@@ -170,8 +246,14 @@
     "Unit": "Unit",
     "Category": "Entree",
     "Status": "Available",
-    "Names": null,
-    "BorrowQuantities": null
+    "Names": [
+      "Ana",
+      "Banana"
+    ],
+    "BorrowQuantities": [
+      3,
+      4
+    ]
   },
   {
     "Id": "john-pizza",
@@ -184,8 +266,14 @@
     "Unit": "Slice",
     "Category": "Entree",
     "Status": "Available",
-    "Names": null,
-    "BorrowQuantities": null
+    "Names": [
+      "Ana",
+      "Banana"
+    ],
+    "BorrowQuantities": [
+      3,
+      4
+    ]
   },
   {
     "Id": "olivia-pasta",
@@ -198,8 +286,14 @@
     "Unit": "Box",
     "Category": "Entree",
     "Status": "Available",
-    "Names": null,
-    "BorrowQuantities": null
+    "Names": [
+      "Ana",
+      "Banana"
+    ],
+    "BorrowQuantities": [
+      3,
+      4
+    ]
   },
   {
     "Id": "jack-orangejuice",
@@ -212,8 +306,14 @@
     "Unit": "Bottle",
     "Category": "Drink",
     "Status": "Available",
-    "Names": null,
-    "BorrowQuantities": null
+    "Names": [
+      "Ana",
+      "Banana"
+    ],
+    "BorrowQuantities": [
+      3,
+      4
+    ]
   },
   {
     "Id": "dan-cola",
@@ -226,8 +326,14 @@
     "Unit": "Can",
     "Category": "Drink",
     "Status": "Available",
-    "Names": null,
-    "BorrowQuantities": null
+    "Names": [
+      "Ana",
+      "Banana"
+    ],
+    "BorrowQuantities": [
+      3,
+      4
+    ]
   },
   {
     "Id": "zach-sugar",
@@ -240,8 +346,14 @@
     "Unit": "Bag",
     "Category": "Miscellaneous",
     "Status": "Available",
-    "Names": null,
-    "BorrowQuantities": null
+    "Names": [
+      "Ana",
+      "Banana"
+    ],
+    "BorrowQuantities": [
+      3,
+      4
+    ]
   },
   {
     "Id": "claire-oliveoil",
@@ -254,8 +366,14 @@
     "Unit": "Bottle",
     "Category": "Miscellaneous",
     "Status": "Available",
-    "Names": null,
-    "BorrowQuantities": null
+    "Names": [
+      "Ana",
+      "Banana"
+    ],
+    "BorrowQuantities": [
+      3,
+      4
+    ]
   },
   {
     "Id": "cam-flour",
@@ -268,8 +386,14 @@
     "Unit": "Bag",
     "Category": "Miscellaneous",
     "Status": "Available",
-    "Names": null,
-    "BorrowQuantities": null
+    "Names": [
+      "Ana",
+      "Banana"
+    ],
+    "BorrowQuantities": [
+      3,
+      4
+    ]
   },
   {
     "Id": "c9d2b67a-c872-49e9-9754-8b28f23eca41",
@@ -282,10 +406,14 @@
     "Unit": "Unit",
     "Category": "Dessert",
     "Status": "Pending",
-    "Names": [ 
-      "Pleebo" ],
-    "BorrowQuantities": [ 
-      1 ]
+    "Names": 
+    [
+      "Pleebo"
+    ],
+    "BorrowQuantities": 
+    [
+      1
+    ]
   },
   {
     "Id": "00ee5812-2054-4dc1-a93e-1994de885801",
@@ -298,8 +426,14 @@
     "Unit": "Unit",
     "Category": "Dessert",
     "Status": "Available",
-    "Names": null,
-    "BorrowQuantities": null
+    "Names": [
+      "Ana",
+      "Banana"
+    ],
+    "BorrowQuantities": [
+      3,
+      4
+    ]
   },
   {
     "Id": "ed40a1f5-24d9-40fa-b0f2-efe0f71befe2",
@@ -312,7 +446,13 @@
     "Unit": "Unit",
     "Category": "Fruit",
     "Status": "Available",
-    "Names": null,
-    "BorrowQuantities": null
+    "Names": [
+      "Ana",
+      "Banana"
+    ],
+    "BorrowQuantities": [
+      3,
+      4
+    ]
   }
 ]
