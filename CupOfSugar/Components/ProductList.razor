@@ -5,11 +5,12 @@
 
 @inject NavigationManager NavManager
 
+
 <!--Filter-->
 <div class="row">
     <div class="row">
         <div class="col">
-            <input id="filter-input" type="text" @onchange="(e) => UpdateFilterText(e.Value.ToString())" value="@FilterDataString" />
+            <input type="text" @onchange="(e) => UpdateFilterText(e.Value.ToString())" value="@FilterDataString" />
             <button @onclick="(e => EnableFilterData())" class="btn btn-success">Filter</button>
             <button @onclick="(e => ClearFilterData())" class="btn btn-danger">Clear</button>
         </div>
@@ -18,7 +19,7 @@
     <div class="row">
         <label class="col-sm-3 col-form-label" for="category"></label>
         <select @onchange="(e) => UpdateFilterCategory(e.Value.ToString())" class="form-select col-sm-9 form-control" id="inputGroupSelect02">
-            <option selected>All</option>
+            <option selected></option>
             <option value="Fruit">Fruit</option>
             <option value="Vegetable">Vegetable</option>
             <option value="Poultry">Poultry</option>
@@ -30,6 +31,14 @@
             <option value="Drink">Drink</option>
             <option value="Miscellaneous">Miscellaneous</option>
         </select>
+    </div>
+
+    <!--checkbox which enables the users to filter the products by availability-->
+    <div class="row" id="availability-filter">
+        <div class="col">
+            <input type="checkbox" id="availability" name="availability" value="available" @onchange="(e) => EnableAvailabilityFilter()">
+            <label for="vehicle1" id="availability-label"> Items available</label>
+        </div>
     </div>
 </div>
 
@@ -65,14 +74,16 @@
                 productListGroup = productListGroup.Where(m => m.Title.ToLower().Contains(FilterDataString.ToLower()));
             }
 
+            //If the availability checkbox is checked, the dataset is reduced according the status of the product
+            if (FilterAvailability)
+            {
+                productListGroup = productListGroup.Where(m => m.Status.ToLower().Equals("available"));
+            }
+
             // filter by category
             if (!String.IsNullOrEmpty(selectedCategory))
-            {   // If the selceted category is not "All", thenget products of the selected category, else productListGroup will
-                // be all products
-                if (!selectedCategory.Equals("All"))
-                {
-                    productListGroup = productListGroup.Where(m => m.Category.ToLower().Contains(selectedCategory.ToLower()));
-                }
+            {
+                productListGroup = productListGroup.Where(m => m.Category.ToLower().Contains(selectedCategory.ToLower()));
             }
 
             if (productListGroup.Any())
@@ -92,7 +103,7 @@
                                 </div>
                                 <div class="card-footer">
                                     <small class="text-muted">
-                                        <button @onclick="(e => MovetoRead(product.Id))" id="MoreInfoButton_@product.Id"  class="btn btn-primary">More Info</button>
+                                        <button @onclick="(e => MovetoRead(product.Id))" id="MoreInfoButton_@product.Id" class="btn btn-primary">More Info</button>
                                     </small>
                                 </div>
                             </div>
@@ -103,14 +114,14 @@
         }
 
         // Checking if the filter applied rendered any products
-        if(productPresent == 0)
-            {
-                <br />
-                <br />
-                <h4>
-                    Sorry! Could not find any items matching your search.
-                </h4>
-            }
+        if (productPresent == 0)
+        {
+            <br />
+            <br />
+            <h4>
+                Sorry! Could not find any items matching your search.
+            </h4>
+        }
     }
 </div>
 
@@ -118,14 +129,33 @@
 
 @code
 {
+    // Selected product
+    Product selectedProduct;
+
+    // Selected product Id
+    string selectedProductId;
+
     // Selected category
     string selectedCategory;
 
-    // Filter string 
+    /// <summary>
+    /// Sets product Id and gets product with this Id
+    /// </summary>
+    /// <param name="productId"></param>
+    void SelectProduct(string productId)
+    {
+        selectedProductId = productId;
+        selectedProduct = ProductService.GetProducts().First(x => x.Id == productId);
+    }
+
+    // Filter string
     string FilterDataString = "";
 
     // Filtering state
     bool FilterData = false;
+
+    // Variable to enable filtering based on availability
+    bool FilterAvailability = false;
 
     /// <summary>
     /// Changes filter string to user input
@@ -153,6 +183,24 @@
     {
         // If the Filter is enabled, set the filter flag
         FilterData = true;
+
+    }
+
+    /// <summary>
+    /// Enables or disables the FilterAvailability flag depending on the checkbox action
+    /// </summary>
+    void EnableAvailabilityFilter()
+    {
+        //If the checkbox is unchecked, set the value of the flag to false
+        if (FilterAvailability == true)
+        {
+            FilterAvailability = false;
+        }
+        else
+        {
+            FilterAvailability = true;
+        }
+        // If the Filter is enabled, set the filter flag
     }
 
 
@@ -167,6 +215,7 @@
         FilterDataString = "";
     }
 
+
     /// <summary>
     /// Routes to read page when More Info button
     /// is clicked
@@ -174,7 +223,6 @@
     /// <param name="id"></param>
     void MovetoRead(string id)
     {
-        var theUri = NavManager.BaseUri;
         NavManager.NavigateTo("../Product/Read/" + id, true);
     }
 }
