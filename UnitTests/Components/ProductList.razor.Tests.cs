@@ -162,7 +162,7 @@ namespace UnitTests.Components
             // Find the one that matches the ID looking for and click it
             var button = buttonList.First(m => m.OuterHtml.Contains("Filter"));
 
-            // Fidn all input elements
+            // Find all input elements
             var inputList = page.FindAll("input");
 
             // Find input element with id filter-input 
@@ -214,5 +214,110 @@ namespace UnitTests.Components
         }
 
         #endregion MovetoRead 
+
+        #region EnableAvailabilityFilter
+
+        /// <summary>
+        /// Tests that available products are listed when 
+        /// availability filter is checked (true).
+        /// </summary>
+        [Test]
+        public void EnableAvailabilityFilter_True_Should_Return_Available_Products()
+        {
+            //Arrange
+            Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+            var page = RenderComponent<ProductList>();
+
+            // Get all inputs
+            var inputList = page.FindAll("input");
+
+            // Get checkbox (input with id of availability)
+            var checkbox = inputList.First(m => m.Id.Equals("availability"));
+
+            // Act
+            // Check the availability box
+            checkbox.Change(true);
+
+            // Get the markup to use for the assert
+            var pageMarkup = page.Markup;
+
+            // Assert
+            Assert.AreEqual(true, pageMarkup.Contains("Avocado"));
+        }
+
+        /// <summary>
+        /// Tests that when the availability filter is not checked
+        /// Pending items are rendered.
+        /// </summary>
+        [Test]
+        public void EnableAvailabilityFilter_False_Should_Return_All_Products()
+        {
+            //Arrange
+            Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+            var page = RenderComponent<ProductList>();
+
+            // Get all inputs
+            var inputList = page.FindAll("input");
+
+            // Get checkbox (input with id of availability)
+            var checkbox = inputList.First(m => m.Id.Equals("availability"));
+
+            // Act
+            // Check and then uncheck the box for availability
+            checkbox.Change(true);
+            checkbox.Change(false);
+
+            // Get the markup to use for the assert
+            var pageMarkup = page.Markup;
+
+            // Assert
+            // Unicorn Cupcake has a Pending status
+            Assert.AreEqual(true, pageMarkup.Contains("Unicorn Cupcake"));
+        }
+
+        #endregion EnableAvailabilityFilter
+
+        #region FilterAndRenderProducts
+
+        /// <summary>
+        /// Tests that filtering for an item when its incorrect category
+        /// is selected returns "Sorry! Could not find any items matching 
+        /// your search." Message
+        /// </summary>
+        [Test]
+        public void Filter_For_Non_Existing_Products_Should_Return_No_Matching_Products_Message()
+        {
+            //Arrange
+            Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+            var page = RenderComponent<ProductList>();
+
+            // Find the Buttons (more info)
+            var categoryDropdown = page.Find("select");
+
+            // Find the Buttons (more info)
+            var buttonList = page.FindAll("button");
+            // Find the one that matches the ID looking for and click it
+            var button = buttonList.First(m => m.OuterHtml.Contains("Filter"));
+
+            // Find all input elements
+            var inputList = page.FindAll("input");
+            // Find input element with id filter-input 
+            var filterInput = inputList.First(m => m.Id.Equals("filter-input"));
+
+            // Act
+            // Change cateory to fruit
+            categoryDropdown.Change("Fruit");
+            // Search for a non-fruit item, a dessert that does not exist in fruit category
+            filterInput.Change("Macarons");
+            button.Click();
+
+            // Get the markup to use for the assert
+            var pageMarkup = page.Markup;
+
+            // Assert
+            Assert.AreEqual(true, pageMarkup.Contains("Sorry! Could not find any items matching your search."));
+        }
+
+        #endregion FilterAndRenderProducts
     }
 }
