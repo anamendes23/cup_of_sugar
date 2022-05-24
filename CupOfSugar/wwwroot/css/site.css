@@ -293,7 +293,7 @@ ul {
     /* END Triangles and their buttons*/
 
     /* CSS for the Lend and borrow buttons to remain white before and after clicking with no underline */
-   .main-button a:link {
+    .main-button a:link {
         text-decoration: none !important;
         color: #F7FFF7 !important;
     }
@@ -526,7 +526,7 @@ ul {
         }
 
 
-/*These are the styling elements for the _Layout page*/
+    /*These are the styling elements for the _Layout page*/
     .navbar-color {
         background-color: #C488E1;
     }
@@ -538,7 +538,7 @@ ul {
 
     .navbar-button {
         font-family: 'Fascinate', cursive;
-        color: white  !important;
+        color: white !important;
         font-size: 1.25em !important;
     }
 
@@ -551,4 +551,18 @@ ul {
     .google-privacy {
         color: black;
         font-weight: 700;
+    }
+
+    /*Styling for Availability filter checkbox in Borrow page*/
+    #availability-filter {
+        padding-left: 35px;
+        padding-top: 7px;
+    }
+
+    #availability {
+        transform: scale(2);
+    }
+
+    #availability-label {
+        padding-left: 10px;
     }
