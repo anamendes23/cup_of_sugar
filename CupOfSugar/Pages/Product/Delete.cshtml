@@ -31,6 +31,15 @@
                 @Html.HiddenFor(x => x.Product.Phone)
                 @Html.HiddenFor(x => x.Product.Category)
                 @Html.HiddenFor(x => x.Product.Status)
+                @Html.HiddenFor(x => x.Product.Unit)
+                @if (Model.Product.Names != null)
+                {
+                    @for (int i = 0; i < Model.Product.Names.Count; i++)
+                    {
+                        @Html.HiddenFor(x => x.Product.BorrowQuantities[i])
+                        @Html.HiddenFor(x => x.Product.Names[i])
+                    }
+                }
                 <h3 class="title" id="productTitle">@Model.Product.Title</h3>
                 <p class="card-text">Quantity: @Model.Product.Quantity @UnitTypeEnumExtensions.DisplayName((UnitTypeEnum)Enum.Parse(typeof(UnitTypeEnum), Model.Product.Unit))</p>
                 <p class="card-text">Lender: @Model.Product.Lender</p>
