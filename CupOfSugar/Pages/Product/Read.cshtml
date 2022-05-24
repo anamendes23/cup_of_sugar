@@ -40,7 +40,7 @@
         <div class="borrows-info-card">
             @if (Model.Product.Names != null)
             {
-                @for (int i = 0; i < Model.Product.Names.Length; i++)
+                @for (int i = 0; i < Model.Product.Names.Count; i++)
                 {
                     <div class="borrow-info-card">
                         <div class="borrow-info-text card-text">@Model.Product.Names[i] - @Model.Product.BorrowQuantities[i] @UnitTypeEnumExtensions.DisplayName((UnitTypeEnum)Enum.Parse(typeof(UnitTypeEnum), Model.Product.Unit))</div>
@@ -69,15 +69,7 @@
 <hr class="read-page-divider" />
 <!-- Start borrow form -->
 <p class="card-text">Borrow this item:</p>
-<div class="product-info-card">
-    <div class="row form-group">
-        <label class="col-sm-3 col-form-label control-label">Name:</label>
-        <input class="col-sm-6 form-control" />
-    </div>
-    <div class="row form-group">
-        <label class="col-sm-4 col-form-label control-label">Quantity:</label>
-        <input class="col-sm-6 form-control" />
-    </div>
+<div class="product-info-card">    
     <form method="post">
         @Html.HiddenFor(x => x.Product.Id)
         @Html.HiddenFor(x => x.Product.Address)
@@ -89,13 +81,23 @@
         @Html.HiddenFor(x => x.Product.Status)
         @Html.HiddenFor(x => x.Product.Title)
         @Html.HiddenFor(x => x.Product.Unit)
-        @for (int i = 0; i < Model.Product.Names.Length; i++)
+        @for (int i = 0; i < Model.Product.Names.Count; i++)
         {
             @Html.HiddenFor(x => x.Product.BorrowQuantities[i])
             @Html.HiddenFor(x => x.Product.Names[i])
         }
+        <div class="row form-group">
+            <label asp-for="borrower" class="col-sm-3 col-form-label control-label update-form-label">Name:</label>
+            <input asp-for="borrower" class="col-sm-6 form-control input-color" />
+            <span asp-validation-for="borrower" class="text-danger"></span>
+        </div>
+        <div class="row form-group">
+            <label asp-for="quantity" class="col-sm-4 col-form-label control-label">Quantity:</label>
+            <input asp-for="quantity" class="col-sm-6 form-control" />
+            <span asp-validation-for="quantity" class="text-danger"></span>
+        </div>
         <input id="borrow" type="submit" value=@Model.borrowBtnValue disabled="@Model.borrowBtnStatus" class="btn btn-red" /> &nbsp; &nbsp;
-        </form>
+    </form>
 </div>
 <!-- End borrow form -->
 <hr class="read-page-divider" />
