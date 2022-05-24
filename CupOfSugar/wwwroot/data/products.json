@@ -281,9 +281,11 @@
     "Quantity": 1,
     "Unit": "Unit",
     "Category": "Dessert",
-    "Status": "Available",
-    "Names": null,
-    "BorrowQuantities": null
+    "Status": "Pending",
+    "Names": [ 
+      "Pleebo" ],
+    "BorrowQuantities": [ 
+      1 ]
   },
   {
     "Id": "00ee5812-2054-4dc1-a93e-1994de885801",
