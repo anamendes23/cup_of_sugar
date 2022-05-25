@@ -4,7 +4,7 @@ using CupOfSugar.WebSite.Models;
 namespace UnitTests.Models
 {
     /// <summary>
-    /// Unit tests for ProductTypeEnum
+    /// Unit tests for UnitTypeEnum
     /// </summary>
     class UnitTypeEnumTests
     {
