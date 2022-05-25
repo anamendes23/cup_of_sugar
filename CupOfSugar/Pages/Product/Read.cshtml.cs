@@ -113,6 +113,11 @@ namespace CupOfSugar.Pages.Product
 
             Product.Names.Add(borrower);
 
+            if (Product.Quantity == 0)
+            {
+                Product.Status = "Pending";
+            }
+
             ProductService.UpdateData(Product);
 
             return RedirectToPage("./Borrow");
