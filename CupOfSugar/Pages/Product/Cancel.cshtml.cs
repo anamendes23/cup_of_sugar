@@ -51,7 +51,6 @@ namespace CupOfSugar.Pages.Product
         /// <returns></returns>
         public IActionResult OnPost(string id)
         {
-
             if (!ModelState.IsValid)
             {
 
@@ -65,7 +64,7 @@ namespace CupOfSugar.Pages.Product
             Product.Quantity += Product.BorrowQuantities[num];
             Product.Names.RemoveAt(num);
             Product.BorrowQuantities.RemoveAt(num);
-
+            Product.Status = "Available";
             ProductService.UpdateData(Product);
 
             return RedirectToPage("./Borrow");
