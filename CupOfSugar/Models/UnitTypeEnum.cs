@@ -41,7 +41,6 @@
                 UnitTypeEnum.Loaf   => "loaf/loaves",
                 UnitTypeEnum.Bottle => "bottle(s)",
                 UnitTypeEnum.Can    => "can(s)",
-                _ => $"Unknown unit {data}"
             };
         }
     }
