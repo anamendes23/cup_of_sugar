@@ -35,24 +35,5 @@ namespace CupOfSugar.WebSite.Controllers
         {
             return ProductService.GetProducts();
         }
-
-        /*/// <summary>
-        /// CRUdi - Update method
-        /// This method updates the rating
-        /// </summary>
-        /// <param name="ProductId"></param>
-        /// <param name="Rating"></param>
-        /// <returns>Ok Status</returns>
-        //[HttpPatch] "[FromBody]"
-        [Route("Rate")]
-        [HttpGet]
-        public ActionResult Get(
-            [FromQuery] string ProductId,
-            [FromQuery] int Rating)
-        {
-            ProductService.AddRating(ProductId, Rating);
-            return Ok();
-        }
-        */
     }
 }
