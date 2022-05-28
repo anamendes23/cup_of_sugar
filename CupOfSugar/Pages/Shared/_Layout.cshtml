@@ -18,19 +18,18 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-toggleable-lg navbar-color navbar-light mb-3">
-            <div class="container">
-                <a class="navbar-brand navbar-logo" asp-area="" asp-page="/Index">
+            <div class="container-fluid">
+                <a class="navbar-brand navbar-logo" asp-page="/Index" asp-area="">
                     Cup of Sugar
                     <div style="float: right;">
                         <img src="~/images/logo/offwhite.png" class="logo-image" />
                     </div>
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link navbar-button" asp-area="" asp-page="/Product/Borrow">Borrow</a>
                         </li>
@@ -47,13 +46,16 @@
                 </div>
             </div>
 
+            <!--START dark mode switch-->
             <div class="custom-control custom-switch">
                 <input type="checkbox" class="custom-control-input" id="darkSwitch">
                 <label class="custom-control-label" for="darkSwitch">Dark Mode</label>
             </div>
             <script src="dark-mode-switch.min.js"></script>
-           
+            <!--END dark mode switch-->
+
         </nav>
+
     </header>
     <div class="container">
         <main role="main" class="pb-3">
@@ -69,6 +71,8 @@
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!--Script for bootstrap and toggling navbar burger menu-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="~/_framework/blazor.server.js"></script>
 
