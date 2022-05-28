@@ -18,8 +18,8 @@ namespace CupOfSugar.WebSite.Models
         [StringLength(60, MinimumLength = 3)]
         public string Lender { get; set; } //string Lender of product
 
-        [Required(ErrorMessage = "Please enter an image URL.")]
-        [Url(ErrorMessage = "Please enter a valid image URL")]
+        [Required(ErrorMessage = "Please enter an image URL,  something like https://thescranline.com/wp-content/uploads/2021/03/Dancing-Queen-Cupcakes.jpg")]
+        [Url]
         [JsonPropertyName("img")]
         public string Image { get; set; } //string url of Image of the product
 
