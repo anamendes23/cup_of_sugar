@@ -99,6 +99,7 @@ namespace UnitTests.Pages.Product
             // Act
             pageModel.OnGet("avaadams-avocado");
             string formattedPhone = pageModel.GetFormattedPhone();
+            
             // Assert
             Assert.AreEqual("(783) 549-6521", formattedPhone);
         }
