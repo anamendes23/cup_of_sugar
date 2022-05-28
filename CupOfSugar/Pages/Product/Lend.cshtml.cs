@@ -15,7 +15,7 @@ namespace CupOfSugar.Pages.Product
         /// <summary>
         /// Defualt Construtor
         /// </summary>
-        /// <param name="productService"></param>
+        /// <param name="productService">The service that interacts with the products.json file</param>
         public LendModel(JsonFileProductService productService)
         {
             ProductService = productService;
@@ -29,7 +29,6 @@ namespace CupOfSugar.Pages.Product
         /// REST Get request
         /// Loads the data
         /// </summary>
-        /// <param name="id"></param>
         public void OnGet()
         {
         }
@@ -40,7 +39,6 @@ namespace CupOfSugar.Pages.Product
         /// Call the data layer to Update that data
         /// Then return to the index page
         /// </summary>
-        /// <returns></returns>
         public IActionResult OnPost()
         {
             if (!ModelState.IsValid)
