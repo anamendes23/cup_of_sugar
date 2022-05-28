@@ -203,376 +203,376 @@ ul {
         height: 500px;
         margin-top: 60px;
     }
+}
 
-    @media (min-width: 576px) {
-        .top-triangle-button {
-            width: 40%;
-            height: 30%;
-            font-size: 450%;
-            left: 15%;
-            top: 10%;
-        }
-
-        .bottom-triangle-button {
-            width: 40%;
-            height: 20%;
-            font-size: 450%;
-            right: 15%;
-            bottom: 10%;
-        }
-
-        .triangle {
-            height: 600px;
-            margin-top: 5px;
-        }
+@media (min-width: 576px) {
+    .top-triangle-button {
+        width: 40%;
+        height: 30%;
+        font-size: 450%;
+        left: 15%;
+        top: 10%;
     }
 
-    @media (min-width: 768px) {
-        .top-triangle-button {
-            width: 40%;
-            height: 30%;
-            font-size: 500%;
-            left: 10%;
-            top: 10%;
-        }
-
-        .bottom-triangle-button {
-            width: 40%;
-            height: 30%;
-            font-size: 500%;
-            right: 10%;
-            bottom: 10%;
-        }
-
-        .triangle {
-            height: 600px;
-            margin-top: 10px;
-        }
+    .bottom-triangle-button {
+        width: 40%;
+        height: 20%;
+        font-size: 450%;
+        right: 15%;
+        bottom: 10%;
     }
 
-    @media (min-width: 992px) {
-        .top-triangle-button {
-            width: 40%;
-            height: 30%;
-            font-size: 550%;
-            left: 10%;
-            top: 15%;
-        }
+    .triangle {
+        height: 600px;
+        margin-top: 5px;
+    }
+}
 
-        .bottom-triangle-button {
-            width: 40%;
-            height: 30%;
-            font-size: 550%;
-            right: 10%;
-            bottom: 15%;
-        }
-
-        .triangle {
-            height: 800px;
-        }
+@media (min-width: 768px) {
+    .top-triangle-button {
+        width: 40%;
+        height: 30%;
+        font-size: 500%;
+        left: 10%;
+        top: 10%;
     }
 
-    @media (min-width: 1200px) {
-        .top-triangle-button {
-            width: 40%;
-            height: 30%;
-            font-size: 600%;
-            left: 5%;
-            top: 15%;
-        }
-
-        .bottom-triangle-button {
-            width: 40%;
-            height: 30%;
-            font-size: 600%;
-            right: 5%;
-            bottom: 15%;
-        }
+    .bottom-triangle-button {
+        width: 40%;
+        height: 30%;
+        font-size: 500%;
+        right: 10%;
+        bottom: 10%;
     }
 
-    /* END Triangles and their buttons*/
+    .triangle {
+        height: 600px;
+        margin-top: 10px;
+    }
+}
 
-    /* CSS for the Lend and borrow buttons to remain white before and after clicking with no underline */
-    .main-button a:link {
-        text-decoration: none !important;
-        color: #F7FFF7 !important;
+@media (min-width: 992px) {
+    .top-triangle-button {
+        width: 40%;
+        height: 30%;
+        font-size: 550%;
+        left: 10%;
+        top: 15%;
     }
 
-    .main-button a:visited {
-        text-decoration: none !important;
-        color: #F7FFF7 !important;
+    .bottom-triangle-button {
+        width: 40%;
+        height: 30%;
+        font-size: 550%;
+        right: 10%;
+        bottom: 15%;
     }
 
-    .main-button a:hover {
-        text-decoration: none !important;
-        color: #C4C4C4 !important;
+    .triangle {
+        height: 800px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .top-triangle-button {
+        width: 40%;
+        height: 30%;
+        font-size: 600%;
+        left: 5%;
+        top: 15%;
     }
 
-    /*START Lend Page/Form Styles*/
-
-    .lend-title {
-        font-family: 'Open Sans', sans-serif;
-        margin-top: 100px;
-        margin-bottom: 100px;
-        font-size: 275%;
+    .bottom-triangle-button {
+        width: 40%;
+        height: 30%;
+        font-size: 600%;
+        right: 5%;
+        bottom: 15%;
     }
+}
 
-    .lend-form-label {
-        font-family: 'Open Sans', sans-serif;
-        font-size: 200%;
-        color: #4ECDC4;
-        font-weight: 500;
-    }
+/* END Triangles and their buttons*/
 
-    .input-color {
-        border: 3px solid #4ECDC4;
-    }
+/* CSS for the Lend and borrow buttons to remain white before and after clicking with no underline */
+.main-button a:link {
+    text-decoration: none !important;
+    color: #F7FFF7 !important;
+}
 
-    .lend-btn {
-        background-color: #F6BD60;
-        font-size: 150%;
-        color: #000000;
-        margin-right: 50px;
-    }
+.main-button a:visited {
+    text-decoration: none !important;
+    color: #F7FFF7 !important;
+}
 
-    /*END Lend Page/Form Styles*/
+.main-button a:hover {
+    text-decoration: none !important;
+    color: #C4C4C4 !important;
+}
+
+/*START Lend Page/Form Styles*/
+
+.lend-title {
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    font-size: 275%;
+}
+
+.lend-form-label {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 200%;
+    color: #4ECDC4;
+    font-weight: 500;
+}
+
+.input-color {
+    border: 3px solid #4ECDC4;
+}
+
+.lend-btn {
+    background-color: #F6BD60;
+    font-size: 150%;
+    color: #000000;
+    margin-right: 50px;
+}
+
+/*END Lend Page/Form Styles*/
 
 
-    /*Adding spacing between the navbar elements*/
-    .navbar-nav > li {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
+/*Adding spacing between the navbar elements*/
+.navbar-nav > li {
+    padding-left: 20px;
+    padding-right: 20px;
+}
 
-    /* Start of Read page styling */
-    .read-title {
-        font-family: 'Fascinate', cursive;
-        text-align: center;
-    }
+/* Start of Read page styling */
+.read-title {
+    font-family: 'Fascinate', cursive;
+    text-align: center;
+}
 
-    .product-info-card {
-        display: flex;
-        flex-direction: row;
-    }
+.product-info-card {
+    display: flex;
+    flex-direction: row;
+}
 
-        .product-info-card img {
-            width: 300px;
-            height: 300px;
-            align-items: flex-start;
-        }
-
-    .product-info {
-        align-items: flex-end;
-        padding: 10px;
-        margin-left: 30px;
-    }
-
-    .borrows-info-card {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .borrow-info-card {
-        display: flex;
-        flex-direction: row;
-        background-color: #D9D9D9;
-        margin: 5px;
-        padding: 5px;
-        align-items: center;
-        justify-content: space-between;
+    .product-info-card img {
         width: 300px;
-    }
-
-    .borrow-info-text {
-        text-align: left;
-    }
-
-    .borrow-form {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .read-buttons {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .btn-green {
-        color: #fff;
-        background-color: #4ECDC4;
-        border-color: #4ECDC4;
-    }
-
-    .btn-red {
-        color: #fff;
-        background-color: #FF6B6B;
-        border-color: #FF6B6B;
-    }
-
-    .btn-thinner {
-        height: 40px;
-        width: 120px;
-    }
-
-    .btn-monster {
-        width: 150px;
-        height: 50px;
-        font-size: 20px;
-        font-weight: bold;
-    }
-
-    .verticalLine {
-        border-left: 1px solid #E5E5E5;
         height: 300px;
-        padding-left: 20px;
-        margin-left: 10px;
+        align-items: flex-start;
     }
 
-    .read-page-divider {
-        color: #c2c2c2;
-    }
-    /* End of Read page styling */
-    /* Start of Borrow page styling */
-    .borrow-title {
-        font-family: 'Fascinate', cursive;
-        color: #FF6B6B;
-        padding: 20px;
-        margin-bottom: 20px;
-    }
-    /* End of Borrow page styling */
+.product-info {
+    align-items: flex-end;
+    padding: 10px;
+    margin-left: 30px;
+}
 
-    /* Start of About us page styling */
-    .dev-card {
-        display: flex;
-        flex-direction: row;
-        width: 1100px;
-        margin-top: 30px;
-        margin-right: 50px;
-    }
+.borrows-info-card {
+    display: flex;
+    flex-direction: column;
+}
 
-    .about-us {
-        width: 200px;
-    }
+.borrow-info-card {
+    display: flex;
+    flex-direction: row;
+    background-color: #D9D9D9;
+    margin: 5px;
+    padding: 5px;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+}
 
-    .dev-card > p {
-        text-align: center;
-        align-self: center;
-        padding: 20px;
-    }
-    /* End of About us page styling */
+.borrow-info-text {
+    text-align: left;
+}
 
-    /*Basic styling for the dark mode*/
+.borrow-form {
+    display: flex;
+    flex-direction: row;
+}
 
+.read-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 
-    [data-theme="dark"] {
-        background-color: #111 !important;
-        color: #eee;
-    }
+.btn-green {
+    color: #fff;
+    background-color: #4ECDC4;
+    border-color: #4ECDC4;
+}
 
-        [data-theme="dark"] .navbar-color {
-            background-color: #936DCC;
-        }
+.btn-red {
+    color: #fff;
+    background-color: #FF6B6B;
+    border-color: #FF6B6B;
+}
 
-        [data-theme="dark"] .triangle {
-            width: 100%;
-            height: 800px;
-            background: linear-gradient(to bottom right, #C52641 0%, #C52641 50%, #4AADBC 50%, #4AADBC 100%);
-            position: relative;
-        }
+.btn-thinner {
+    height: 40px;
+    width: 120px;
+}
 
-        [data-theme="dark"] .bottom-triangle-button {
-            padding: 10px;
-            position: absolute;
-            background-color: #4AADBC;
-            color: white;
-            font-family: 'Fascinate Inline', cursive;
-            text-align: left;
-        }
+.btn-monster {
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+}
 
-        [data-theme="dark"] .top-triangle-button {
-            padding: 10px;
-            position: absolute;
-            background-color: #C52641;
-            color: white;
-            font-family: 'Fascinate Inline', cursive;
-            text-align: right;
-        }
+.verticalLine {
+    border-left: 1px solid #E5E5E5;
+    height: 300px;
+    padding-left: 20px;
+    margin-left: 10px;
+}
 
-        [data-theme="dark"] .borrow-title {
-            font-family: 'Fascinate', cursive;
-            color: #C52641;
-            padding: 20px;
-            margin-bottom: 20px;
-        }
+.read-page-divider {
+    color: #c2c2c2;
+}
+/* End of Read page styling */
+/* Start of Borrow page styling */
+.borrow-title {
+    font-family: 'Fascinate', cursive;
+    color: #FF6B6B;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+/* End of Borrow page styling */
 
-        [data-theme="dark"] .card-columns .card-body {
-            height: 100px;
-            font-family: 'Nunito', sans-serif;
-            background: #1d1c1f;
-        }
+/* Start of About us page styling */
+.dev-card {
+    display: flex;
+    flex-direction: row;
+    width: 1100px;
+    margin-top: 30px;
+    margin-right: 50px;
+}
 
-        [data-theme="dark"] .cupofsugar-privacy {
-            color: white;
-            font-weight: 1000;
-        }
+.about-us {
+    width: 200px;
+}
 
-        [data-theme="dark"] .google-privacy {
-            color: white;
-            font-weight: 700;
-        }
+.dev-card > p {
+    text-align: center;
+    align-self: center;
+    padding: 20px;
+}
+/* End of About us page styling */
 
-
-        [data-theme="dark"] .bg-light {
-            background-color: #333 !important;
-        }
-
-        [data-theme="dark"] .bg-white {
-            background-color: #000 !important;
-        }
-
-        [data-theme="dark"] .bg-black {
-            background-color: #eee !important;
-        }
+/*Basic styling for the dark mode*/
 
 
-    /*These are the styling elements for the _Layout page*/
-    .navbar-color {
-        background-color: #C488E1;
-    }
+[data-theme="dark"] {
+    background-color: #111 !important;
+    color: #eee;
+}
 
-    .navbar-logo {
-        font-family: 'Fascinate', cursive !important;
-        color: white !important;
-    }
+[data-theme="dark"] .navbar-color {
+    background-color: #936DCC;
+}
 
-    .navbar-button {
-        font-family: 'Fascinate', cursive;
-        color: white !important;
-        font-size: 1.25em !important;
-    }
+[data-theme="dark"] .triangle {
+    width: 100%;
+    height: 800px;
+    background: linear-gradient(to bottom right, #C52641 0%, #C52641 50%, #4AADBC 50%, #4AADBC 100%);
+    position: relative;
+}
 
-    /*START privacy page styling*/
-    .cupofsugar-privacy {
-        color: black;
-        font-weight: 1000;
-    }
+[data-theme="dark"] .bottom-triangle-button {
+    padding: 10px;
+    position: absolute;
+    background-color: #4AADBC;
+    color: white;
+    font-family: 'Fascinate Inline', cursive;
+    text-align: left;
+}
 
-    .google-privacy {
-        color: black;
-        font-weight: 700;
-    }
+[data-theme="dark"] .top-triangle-button {
+    padding: 10px;
+    position: absolute;
+    background-color: #C52641;
+    color: white;
+    font-family: 'Fascinate Inline', cursive;
+    text-align: right;
+}
 
-    /*Styling for Availability filter checkbox in Borrow page*/
-    #availability-filter {
-        padding-left: 35px;
-        padding-top: 7px;
-    }
+[data-theme="dark"] .borrow-title {
+    font-family: 'Fascinate', cursive;
+    color: #C52641;
+    padding: 20px;
+    margin-bottom: 20px;
+}
 
-    #availability {
-        transform: scale(2);
-    }
+[data-theme="dark"] .card-columns .card-body {
+    height: 100px;
+    font-family: 'Nunito', sans-serif;
+    background: #1d1c1f;
+}
 
-    #availability-label {
-        padding-left: 10px;
-    }
+[data-theme="dark"] .cupofsugar-privacy {
+    color: white;
+    font-weight: 1000;
+}
+
+[data-theme="dark"] .google-privacy {
+    color: white;
+    font-weight: 700;
+}
+
+[data-theme="dark"] .bg-light {
+    background-color: #333 !important;
+}
+
+[data-theme="dark"] .bg-white {
+    background-color: #000 !important;
+}
+
+[data-theme="dark"] .bg-black {
+    background-color: #eee !important;
+}
+
+
+/*These are the styling elements for the _Layout page*/
+.navbar-color {
+    background-color: #C488E1;
+}
+
+.navbar-logo {
+    font-family: 'Fascinate', cursive !important;
+    color: white !important;
+}
+
+.navbar-button {
+    font-family: 'Fascinate', cursive;
+    color: white !important;
+    font-size: 1.25em !important;
+}
+
+/*START privacy page styling*/
+.cupofsugar-privacy {
+    color: black;
+    font-weight: 1000;
+}
+
+.google-privacy {
+    color: black;
+    font-weight: 700;
+}
+
+/*Styling for Availability filter checkbox in Borrow page*/
+#availability-filter {
+    padding-left: 35px;
+    padding-top: 7px;
+}
+
+#availability {
+    transform: scale(2);
+}
+
+#availability-label {
+    padding-left: 10px;
+}
