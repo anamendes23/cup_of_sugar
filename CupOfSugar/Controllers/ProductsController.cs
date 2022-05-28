@@ -22,8 +22,7 @@ namespace CupOfSugar.WebSite.Controllers
         {
             this.ProductService = productService;
         }
-
-        
+  
         public JsonFileProductService ProductService { get; } // ProductService attribute deals with json file
 
         /// <summary>
