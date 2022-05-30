@@ -403,11 +403,16 @@ ul {
     padding: 5px;
     align-items: center;
     justify-content: space-between;
-    width: 300px;
+    width: 470px;
 }
 
 .borrow-info-text {
     text-align: left;
+}
+
+[data-theme="dark"] .borrow-info-text {
+    text-align: left;
+    color: #000000;
 }
 
 .borrow-form {
@@ -433,6 +438,12 @@ ul {
     color: #fff;
     background-color: #4ECDC4;
     border-color: #4ECDC4;
+}
+
+[data-theme="dark"] .btn-green {
+    color: #fff;
+    background-color: #4AADBC;
+    border-color: #4AADBC;
 }
 
 .btn-red {
@@ -467,7 +478,11 @@ ul {
 }
 
 .read-page-divider {
-    color: #c2c2c2;
+    border-color: #c2c2c2;
+}
+
+[data-theme="dark"] .read-page-divider {
+    border-color: #F7FFF7;
 }
 /* End of Read page styling */
 /* Start of Borrow page styling */
@@ -503,7 +518,7 @@ ul {
 
 
 [data-theme="dark"] {
-    background-color: #111 !important;
+    background-color: #272822 !important;
     color: #eee;
 }
 
