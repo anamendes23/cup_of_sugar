@@ -312,33 +312,55 @@ ul {
 /*START Lend Page/Form Styles*/
 
 .lend-title {
-    font-family: 'Open Sans', sans-serif;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    font-size: 275%;
+    font-family: 'Fascinate', cursive;
+    margin: 80px;
+    text-align: center;
 }
 
 .lend-form-label {
     font-family: 'Open Sans', sans-serif;
-    font-size: 200%;
+    font-size: 150%;
     color: #4ECDC4;
-    font-weight: 500;
+    font-weight: 700;
+    text-align: right;
+    align-self: center;
+    margin-left: 10%;
+}
+
+[data-theme="dark"] .lend-form-label {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 150%;
+    color: #4AADBC;
+    font-weight: 700;
+    text-align: right;
+    align-self: center;
+    margin-left: 10%;
 }
 
 .input-color {
     border: 3px solid #4ECDC4;
+    height: 50px;
+    align-self: center;
+}
+
+[data-theme="dark"] .input-color {
+    border: 3px solid #4AADBC;
+    height: 50px;
+    align-self: center;
 }
 
 .lend-btn {
+    color: #fff;
+    border-color: #F6BD60;
     background-color: #F6BD60;
-    font-size: 150%;
-    color: #000000;
-    margin-right: 50px;
 }
 
+[data-theme="dark"] .lend-btn {
+    color: #fff;
+    border-color: #E87220;
+    background-color: #E87220;
+}
 /*END Lend Page/Form Styles*/
-
-
 /*Adding spacing between the navbar elements*/
 .navbar-nav > li {
     padding-left: 20px;
@@ -399,6 +421,14 @@ ul {
     justify-content: center;
 }
 
+.btn-spacing {
+    margin-left: 50px;
+}
+
+.btn-padding {
+    margin: 50px;
+}
+
 .btn-green {
     color: #fff;
     background-color: #4ECDC4;
@@ -409,6 +439,12 @@ ul {
     color: #fff;
     background-color: #FF6B6B;
     border-color: #FF6B6B;
+}
+
+[data-theme="dark"] .btn-red {
+    color: #fff;
+    background-color: #C52641;
+    border-color: #C52641;
 }
 
 .btn-thinner {
