@@ -36,8 +36,8 @@ namespace CupOfSugar.WebSite.Models
             ErrorMessage = "Not a valid phone number. Please enter a 10 digit phone number.")]
         public string Phone { get; set; } //string phone of Lender
 
-        [Required(ErrorMessage = "Please enter a quantity greater than 0.")]
-        [Range(1, Int32.MaxValue, ErrorMessage = "Please enter a quantity greater than 0.")]
+        [Required(ErrorMessage = "Please enter a quantity equal or greater than 0.")]
+        [Range(0, Int32.MaxValue, ErrorMessage = "Please enter a quantity equal or greater than 0.")]
         public int Quantity { get; set; } //int quantity of product
 
         [Required(ErrorMessage = "Please select a unit from the list. " +
