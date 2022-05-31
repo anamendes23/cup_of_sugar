@@ -10,16 +10,15 @@
 }
 
 <!-- Start Page title -->
-<h1>Delete</h1>
+<h1 class="read-title">Done with your lend?</h1>
 <br />
 <!-- End Page title -->
 
 <div class="container">
     <form method="post">
+        <h2 class="text-center">Confirm the deletion of this item:</h2>
         <!-- Start of product information -->
-
-        <div class="product-info-card">
-            <img id="one" src='@Model.Product.Image' onerror="this.onerror=null;this.src='../images/default-@Model.Product.Category.ToLower()\.png'">
+        <div class="product-info-card product-info-card-center">
             <div class="product-info">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 @Html.HiddenFor(x => x.Product.Id)
@@ -48,14 +47,12 @@
                 <p class="card-text">Category: @Model.Product.Category</p>
                 <p class="card-text">Status: @Model.Product.Status</p>
             </div>
+            <img id="one" src='@Model.Product.Image' onerror="this.onerror=null;this.src='../images/default-@Model.Product.Category.ToLower()\.png'">
         </div>
         <!-- End of product information -->
-        <br />
-        <br />
         <!-- Start of delete confirmation section -->
-        <h2>Confirm Delete of this item</h2>
-        <div class="form-group">
-            <input type="submit" value="Delete" class="btn btn-primary" />
+        <div class="read-buttons">
+            <input type="submit" value="Delete" class="btn btn-red btn-monster" />
         </div>
         <!-- End of delete confirmation section -->
     </form>
