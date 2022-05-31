@@ -384,6 +384,12 @@ ul {
         align-items: flex-start;
     }
 
+.product-info-card-center {
+    margin-left: 15%;
+    width: 66%;
+    padding: 5%;
+}
+
 .product-info {
     align-items: flex-end;
     padding: 10px;
@@ -404,6 +410,18 @@ ul {
     align-items: center;
     justify-content: space-between;
     width: 470px;
+}
+
+.borrow-info-card-sm {
+    display: flex;
+    flex-direction: row;
+    background-color: #D9D9D9;
+    margin-top: 25px;
+    padding: 5px;
+    align-items: center;
+    justify-content: space-between;
+    width: 350px;
+    margin-left: 35%;
 }
 
 .borrow-info-text {
