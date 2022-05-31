@@ -656,7 +656,8 @@ ul {
 /*Styling for Availability filter checkbox in Borrow page*/
 #availability-filter {
     padding-left: 35px;
-    padding-top: 7px;
+    margin-top:13px;
+    padding-top: 10px;
 }
 
 #availability {
@@ -666,3 +667,20 @@ ul {
 #availability-label {
     padding-left: 10px;
 }
+
+/*Start of FILTER styling*/
+.filter{
+    height: 35px;
+    width:300px;
+    margin-left: 13px;
+    margin-top: 20px;
+}
+
+.dropdown-filter{
+    margin-top:20px;
+}
+
+.filter-btn-space{
+    margin-left: 5px;
+}
+/*End of FILTER styling*/
