@@ -472,6 +472,44 @@ ul {
 }
 
 /* End of Read page styling */
+
+/*Start UPDATE PAGE Styling*/
+.update-form-label {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 150%;
+    color: #4ECDC4;
+    font-weight: 700;
+    text-align: right;
+    align-self: center;
+    margin-left: 10%;
+}
+
+[data-theme="dark"] .update-form-label {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 150%;
+    color: #4AADBC;
+    font-weight: 700;
+    text-align: right;
+    align-self: center;
+    margin-left: 10%;
+}
+
+.update-title {
+    font-family: 'Fascinate', cursive;
+    margin: 80px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.update-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 30px;
+}
+/*End UPDATE PAGE Styling*/
+
+
 /* Start of Borrow page styling */
 .borrow-title {
     font-family: 'Fascinate', cursive;
@@ -501,9 +539,7 @@ ul {
 }
 /* End of About us page styling */
 
-/*Basic styling for the dark mode*/
-
-
+/*Start of styling for the dark mode*/
 [data-theme="dark"] {
     background-color: #272822 !important;
     color: #eee;
@@ -588,6 +624,7 @@ ul {
 [data-theme="dark"] .read-page-divider {
     border-color: #F7FFF7;
 }
+/*End of styling for Dark Mode*/
 
 /*These are the styling elements for the _Layout page*/
 .navbar-color {
