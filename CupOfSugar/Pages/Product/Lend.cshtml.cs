@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using CupOfSugar.WebSite.Services;
+using System.ComponentModel.DataAnnotations;
+using System;
 
 namespace CupOfSugar.Pages.Product
 {
@@ -23,7 +25,11 @@ namespace CupOfSugar.Pages.Product
 
         // The data to show, bind to it for the post
         [BindProperty]
-        public CupOfSugar.WebSite.Models.Product Product { get; set; } 
+        public CupOfSugar.WebSite.Models.Product Product { get; set; }
+
+        [Required(ErrorMessage = "Please enter a quantity greater than 0.")]
+        [Range(1, Int32.MaxValue, ErrorMessage = "Please enter a quantity greater than 0.")]
+        public int initQuantity { get; set; } //int quantity of product
 
         /// <summary>
         /// REST Get request
@@ -45,7 +51,7 @@ namespace CupOfSugar.Pages.Product
             {
                 return Page();
             }
-
+            Product.Quantity = initQuantity;
             Product = ProductService.CreateData(Product);
 
             return RedirectToPage("../Index");
