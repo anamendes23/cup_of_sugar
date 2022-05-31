@@ -7,7 +7,7 @@ using System;
 namespace CupOfSugar.Pages.Product
 {
     /// <summary>
-    /// Delete Page
+    /// Cancel Borrow Page
     /// </summary>
     public class CancelModel : PageModel
     {
