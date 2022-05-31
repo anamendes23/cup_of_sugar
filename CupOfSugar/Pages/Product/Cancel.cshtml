@@ -34,7 +34,7 @@
             @Html.HiddenFor(x => x.Product.Names[i])
         }
         @Html.HiddenFor(x => x.num)
-        <div class="borrow-info-card">
+        <div class="borrow-info-card-sm">
             <div class="borrow-info-text card-text">@Model.Product.Names[@Model.num] - @Model.Product.BorrowQuantities[@Model.num] @UnitTypeEnumExtensions.DisplayName((UnitTypeEnum)Enum.Parse(typeof(UnitTypeEnum), Model.Product.Unit))</div>
             <input type="submit" value="Cancel Borrow" class="btn btn-red" />
         </div>
