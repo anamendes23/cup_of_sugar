@@ -120,7 +120,7 @@ namespace CupOfSugar.Pages.Product
 
             ProductService.UpdateData(Product);
             
-            return RedirectToPage("./Borrow");
+            return RedirectToPage("./Read");
         }
     }
 }
