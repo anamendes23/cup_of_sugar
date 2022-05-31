@@ -440,11 +440,6 @@ ul {
     border-color: #4ECDC4;
 }
 
-[data-theme="dark"] .btn-green {
-    color: #fff;
-    background-color: #4AADBC;
-    border-color: #4AADBC;
-}
 
 .btn-red {
     color: #fff;
@@ -452,11 +447,6 @@ ul {
     border-color: #FF6B6B;
 }
 
-[data-theme="dark"] .btn-red {
-    color: #fff;
-    background-color: #C52641;
-    border-color: #C52641;
-}
 
 .btn-thinner {
     height: 40px;
@@ -481,9 +471,6 @@ ul {
     border-color: #c2c2c2;
 }
 
-[data-theme="dark"] .read-page-divider {
-    border-color: #F7FFF7;
-}
 /* End of Read page styling */
 /* Start of Borrow page styling */
 .borrow-title {
@@ -586,6 +573,21 @@ ul {
     background-color: #eee !important;
 }
 
+[data-theme="dark"] .btn-green {
+    color: #fff;
+    background-color: #4AADBC;
+    border-color: #4AADBC;
+}
+
+[data-theme="dark"] .btn-red {
+    color: #fff;
+    background-color: #C52641;
+    border-color: #C52641;
+}
+
+[data-theme="dark"] .read-page-divider {
+    border-color: #F7FFF7;
+}
 
 /*These are the styling elements for the _Layout page*/
 .navbar-color {
