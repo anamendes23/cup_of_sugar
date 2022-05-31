@@ -102,8 +102,8 @@ namespace CupOfSugar.Pages.Product
 
             if (quantity > Product.Quantity)
             {
-                Product.Quantity -= 1;
-                Product.BorrowQuantities.Add(1);
+                Product.Quantity -= Product.Quantity;
+                Product.BorrowQuantities.Add(Product.Quantity);
             }
             else
             {
@@ -119,7 +119,7 @@ namespace CupOfSugar.Pages.Product
             }
 
             ProductService.UpdateData(Product);
-
+            
             return RedirectToPage("./Borrow");
         }
     }
