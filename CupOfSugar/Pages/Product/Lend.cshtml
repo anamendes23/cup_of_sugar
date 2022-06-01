@@ -21,78 +21,94 @@
             @Html.HiddenFor(x => x.Product.Id)
 
             <!--input text field for product title with validation-->
-            <div class="row form-group">
-                <label asp-for="Product.Title" class="col-sm-3 col-form-label control-label lend-form-label"></label>
-                <input asp-for="Product.Title" class="col-sm-4 form-control input-color" />
+            <div class="col text-center form-group">
+                <div class="row">
+                    <label asp-for="Product.Title" class="col-sm-3 col-form-label control-label lend-form-label"></label>
+                    <input asp-for="Product.Title" class="col-sm-4 form-control input-color" />
+                </div>
                 <span asp-validation-for="Product.Title" class="text-danger"></span>
             </div>
 
             <!--input text field for product quantity with validation-->
-            <div class="row form-group">
-                <label asp-for="initQuantity" class="col-sm-3 col-form-label control-label lend-form-label">Quantity</label>
-                <input asp-for="initQuantity" class="col-sm-4 form-control input-color" />
+            <div class="col text-center form-group">
+                <div class="row">
+                    <label asp-for="initQuantity" class="col-sm-3 col-form-label control-label lend-form-label">Quantity</label>
+                    <input asp-for="initQuantity" class="col-sm-4 form-control input-color" />
+                </div>
                 <span asp-validation-for="initQuantity" class="text-danger"></span>
             </div>
 
             <!--drop down menu for quantity unit types-->
-            <div class="row form-group">
-                <label asp-for="Product.Unit" class="col-sm-3 col-form-label control-label lend-form-label"></label>
-                <select asp-for="Product.Unit" class="form-select col-sm-4 form-control input-color" id="inputGroupSelect03">
-                    <option selected></option>
-                    @foreach (UnitTypeEnum unit in Enum.GetValues(typeof(UnitTypeEnum)))
-                    {
-                        <option value=@unit>@UnitTypeEnumExtensions.DisplayName(unit)</option>
-                    }
-                </select>
+            <div class="col text-center form-group">
+                <div class="row">
+                    <label asp-for="Product.Unit" class="col-sm-3 col-form-label control-label lend-form-label"></label>
+                    <select asp-for="Product.Unit" class="form-select col-sm-4 form-control input-color" id="inputGroupSelect03">
+                        <option selected></option>
+                        @foreach (UnitTypeEnum unit in Enum.GetValues(typeof(UnitTypeEnum)))
+                        {
+                            <option value=@unit>@UnitTypeEnumExtensions.DisplayName(unit)</option>
+                        }
+                    </select>
+                </div>
                 <span asp-validation-for="Product.Unit" class="text-danger"></span>
             </div>
 
             <!--input text field for product image url with validation-->
-            <div class="row form-group">
-                <label asp-for="Product.Image" class="col-sm-3 col-form-label control-label lend-form-label"></label>
-                <input asp-for="Product.Image" class="col-sm-4 form-control input-color" />
+            <div class="col text-center form-group">
+                <div class="row">
+                    <label asp-for="Product.Image" class="col-sm-3 col-form-label control-label lend-form-label"></label>
+                    <input asp-for="Product.Image" class="col-sm-4 form-control input-color" />
+                </div>
                 <span asp-validation-for="Product.Image" class="text-danger"></span>
             </div>
 
             <!--input text field for lender name with validation-->
-            <div class="row form-group">
-                <label asp-for="Product.Lender" class="col-sm-3 col-form-label control-label lend-form-label"></label>
-                <input asp-for="Product.Lender" class="col-sm-4 form-control input-color" />
+            <div class="col text-center form-group">
+                <div class="row">
+                    <label asp-for="Product.Lender" class="col-sm-3 col-form-label control-label lend-form-label"></label>
+                    <input asp-for="Product.Lender" class="col-sm-4 form-control input-color" />
+                </div>
                 <span asp-validation-for="Product.Lender" class="text-danger"></span>
             </div>
 
             <!--input text field for lender address with validation-->
-            <div class="row form-group">
-                <label asp-for="Product.Address" class="col-sm-3 col-form-label control-label lend-form-label"></label>
-                <input asp-for="Product.Address" class="col-sm-4 form-control input-color" />
+            <div class="col text-center form-group">
+                <div class="row">
+                    <label asp-for="Product.Address" class="col-sm-3 col-form-label control-label lend-form-label"></label>
+                    <input asp-for="Product.Address" class="col-sm-4 form-control input-color" />
+                </div>
                 <span asp-validation-for="Product.Address" class="text-danger"></span>
             </div>
 
             <!--input text field for lender phone number with validation-->
-            <div class="row form-group">
-                <label asp-for="Product.Phone" class="col-sm-3 col-form-label control-label lend-form-label"></label>
-                <input asp-for="Product.Phone" class="col-sm-4 form-control input-color" />
+            <div class="col text-center form-group">
+                <div class="row">
+                    <label asp-for="Product.Phone" class="col-sm-3 col-form-label control-label lend-form-label"></label>
+                    <input asp-for="Product.Phone" class="col-sm-4 form-control input-color" />
+                </div>
                 <span asp-validation-for="Product.Phone" class="text-danger"></span>
             </div>
 
             <!--drop down menu for food category types-->
-            <div class="row form-group">
-                <label asp-for="Product.Category" class="col-sm-3 col-form-label control-label lend-form-label"></label>
-                <select asp-for="Product.Category" class="form-select col-sm-4 form-control input-color" id="inputGroupSelect02">
-                    <option selected></option>
-                    @foreach (ProductTypeEnum category in Enum.GetValues(typeof(ProductTypeEnum)))
-                    {
-                        <option value=@category>@ProductTypeEnumExtensions.DisplayName(category)</option>
-                    }
-                </select>
+            <div class="col text-center form-group">
+                <div class="row">
+                    <label asp-for="Product.Category" class="col-sm-3 col-form-label control-label lend-form-label"></label>
+                    <select asp-for="Product.Category" class="form-select col-sm-4 form-control input-color" id="inputGroupSelect02">
+                        <option selected></option>
+                        @foreach (ProductTypeEnum category in Enum.GetValues(typeof(ProductTypeEnum)))
+                        {
+                            <option value=@category>@ProductTypeEnumExtensions.DisplayName(category)</option>
+                        }
+                    </select>
+                </div>
                 <span asp-validation-for="Product.Category" class="text-danger"></span>
             </div>
 
-            <div class="read-buttons btn-padding">
-                <input type="submit" value="Save" name="action" class="btn btn-monster lend-btn" />
-                <div class="btn-spacing"></div>
-                <input type="button" value="Cancel" onclick="history.back()" class="btn btn-red btn-monster" />
-            </div>
+                <div class="read-buttons btn-padding">
+                    <input type="submit" value="Save" name="action" class="btn btn-monster lend-btn" />
+                    <div class="btn-spacing"></div>
+                    <input type="button" value="Cancel" onclick="history.back()" class="btn btn-red btn-monster" />
+                </div>
         </form>
         <!-- FORM END -->
     </div>
