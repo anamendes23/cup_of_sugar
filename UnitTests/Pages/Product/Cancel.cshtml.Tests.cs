@@ -24,6 +24,11 @@ namespace UnitTests.Pages.Product
         #endregion TestSetup
 
         #region OnGet
+
+        /// <summary>
+        /// The unit test to test if the valid 
+        /// return the correct item and borrower index
+        /// </summary>
         [Test]
         public void OnGet_Valid_Should_Be_Valid_State_And_Valid_Borrow_Index()
         {
@@ -35,19 +40,25 @@ namespace UnitTests.Pages.Product
             // Assert
             Assert.AreEqual(true, pageModel.ModelState.IsValid);
             Assert.AreEqual("Avocado", pageModel.Product.Title);
-            Assert.NotNull(pageModel.num);
+            Assert.AreEqual(0, pageModel.num);
         }
         #endregion OnGet
 
         #region OnPostAsync
+        /// <summary>
+        /// The unit test to test if 
+        /// the valid delete borrow request deletes the borrows
+        /// and redirect to the correct page
+        /// </summary>
         [Test]
         public void OnPostAsync_Valid_Should_Return_Products()
         {
             // Arrange
 
-            // First Create the product to delete
-
+            // First retrieve a product with borrows
             pageModel.Product = TestHelper.ProductService.GetProducts().FirstOrDefault(x => x.Names.Count > 0);
+
+            // Create the borrowing id from the first borrow
             var id = pageModel.Product.Id + "&" + "0";
             var borrowerCount = pageModel.Product.Names.Count;
 
@@ -59,10 +70,15 @@ namespace UnitTests.Pages.Product
             Assert.AreEqual(true, result.PageName.Contains("Borrow"));
 
             // Confirm the borrower is deleted
+
             var newBorrowerCount = TestHelper.ProductService.GetProducts().FirstOrDefault(x => x.Id.Equals(pageModel.Product.Id)).Names.Count;
             Assert.AreEqual(borrowerCount - 1, newBorrowerCount);
         }
 
+        /// <summary>
+        /// The unit test to test if an invalid Model State
+        /// return the page
+        /// </summary>
         [Test]
         public void OnPostAsync_InValid_Model_NotValid_Return_Page()
         {
