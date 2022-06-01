@@ -101,13 +101,13 @@ namespace CupOfSugar.Pages.Product
 
             if (quantity > Product.Quantity)
             {
-                Product.Quantity -= Product.Quantity;
                 Product.BorrowQuantities.Add(Product.Quantity);
+                Product.Quantity -= Product.Quantity;
             }
             else
             {
-                Product.Quantity -= quantity;
                 Product.BorrowQuantities.Add(quantity);
+                Product.Quantity -= quantity;
             }
 
             Product.Names.Add(borrower);
