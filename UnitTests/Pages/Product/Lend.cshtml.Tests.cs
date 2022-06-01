@@ -70,6 +70,7 @@ namespace UnitTests.Pages.Product
                 Category = "bogus",
                 Status = "bogus"
             };
+            pageModel.initQuantity = 1;
 
             // Act
             var result = pageModel.OnPost() as RedirectToPageResult;
