@@ -218,8 +218,8 @@ namespace UnitTests.Pages.Product
             var result = pageModel.OnPost() as RedirectToPageResult;
 
             // Assert
-            Assert.AreEqual(7, pageModel.Product.Quantity);
-            Assert.AreEqual(1, pageModel.Product.BorrowQuantities[0]);
+            Assert.AreEqual(0, pageModel.Product.Quantity);
+            Assert.AreEqual(8, pageModel.Product.BorrowQuantities[0]);
             Assert.AreEqual(true, pageModel.ModelState.IsValid);
         }
 
