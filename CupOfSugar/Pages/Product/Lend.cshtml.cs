@@ -27,6 +27,7 @@ namespace CupOfSugar.Pages.Product
         [BindProperty]
         public CupOfSugar.WebSite.Models.Product Product { get; set; }
 
+        [BindProperty]
         [Required(ErrorMessage = "Please enter a quantity greater than 0.")]
         [Range(1, Int32.MaxValue, ErrorMessage = "Please enter a quantity greater than 0.")]
         public int initQuantity { get; set; } //int quantity of product
