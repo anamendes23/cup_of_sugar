@@ -21,7 +21,7 @@
 <div class="content product-info-card">
     <!-- Start Product Data -->
     <div class="product-info-card">
-        <img id="one" src='@Model.Product.Image' onerror="this.onerror=null;this.src='../images/default-@Model.Product.Category.ToLower()\.png'">
+        <img id="one" src='@Model.Product.Image'> 
         <div class="product-info">
             <h3 class="title" id="productTitle">@Model.Product.Title</h3>
             <p class="card-text">Quantity: @Model.Product.Quantity @UnitTypeEnumExtensions.DisplayName((UnitTypeEnum)Enum.Parse(typeof(UnitTypeEnum), Model.Product.Unit))</p>
