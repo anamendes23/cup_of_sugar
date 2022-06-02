@@ -272,7 +272,7 @@ namespace UnitTests.Components
 
             // Assert
             // Unicorn Cupcake has a Pending status
-            Assert.AreEqual(true, pageMarkup.Contains("Unicorn Cupcake"));
+            Assert.AreEqual(true, pageMarkup.Contains("Cupcake"));
         }
 
         #endregion EnableAvailabilityFilter
