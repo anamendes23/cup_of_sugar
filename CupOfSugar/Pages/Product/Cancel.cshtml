@@ -10,14 +10,14 @@
 }
 
 <!-- Start Page title -->
-<h1 class="read-title">Cancel</h1>
+<h1 class="read-title">Changed your mind? No worries!</h1>
 <br />
 <!-- End Page title -->
 
 <div class="container">
     <!-- Start of cancellation confirmation section -->
     <form method="post">
-        <h2>Confirm Cancel of this borrow:</h2>
+        <h2 class="text-center">Click on the button below to confirm that<br />you want to cancel this borrow:</h2>
         @Html.HiddenFor(x => x.Product.Id)
         @Html.HiddenFor(x => x.Product.Title)
         @Html.HiddenFor(x => x.Product.Image)
@@ -41,9 +41,7 @@
     </form>
     <!-- End of cancellation confirmation section -->
     <!-- Start of product information -->
-    <h2>For this product:</h2>
-    <div class="product-info-card">
-        <img id="one" src='@Model.Product.Image' onerror="this.onerror=null;this.src='../images/default-@Model.Product.Category.ToLower()\.png'">
+    <div class="product-info-card product-info-card-center">
         <div class="product-info">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <h3 class="title" id="productTitle">@Model.Product.Title</h3>
@@ -54,6 +52,7 @@
             <p class="card-text">Category: @Model.Product.Category</p>
             <p class="card-text">Status: @Model.Product.Status</p>
         </div>
+        <img id="one" src='@Model.Product.Image' onerror="this.onerror=null;this.src='../images/default-@Model.Product.Category.ToLower()\.png'">
     </div>
     <!-- End of product information -->
     <br />
