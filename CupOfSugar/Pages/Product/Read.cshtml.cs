@@ -40,8 +40,9 @@ namespace CupOfSugar.Pages.Product
         public int quantity { get; set; }
 
 
-        // The status that indicate if the borrow is available or not
+        // The status and lable of the borrow button that indicate if the borrow is available or not
         public bool borrowBtnStatus;
+        public string borrowBtnLabel;
 
         /// <summary>
         /// REST Get request
@@ -53,10 +54,12 @@ namespace CupOfSugar.Pages.Product
             if ((Product.Status == "Out of Stock") || (Product.Status == "Pending"))
             {
                 borrowBtnStatus = true;
+                borrowBtnLabel = Product.Status;
             }
             else
             {
                 borrowBtnStatus = false;
+                borrowBtnLabel = "Borrow";
             }
         }
 
