@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using CupOfSugar.Pages.Product;
 using Microsoft.AspNetCore.Mvc;
+using System.Net;
 
 namespace UnitTests.Pages.Product
 {
@@ -110,6 +111,41 @@ namespace UnitTests.Pages.Product
 
             // Assert
             Assert.AreEqual(false, pageModel.ModelState.IsValid);
+        }
+
+        /// <summary>
+        /// Tests that when a valid image url is provided
+        /// The product's image is NOT set to the default image
+        /// </summary>
+        [Test]
+        public void OnPost_Given_Valid_Image_URL_Product_Image_Should_Not_Be_Set_To_Default_Image()
+        {
+            // Arrange
+            pageModel.Product = new CupOfSugar.WebSite.Models.Product()
+            {
+                Id = "an-id-123",
+                Lender = "Sleepy Larry",
+                Image = "https://user-images.githubusercontent.com/64483865/165871015-14dd3358-7188-43a5-92cd-a8e7dc336aab.jpg",
+                Title = "Something Stinky",
+                Address = "123 adress st WA 98276",
+                Phone = "0123456789",
+                Quantity = 2,
+                Category = "Fruit",
+                Status = "Available"
+            };
+
+            // Default image path, what a Fruit Product image is set to if its given url is invalid
+            var defaultFruitImagePath = "../../images/default-" + pageModel.Product.Category.ToLower() + ".png";
+
+            // Act
+            var result = pageModel.OnPost() as ActionResult;
+
+            // Assert
+            // All attributes are valid, so the page state should be valid
+            Assert.AreEqual(true, pageModel.ModelState.IsValid);
+            
+            // The product's given url is valid, so it should NOT be equal to the default Fruit image path
+            Assert.AreNotEqual(pageModel.Product.Image, defaultFruitImagePath);
         }
 
         #endregion OnPost
