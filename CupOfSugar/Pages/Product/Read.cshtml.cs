@@ -50,7 +50,7 @@ namespace CupOfSugar.Pages.Product
         public void OnGet(string id)
         {
             Product = ProductService.GetProducts().FirstOrDefault(m => m.Id.Equals(id));
-            if (Product.Status == "Out of Stock")
+            if ((Product.Status == "Out of Stock") || (Product.Status == "Pending"))
             {
                 borrowBtnStatus = true;
             }
