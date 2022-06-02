@@ -40,11 +40,8 @@ namespace CupOfSugar.Pages.Product
         public int quantity { get; set; }
 
 
-        // The status that indicate if the borrow button was clicked or not
+        // The status that indicate if the borrow is available or not
         public bool borrowBtnStatus;
-        // The value of the borrow button press
-        public string borrowBtnValue;
-
 
         /// <summary>
         /// REST Get request
@@ -53,15 +50,13 @@ namespace CupOfSugar.Pages.Product
         public void OnGet(string id)
         {
             Product = ProductService.GetProducts().FirstOrDefault(m => m.Id.Equals(id));
-            if (Product.Status == "Available")
+            if (Product.Status == "Out of Stock")
             {
-                borrowBtnStatus = false;
-                borrowBtnValue = "Borrow";
+                borrowBtnStatus = true;
             }
             else
             {
-                borrowBtnStatus = true;
-                borrowBtnValue = "Pending";
+                borrowBtnStatus = false;
             }
         }
 
