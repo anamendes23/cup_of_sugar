@@ -45,7 +45,7 @@
                     <div class="borrow-info-card">
                         <div class="borrow-info-text card-text">@Model.Product.Names[i] - @Model.Product.BorrowQuantities[i] @UnitTypeEnumExtensions.DisplayName((UnitTypeEnum)Enum.Parse(typeof(UnitTypeEnum), Model.Product.Unit))</div>
                         <div>
-                            <a asp-page="CompleteBorrow" asp-route-id="@Model.Product.Id&@i" id="complete_borrow" class="btn btn-green">Complete Borrow</a>&nbsp;&nbsp;
+                            <a asp-page="ConfirmPickup" asp-route-id="@Model.Product.Id&@i" id="confirm_pickup" class="btn btn-green">Confirm Pickup</a>&nbsp;&nbsp;
                             <a asp-page="Cancel" asp-route-id="@Model.Product.Id&@i" id="cancel_borrow" class="btn btn-red">Cancel Borrow</a>
                         </div>
                     </div>
