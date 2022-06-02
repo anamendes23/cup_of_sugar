@@ -642,9 +642,20 @@ ul {
 [data-theme="dark"] .read-page-divider {
     border-color: #F7FFF7;
 }
+
+[data-theme="dark"] .sun-icon {
+    margin-top: 10px;
+    margin-right: 10px;
+    color: darkgray ;
+}
+
+[data-theme="dark"] .moon-icon {
+    color: ghostwhite;
+}
 /*End of styling for Dark Mode*/
 
-/*These are the styling elements for the _Layout page*/
+
+/*Start of styling elements for the _Layout page*/
 .navbar-color {
     background-color: #C488E1;
 }
@@ -659,6 +670,17 @@ ul {
     color: white !important;
     font-size: 1.25em !important;
 }
+
+.sun-icon {
+    margin-top: 10px;
+    margin-right: 10px;
+    color: yellow;
+}
+
+.moon-icon {
+    color: dimgray;
+}
+/*End of styling elements for the _Layout page*/
 
 /*START privacy page styling*/
 .cupofsugar-privacy {
@@ -702,3 +724,4 @@ ul {
     margin-left: 5px;
 }
 /*End of FILTER styling*/
+
