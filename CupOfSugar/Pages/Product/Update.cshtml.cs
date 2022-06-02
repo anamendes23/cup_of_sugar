@@ -50,6 +50,8 @@ namespace CupOfSugar.Pages.Product
                 return Page();
             }
 
+            if (Product.Quantity > 0)
+                Product.Status = "Available";
             ProductService.UpdateData(Product);
 
             return RedirectToPage("./Borrow");
