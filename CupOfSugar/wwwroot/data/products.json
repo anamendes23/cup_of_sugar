@@ -410,43 +410,21 @@
     ]
   },
   {
-    "Id": "00ee5812-2054-4dc1-a93e-1994de885801",
+    "Id": "864fe132-2065-4777-8b1d-683e12583984",
     "Lender": "Sleepy Larry",
-    "img": "https://www.myweekendplan.com.my/wp-content/uploads/2020/05/INCOMPLETE",
-    "Title": "Default Dessert Example",
-    "Address": "555 NotAStreet WA 999999",
-    "Phone": "4444444444",
-    "Quantity": 1,
-    "Unit": "Unit",
-    "Category": "Dessert",
-    "Status": "Available",
-    "Names": [
-      "Ana",
-      "Banana"
-    ],
-    "BorrowQuantities": [
-      3,
-      4
-    ]
-  },
-  {
-    "Id": "ed40a1f5-24d9-40fa-b0f2-efe0f71befe2",
-    "Lender": "Sleepy Larry",
-    "img": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/INCOMPLETE",
+    "img": "../../images/default-fruit.png",
     "Title": "Default Fruit Example",
-    "Address": "555 NotAStreet WA 999999",
-    "Phone": "4444444444",
-    "Quantity": 1,
+    "Address": "555 NotAStreet Atlantic Ocean Atlantis 000000",
+    "Phone": "2222222222",
+    "Quantity": 0,
     "Unit": "Unit",
     "Category": "Fruit",
-    "Status": "Available",
+    "Status": "Pending",
     "Names": [
-      "Ana",
-      "Banana"
+      "The Borrower"
     ],
     "BorrowQuantities": [
-      3,
-      4
+      5
     ]
   }
 ]
