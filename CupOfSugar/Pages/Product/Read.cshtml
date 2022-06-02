@@ -77,7 +77,7 @@
             @Html.HiddenFor(x => x.Product.Names[i])
         }
     }
-    <div class="product-info-card">
+    <div class="product-info-card" disabled="@Model.borrowBtnStatus">
         <div class="row form-group">
             <label asp-for="borrower" class="col-sm-3 col-form-label control-label">Name:</label>
             <input asp-for="borrower" class="col-sm-6 form-control" disabled="@Model.borrowBtnStatus"/>
@@ -88,7 +88,7 @@
             <input asp-for="quantity" class="col-sm-6 form-control" disabled="@Model.borrowBtnStatus"/>
             <span asp-validation-for="quantity" class="text-danger"></span>
         </div>
-        <input id="borrow" type="submit" value="Borrow" disabled="@Model.borrowBtnStatus" class="btn btn-red btn-thinner" /> &nbsp; &nbsp;
+        <input id="borrow" type="submit" value="@Model.Product.Status" disabled="@Model.borrowBtnStatus" class="btn btn-red btn-thinner" /> &nbsp; &nbsp;
     </div>
 </form>
 
