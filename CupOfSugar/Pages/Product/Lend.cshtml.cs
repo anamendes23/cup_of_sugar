@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using CupOfSugar.WebSite.Services;
 using System.ComponentModel.DataAnnotations;
 using System;
+using System.Net;
 
 namespace CupOfSugar.Pages.Product
 {
@@ -52,6 +53,28 @@ namespace CupOfSugar.Pages.Product
             {
                 return Page();
             }
+
+            // Test img url, set to default img if does not return an img
+            HttpWebRequest request;
+            bool exists;
+
+            try
+            {
+                request = (HttpWebRequest)HttpWebRequest.Create(Product.Image);
+                request.Method = "HEAD";
+                request.GetResponse();
+                exists = true;
+            }
+            catch
+            {
+                exists = false;
+            } 
+
+            if (exists == false)
+            {
+                Product.Image = "../../images/default-" + Product.Category.ToLower() + ".png"; // Set Image to default if entered url invalid
+            }
+
             Product.Quantity = initQuantity;
             Product = ProductService.CreateData(Product);
 
