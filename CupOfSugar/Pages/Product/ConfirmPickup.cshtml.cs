@@ -60,6 +60,8 @@ namespace CupOfSugar.Pages.Product
 
             Product.Names.RemoveAt(num);
             Product.BorrowQuantities.RemoveAt(num);
+            if ((Product.Quantity == 0) && (Product.Names.Count == 0))
+                Product.Status = "Out of Stock";
             ProductService.UpdateData(Product);
 
             return RedirectToPage("./Borrow");
