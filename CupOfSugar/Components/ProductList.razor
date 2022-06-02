@@ -94,17 +94,17 @@
                     <div class="card-columns">
                         @foreach (var product in productListGroup)
                         {
-                            <div class="card">
-                                <img class="card-img" src="@product.Image" onerror="this.onerror=null;this.src='../images/default-@product.Category.ToLower()\.png'" />
-                                <div class="card-body">
-                                    <h5 class="card-title">@product.Title</h5>
-                                </div>
-                                <div class="card-footer">
-                                    <small class="text-muted">
-                                        <button @onclick="(e => MovetoRead(product.Id))" id="MoreInfoButton_@product.Id" class="btn btn-green">More Info</button>
-                                    </small>
-                                </div>
+                        <div class="card">
+                            <img class="card-img" src="@product.Image" />
+                            <div class="card-body">
+                                <h5 class="card-title">@product.Title</h5>
                             </div>
+                            <div class="card-footer">
+                                <small class="text-muted">
+                                    <button @onclick="(e => MovetoRead(product.Id))" id="MoreInfoButton_@product.Id" class="btn btn-green">More Info</button>
+                                </small>
+                            </div>
+                        </div>
                         }
                     </div>
                 </div>
