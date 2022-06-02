@@ -10,13 +10,11 @@
     "Unit": "Unit",
     "Category": "Fruit",
     "Status": "Available",
-    "Names": 
-    [
+    "Names": [
       "Ana",
       "Banana"
     ],
-    "BorrowQuantities": 
-    [
+    "BorrowQuantities": [
       3,
       4
     ]
@@ -90,10 +88,8 @@
     "Unit": "Box",
     "Category": "Fruit",
     "Status": "Available",
-    "Names": [
-    ],
-    "BorrowQuantities": [
-    ]
+    "Names": [],
+    "BorrowQuantities": []
   },
   {
     "Id": "margot-tomatoes",
@@ -278,7 +274,7 @@
   {
     "Id": "olivia-pasta",
     "Lender": "olivia",
-    "img": "https://user-images.githubusercontent.com/64483865/165874548-eebff62e-2995-4c01-8ebb-08803710618b.jpg",
+    "img": "https://user-images.githubusercontent.com/64483865/171602346-ba71bf7c-f74d-483e-be48-c3e5564bda07.png",
     "Title": "Carbonara Pasta",
     "Address": "5862 Marilou Fort Apt. 477, 54559",
     "Phone": "5988247244",
@@ -398,20 +394,18 @@
   {
     "Id": "c9d2b67a-c872-49e9-9754-8b28f23eca41",
     "Lender": "Sleepy Larry",
-    "img": "https://thescranline.com/wp-content/uploads/2021/03/Dancing-Queen-Cupcakes.jpg",
-    "Title": "Unicorn Cupcake",
+    "img": "https://user-images.githubusercontent.com/64483865/171603773-5590cfd6-eb86-46ac-aa43-95dc907806d7.png",
+    "Title": "Cupcake",
     "Address": "222 NotAStreetItsAnOcean Street Atlantis Atlantic Ocean 00000",
     "Phone": "4444444444",
     "Quantity": 1,
     "Unit": "Unit",
     "Category": "Dessert",
-    "Status": "Pending",
-    "Names": 
-    [
+    "Status": "Available",
+    "Names": [
       "Pleebo"
     ],
-    "BorrowQuantities": 
-    [
+    "BorrowQuantities": [
       1
     ]
   },
