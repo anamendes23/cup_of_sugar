@@ -63,6 +63,7 @@ namespace UnitTests.Pages.Products
             // First Create the product to delete
 
             pageModel.Product = TestHelper.ProductService.GetProducts().FirstOrDefault(x => (x.Names.Count == 1 && x.Quantity == 0));
+            var productId = pageModel.Product.Id;
             var id = pageModel.Product.Id + "&" + "0";
 
             // Act
@@ -73,7 +74,7 @@ namespace UnitTests.Pages.Products
             Assert.AreEqual(true, result.PageName.Contains("Borrow"));
 
             // Confirm the borrower is deleted
-            var newStatus = TestHelper.ProductService.GetProducts().FirstOrDefault(x => x.Id.Equals(pageModel.Product.Id)).Status;
+            var newStatus = TestHelper.ProductService.GetProducts().FirstOrDefault(x => x.Id.Equals(productId)).Status;
             Assert.AreEqual("Out of Stock", newStatus);
         }
 
