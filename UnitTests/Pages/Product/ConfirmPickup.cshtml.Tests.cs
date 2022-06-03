@@ -56,6 +56,33 @@ namespace UnitTests.Pages.Products
         /// posted, and redirects to correct page
         /// </summary>
         [Test]
+        public void OnPostAsync_Zeroed_Item_Should_Update_Status()
+        {
+            // Arrange
+
+            // First Create the product to delete
+
+            pageModel.Product = TestHelper.ProductService.GetProducts().FirstOrDefault(x => (x.Names.Count == 1 && x.Quantity == 0));
+            var id = pageModel.Product.Id + "&" + "0";
+
+            // Act
+            var result = pageModel.OnPost(id) as RedirectToPageResult;
+
+            // Assert
+            Assert.AreEqual(true, pageModel.ModelState.IsValid);
+            Assert.AreEqual(true, result.PageName.Contains("Borrow"));
+
+            // Confirm the borrower is deleted
+            var newStatus = TestHelper.ProductService.GetProducts().FirstOrDefault(x => x.Id.Equals(pageModel.Product.Id)).Status;
+            Assert.AreEqual("Out of Stock", newStatus);
+        }
+
+        /// <summary>
+        /// The Unit test case to check if a 
+        /// Product is returned When form is 
+        /// posted, and redirects to correct page
+        /// </summary>
+        [Test]
         public void OnPostAsync_Valid_Should_Return_Products()
         {
             // Arrange
