@@ -71,6 +71,28 @@ namespace UnitTests.Pages.Product
             Assert.AreEqual("Avocado", pageModel.Product.Title);
         }
 
+        /// <summary>
+        /// The unit test to check if the correct
+        /// HTTP request ID with Status: Pending 
+        /// is being retrieved
+        /// Also check if it's valid or not
+        /// </summary>
+        [Test]
+        public void OnGet_Pending_Or_OutOfStock_Should_Return_True_BottonStatus()
+        {
+            // Arrange
+            pageModel.Product = TestHelper.ProductService.GetProducts().FirstOrDefault(m => m.Status.Equals("Pending") || m.Status.Equals("Out of Stock"));
+            var id = pageModel.Product.Id;
+
+            // Act
+            pageModel.OnGet(id);
+
+            // Assert
+            Assert.AreEqual(true, pageModel.ModelState.IsValid);
+            Assert.AreEqual(true, pageModel.borrowBtnStatus);
+            Assert.AreEqual(pageModel.Product.Status, pageModel.borrowBtnLabel);
+        }
+
         #endregion OnGet
 
 
