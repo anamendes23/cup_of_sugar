@@ -3,7 +3,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using CupOfSugar.Pages.Product;
 
-namespace UnitTests.Pages.Products
+namespace UnitTests.Pages.Product
 {
     /// <summary>
     ///  Unit tests class for Confirm Pickup page
@@ -62,7 +62,7 @@ namespace UnitTests.Pages.Products
 
             // First Create the product to delete
 
-            pageModel.Product = TestHelper.ProductService.GetProducts().FirstOrDefault(x => (x.Names.Count == 1 && x.Quantity == 0));
+            pageModel.Product = TestHelper.ProductService.GetProducts().FirstOrDefault(x => (x.Names?.Count == 1 && x.Quantity == 0));
             var productId = pageModel.Product.Id;
             var id = pageModel.Product.Id + "&" + "0";
 
